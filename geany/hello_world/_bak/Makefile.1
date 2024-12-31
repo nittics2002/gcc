@@ -1,0 +1,29 @@
+TARGET := hello_world
+
+CC := gcc
+
+#CFLAGS := -g3 -MMD -O0
+CFLAGS = -shared $(shell pkg-config --libs geany)
+
+#LDFLAGS :=
+LDFLAGS = -fPIC $(shell pkg-config --cflags geany)
+
+SRCS = $(wildcard *.c)
+OBJS = $(SRCS:%.c=%.o)
+DEPS = $(SRCS:%.c=%.d)
+RM := rm -f
+
+.PHONY: all
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $^ -o $@.so $(LDFLAGS)
+
+%.o: %.c
+	$(CC) -c $< $(CFLAGS)
+
+.PHONY: clean
+clean:
+	$(RM) $(TARGET) $(OBJS) $(DEPS)
+
+-include *.d
