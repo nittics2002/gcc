@@ -1,0 +1,223 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	number	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/user/document/src/gcc/geany/_addon/geanyctags/src/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+address	./readtags.h	140;"	member	struct:__anon0e8d8a030908	typeref:struct:__anon0e8d8a030908::__anon0e8d8a030a08
+author	./readtags.c	87;"	member	struct:sTagFile::__anon0e8d89fe0408	typeref:typename:char *	file:
+author	./readtags.h	94;"	member	struct:__anon0e8d8a030408::__anon0e8d8a030708	typeref:typename:const char *
+buffer	./readtags.c	32;"	member	struct:__anon0e8d89fe0108	typeref:typename:char *	file:
+case_sensitive	./geanyctags.c	62;"	member	struct:__anonaee9ed590108	typeref:typename:GtkWidget *	file:
+combo	./geanyctags.c	60;"	member	struct:__anonaee9ed590108	typeref:typename:GtkWidget *	file:
+combo_match	./geanyctags.c	61;"	member	struct:__anonaee9ed590108	typeref:typename:GtkWidget *	file:
+copyName	./readtags.c	285;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file)
+count	./readtags.h	151;"	member	struct:__anon0e8d8a030908::__anon0e8d8a030b08	typeref:typename:unsigned short
+countContinuousBackslashesBackward	./readtags.c	514;"	function	typeref:typename:unsigned int	file:	signature:(const char * from,const char * till)
+create_dialog_find_file	./geanyctags.c	535;"	function	typeref:typename:void	file:	signature:(void)
+declaration	./geanyctags.c	63;"	member	struct:__anonaee9ed590108	typeref:typename:GtkWidget *	file:
+doesFilePointPseudoTag	./readtags.c	817;"	function	typeref:typename:int	file:	signature:(tagFile * const file,void * unused)
+duplicate	./readtags.c	675;"	function	typeref:typename:char *	file:	signature:(const char * str)
+EmptyString	./readtags.c	103;"	variable	typeref:typename:const char * const	file:
+err	./readtags.c	97;"	member	struct:sTagFile	typeref:typename:int	file:
+error_number	./readtags.h	78;"	member	struct:__anon0e8d8a030408::__anon0e8d8a030508	typeref:typename:int
+fields	./readtags.c	83;"	member	struct:sTagFile	typeref:struct:sTagFile::__anon0e8d89fe0308	file:
+fields	./readtags.h	155;"	member	struct:__anon0e8d8a030908	typeref:struct:__anon0e8d8a030908::__anon0e8d8a030b08
+file	./readtags.h	129;"	member	struct:__anon0e8d8a030908	typeref:typename:const char *
+file	./readtags.h	88;"	member	struct:__anon0e8d8a030408	typeref:struct:__anon0e8d8a030408::__anon0e8d8a030608
+fileScope	./readtags.h	146;"	member	struct:__anon0e8d8a030908	typeref:typename:short
+filter_tag	./geanyctags.c	406;"	function	typeref:typename:gboolean	file:	signature:(tagEntry * entry,GPatternSpec * name,gboolean declaration,gboolean case_sensitive)
+find	./readtags.c	1164;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry,const char * const name,const int options)
+findBinary	./readtags.c	1081;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file)
+findFirstMatchBefore	./readtags.c	1063;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file)
+findFirstNonMatchBefore	./readtags.c	1042;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file)
+findNext	./readtags.c	1242;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry)
+findNextFull	./readtags.c	1221;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry,int sorted,int (* isAcceptable)(tagFile * const,void *),void * data)
+findPseudoTag	./readtags.c	1250;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file,int rewindBeforeFinding,tagEntry * const entry)
+findSequential	./readtags.c	1159;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file)
+findSequentialFull	./readtags.c	1130;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file,int (* isAcceptable)(tagFile * const,void *),void * data)
+find_first	./geanyctags.c	375;"	function	typeref:typename:gboolean	file:	signature:(tagFile * tf,tagEntry * entry,const gchar * name,MatchType match_type)
+find_next	./geanyctags.c	391;"	function	typeref:typename:gboolean	file:	signature:(tagFile * tf,tagEntry * entry,MatchType match_type)
+find_tags	./geanyctags.c	433;"	function	typeref:typename:void	file:	signature:(const gchar * name,gboolean declaration,gboolean case_sensitive,MatchType match_type)
+format	./readtags.c	47;"	member	struct:sTagFile	typeref:typename:unsigned char	file:
+format	./readtags.h	84;"	member	struct:__anon0e8d8a030408::__anon0e8d8a030608	typeref:typename:short
+fp	./readtags.c	55;"	member	struct:sTagFile	typeref:typename:FILE *	file:
+geany_data	./geanyctags.c	50;"	variable	typeref:typename:GeanyData *	file:
+geany_load_module	./geanyctags.c	720;"	function	typeref:typename:G_MODULE_EXPORT void	signature:(GeanyPlugin * plugin)
+geany_plugin	./geanyctags.c	49;"	variable	typeref:typename:GeanyPlugin *	file:
+generate_find_string	./geanyctags.c	186;"	function	typeref:typename:gchar *	file:	signature:(GeanyProject * prj)
+get_base_path	./geanyctags.c	205;"	function	typeref:typename:gchar *	file:	signature:(void)
+get_selection	./geanyctags.c	317;"	function	typeref:typename:gchar *	file:	signature:(void)
+get_tags_filename	./geanyctags.c	174;"	function	typeref:typename:gchar *	file:	signature:(void)
+gotoFirstLogicalTag	./readtags.c	822;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file)
+growFields	./readtags.c	399;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file)
+growString	./readtags.c	256;"	function	typeref:typename:tagResult	file:	signature:(vstring * s)
+GTK_COMBO_BOX_TEXT	./geanyctags.c	43;"	macro	file:
+gtk_combo_box_text_append_text	./geanyctags.c	45;"	macro	file:
+gtk_combo_box_text_new	./geanyctags.c	44;"	macro	file:
+g_pattern_spec_match_string	./geanyctags.c	403;"	macro	file:
+ignorecase	./readtags.c	75;"	member	struct:sTagFile::__anon0e8d89fe0208	typeref:typename:short	file:
+initialize	./readtags.c	856;"	function	typeref:typename:tagFile *	file:	signature:(const char * const filePath,tagFileInfo * const info)
+initialized	./readtags.c	45;"	member	struct:sTagFile	typeref:typename:unsigned char	file:
+inputUCtagsMode	./readtags.c	51;"	member	struct:sTagFile	typeref:typename:unsigned char	file:
+isOdd	./readtags.c	509;"	function	typeref:typename:int	file:	signature:(unsigned int i)
+isPseudoTagLine	./readtags.c	687;"	function	typeref:typename:int	file:	signature:(const char * buffer)
+JUMP_BACK	./readtags.c	1044;"	macro	file:
+kb_callback	./geanyctags.c	639;"	function	typeref:typename:gboolean	file:	signature:(guint key_id)
+KB_COUNT	./geanyctags.c	73;"	enumerator	enum:__anonaee9ed590203	file:
+KB_FIND_TAG	./geanyctags.c	71;"	enumerator	enum:__anonaee9ed590203	file:
+KB_GENERATE_TAGS	./geanyctags.c	72;"	enumerator	enum:__anonaee9ed590203	file:
+key	./readtags.h	114;"	member	struct:__anon0e8d8a030808	typeref:typename:const char *
+kind	./readtags.h	143;"	member	struct:__anon0e8d8a030908	typeref:typename:const char *
+line	./readtags.c	61;"	member	struct:sTagFile	typeref:typename:vstring	file:
+lineNumber	./readtags.h	139;"	member	struct:__anon0e8d8a030908::__anon0e8d8a030a08	typeref:typename:unsigned long
+list	./readtags.c	82;"	member	struct:sTagFile::__anon0e8d89fe0308	typeref:typename:tagExtensionField *	file:
+list	./readtags.h	154;"	member	struct:__anon0e8d8a030908::__anon0e8d8a030b08	typeref:typename:tagExtensionField *
+MatchType	./geanyctags.c	373;"	typedef	typeref:enum:__anonaee9ed590303	file:
+MATCH_FULL	./geanyctags.c	370;"	enumerator	enum:__anonaee9ed590303	file:
+MATCH_PATTERN	./geanyctags.c	372;"	enumerator	enum:__anonaee9ed590303	file:
+MATCH_PREFIX	./geanyctags.c	371;"	enumerator	enum:__anonaee9ed590303	file:
+max	./readtags.c	80;"	member	struct:sTagFile::__anon0e8d89fe0308	typeref:typename:unsigned short	file:
+name	./readtags.c	63;"	member	struct:sTagFile	typeref:typename:vstring	file:
+name	./readtags.c	69;"	member	struct:sTagFile::__anon0e8d89fe0208	typeref:typename:char *	file:
+name	./readtags.c	89;"	member	struct:sTagFile::__anon0e8d89fe0408	typeref:typename:char *	file:
+name	./readtags.h	125;"	member	struct:__anon0e8d8a030908	typeref:typename:const char *
+name	./readtags.h	97;"	member	struct:__anon0e8d8a030408::__anon0e8d8a030708	typeref:typename:const char *
+nameAcceptable	./readtags.c	1154;"	function	typeref:typename:int	file:	signature:(tagFile * const file,void * unused)
+nameComparison	./readtags.c	1020;"	function	typeref:typename:int	file:	signature:(tagFile * const file)
+nameLength	./readtags.c	71;"	member	struct:sTagFile::__anon0e8d89fe0208	typeref:typename:size_t	file:
+on_find_declaration	./geanyctags.c	515;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
+on_find_definition	./geanyctags.c	525;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
+on_find_tag	./geanyctags.c	602;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
+on_generate_tags	./geanyctags.c	225;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
+on_project_close	./geanyctags.c	91;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,G_GNUC_UNUSED gpointer user_data)
+on_project_open	./geanyctags.c	86;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,GKeyFile * config,G_GNUC_UNUSED gpointer user_data)
+on_project_save	./geanyctags.c	96;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,GKeyFile * config,G_GNUC_UNUSED gpointer user_data)
+opened	./readtags.h	74;"	member	struct:__anon0e8d8a030408::__anon0e8d8a030508	typeref:typename:int
+parseExtensionFields	./readtags.c	416;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry,char * const string,int * err)
+parseTagLine	./readtags.c	559;"	function	typeref:typename:tagResult	file:	signature:(tagFile * file,tagEntry * const entry,int * err)
+partial	./readtags.c	73;"	member	struct:sTagFile::__anon0e8d89fe0208	typeref:typename:short	file:
+pattern	./readtags.h	135;"	member	struct:__anon0e8d8a030908::__anon0e8d8a030a08	typeref:typename:const char *
+plugin_geanyctags_callbacks	./geanyctags.c	101;"	variable	typeref:typename:PluginCallback[]	file:
+plugin_geanyctags_cleanup	./geanyctags.c	702;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)
+plugin_geanyctags_help	./geanyctags.c	108;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)
+plugin_geanyctags_init	./geanyctags.c	653;"	function	typeref:typename:gboolean	file:	signature:(GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)
+pos	./readtags.c	57;"	member	struct:sTagFile	typeref:typename:rt_off_t	file:
+pos	./readtags.c	67;"	member	struct:sTagFile::__anon0e8d89fe0208	typeref:typename:rt_off_t	file:
+program	./readtags.c	94;"	member	struct:sTagFile	typeref:struct:sTagFile::__anon0e8d89fe0408	file:
+program	./readtags.h	104;"	member	struct:__anon0e8d8a030408	typeref:struct:__anon0e8d8a030408::__anon0e8d8a030708
+PseudoTagPrefix	./readtags.c	104;"	variable	typeref:typename:const char * const	file:
+PseudoTagPrefixLength	./readtags.c	105;"	variable	typeref:typename:const size_t	file:
+readFieldValue	./readtags.c	986;"	function	typeref:typename:const char *	file:	signature:(const tagEntry * const entry,const char * const key)
+readNext	./readtags.c	963;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry)
+readPseudoTags	./readtags.c	692;"	function	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagFileInfo * const info)
+readTagCharacter	./readtags.c	154;"	function	typeref:typename:int	file:	signature:(const char ** const s)
+readTagLine	./readtags.c	389;"	function	typeref:typename:int	file:	signature:(tagFile * const file,int * err)
+readTagLineRaw	./readtags.c	313;"	function	typeref:typename:int	file:	signature:(tagFile * const file,int * err)
+readTagLineSeek	./readtags.c	1001;"	function	typeref:typename:int	file:	signature:(tagFile * const file,const rt_off_t pos)
+readtags_fseek	./readtags.c	124;"	function	typeref:typename:int	file:	signature:(FILE * fp,rt_off_t pos,int whence)
+readtags_ftell	./readtags.c	111;"	function	typeref:typename:rt_off_t	file:	signature:(FILE * fp)
+READTAGS_H	./readtags.h	20;"	macro
+rt_off_t	./readtags.c	37;"	typedef	typeref:typename:long long	file:
+rt_off_t	./readtags.c	39;"	typedef	typeref:typename:off_t	file:
+search	./readtags.c	76;"	member	struct:sTagFile	typeref:struct:sTagFile::__anon0e8d89fe0208	file:
+set_widgets_sensitive	./geanyctags.c	78;"	function	typeref:typename:void	file:	signature:(gboolean sensitive)
+show_entry	./geanyctags.c	265;"	function	typeref:typename:void	file:	signature:(tagEntry * entry)
+size	./readtags.c	31;"	member	struct:__anon0e8d89fe0108	typeref:typename:size_t	file:
+size	./readtags.c	59;"	member	struct:sTagFile	typeref:typename:rt_off_t	file:
+sort	./readtags.h	87;"	member	struct:__anon0e8d8a030408::__anon0e8d8a030608	typeref:typename:tagSortType
+sortMethod	./readtags.c	53;"	member	struct:sTagFile	typeref:typename:tagSortType	file:
+sortType	./readtags.h	39;"	macro
+spawn_cmd	./geanyctags.c	113;"	function	typeref:typename:void	file:	signature:(const gchar * cmd,const gchar * dir)
+sTagFile	./readtags.c	43;"	struct	file:
+status	./readtags.h	79;"	member	struct:__anon0e8d8a030408	typeref:struct:__anon0e8d8a030408::__anon0e8d8a030508
+s_context_fdec_item	./geanyctags.c	53;"	variable	typeref:typename:GtkWidget *	file:
+s_context_fdef_item	./geanyctags.c	53;"	variable	typeref:typename:GtkWidget *	file:
+s_context_sep_item	./geanyctags.c	53;"	variable	typeref:typename:GtkWidget *	file:
+s_ft_dialog	./geanyctags.c	64;"	variable	typeref:struct:__anonaee9ed590108
+s_ft_item	./geanyctags.c	54;"	variable	typeref:typename:GtkWidget *	file:
+s_gt_item	./geanyctags.c	54;"	variable	typeref:typename:GtkWidget *	file:
+s_sep_item	./geanyctags.c	54;"	variable	typeref:typename:GtkWidget *	file:
+TAB	./readtags.c	24;"	macro	file:
+tagcmp	./readtags.c	228;"	function	typeref:typename:int	file:	signature:(const char * s1,const char * s2)
+tagEntry	./readtags.h	157;"	typedef	typeref:struct:__anon0e8d8a030908
+tagErrno	./readtags.h	63;"	typedef	typeref:enum:__anon0e8d8a030303
+TagErrnoFileMaybeTooBig	./readtags.h	62;"	enumerator	enum:__anon0e8d8a030303
+TagErrnoInvalidArgument	./readtags.h	60;"	enumerator	enum:__anon0e8d8a030303
+TagErrnoUnexpectedFormat	./readtags.h	57;"	enumerator	enum:__anon0e8d8a030303
+TagErrnoUnexpectedLineno	./readtags.h	58;"	enumerator	enum:__anon0e8d8a030303
+TagErrnoUnexpectedSortedMethod	./readtags.h	56;"	enumerator	enum:__anon0e8d8a030303
+tagExtensionField	./readtags.h	119;"	typedef	typeref:struct:__anon0e8d8a030808
+TagFailure	./readtags.h	53;"	enumerator	enum:__anon0e8d8a030203
+tagFile	./readtags.h	67;"	typedef	typeref:struct:sTagFile
+tagFileInfo	./readtags.h	106;"	typedef	typeref:struct:__anon0e8d8a030408
+tagncmp	./readtags.c	242;"	function	typeref:typename:int	file:	signature:(const char * s1,const char * s2,size_t n)
+tagnuppercmp	./readtags.c	214;"	function	typeref:typename:int	file:	signature:(const char * s1,const char * s2,size_t n)
+tagResult	./readtags.h	53;"	typedef	typeref:enum:__anon0e8d8a030203
+tagsClose	./readtags.c	1420;"	function	typeref:typename:tagResult	signature:(tagFile * const file)
+tagsClose	./readtags.h	293;"	prototype	typeref:typename:tagResult	signature:(tagFile * const file)
+tagsField	./readtags.c	1340;"	function	typeref:typename:const char *	signature:(const tagEntry * const entry,const char * const key)
+tagsField	./readtags.h	222;"	prototype	typeref:typename:const char *	signature:(const tagEntry * const entry,const char * const key)
+tagsFind	./readtags.c	1348;"	function	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry,const char * const name,const int options)
+tagsFind	./readtags.h	249;"	prototype	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry,const char * const name,const int options)
+tagsFindNext	./readtags.c	1363;"	function	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsFindNext	./readtags.h	258;"	prototype	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsFindPseudoTag	./readtags.c	1387;"	function	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry,const char * const name,const int match)
+tagsFindPseudoTag	./readtags.h	286;"	prototype	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry,const char * const name,const int match)
+tagsFirst	./readtags.c	1310;"	function	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsFirst	./readtags.h	203;"	prototype	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsFirstPseudoTag	./readtags.c	1377;"	function	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsFirstPseudoTag	./readtags.h	265;"	prototype	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsGetErrno	./readtags.c	1431;"	function	typeref:typename:int	signature:(tagFile * const file)
+tagsGetErrno	./readtags.h	305;"	prototype	typeref:typename:int	signature:(tagFile * const file)
+tagsNext	./readtags.c	1326;"	function	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsNext	./readtags.h	213;"	prototype	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsNextPseudoTag	./readtags.c	1382;"	function	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsNextPseudoTag	./readtags.h	271;"	prototype	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsOpen	./readtags.c	1280;"	function	typeref:typename:tagFile *	signature:(const char * const filePath,tagFileInfo * const info)
+tagsOpen	./readtags.h	179;"	prototype	typeref:typename:tagFile *	signature:(const char * const filePath,tagFileInfo * const info)
+tagSortType	./readtags.h	33;"	typedef	typeref:enum:__anon0e8d8a030103
+tagsSetSortType	./readtags.c	1286;"	function	typeref:typename:tagResult	signature:(tagFile * const file,const tagSortType type)
+tagsSetSortType	./readtags.h	194;"	prototype	typeref:typename:tagResult	signature:(tagFile * const file,const tagSortType type)
+TagSuccess	./readtags.h	53;"	enumerator	enum:__anon0e8d8a030203
+taguppercmp	./readtags.c	200;"	function	typeref:typename:int	file:	signature:(const char * s1,const char * s2)
+TAG_FOLDSORTED	./readtags.h	32;"	enumerator	enum:__anon0e8d8a030103
+TAG_FULLMATCH	./readtags.h	43;"	macro
+TAG_IGNORECASE	./readtags.h	47;"	macro
+TAG_OBSERVECASE	./readtags.h	46;"	macro
+TAG_PARTIALMATCH	./readtags.h	44;"	macro
+TAG_SORTED	./readtags.h	32;"	enumerator	enum:__anon0e8d8a030103
+TAG_UNSORTED	./readtags.h	32;"	enumerator	enum:__anon0e8d8a030103
+terminate	./readtags.c	939;"	function	typeref:typename:void	file:	signature:(tagFile * const file)
+unescapeInPlace	./readtags.c	534;"	function	typeref:typename:char *	file:	signature:(char * q,char ** tab,size_t * p_len)
+url	./readtags.c	91;"	member	struct:sTagFile::__anon0e8d89fe0408	typeref:typename:char *	file:
+url	./readtags.h	100;"	member	struct:__anon0e8d8a030408::__anon0e8d8a030708	typeref:typename:const char *
+value	./readtags.h	117;"	member	struct:__anon0e8d8a030808	typeref:typename:const char *
+version	./readtags.c	93;"	member	struct:sTagFile::__anon0e8d89fe0408	typeref:typename:char *	file:
+version	./readtags.h	103;"	member	struct:__anon0e8d8a030408::__anon0e8d8a030708	typeref:typename:const char *
+vstring	./readtags.c	33;"	typedef	typeref:struct:__anon0e8d89fe0108	file:
+widget	./geanyctags.c	58;"	member	struct:__anonaee9ed590108	typeref:typename:GtkWidget *	file:
+xdigitValue	./readtags.c	138;"	function	typeref:typename:int	file:	signature:(unsigned char digit)
+__anon0e8d89fe0108	./readtags.c	30;"	struct	file:
+__anon0e8d89fe0208	./readtags.c	65;"	struct	struct:sTagFile	file:
+__anon0e8d89fe0308	./readtags.c	78;"	struct	struct:sTagFile	file:
+__anon0e8d89fe0408	./readtags.c	85;"	struct	struct:sTagFile	file:
+__anon0e8d8a030103	./readtags.h	31;"	enum
+__anon0e8d8a030203	./readtags.h	53;"	enum
+__anon0e8d8a030303	./readtags.h	55;"	enum
+__anon0e8d8a030408	./readtags.h	70;"	struct
+__anon0e8d8a030508	./readtags.h	72;"	struct	struct:__anon0e8d8a030408
+__anon0e8d8a030608	./readtags.h	82;"	struct	struct:__anon0e8d8a030408
+__anon0e8d8a030708	./readtags.h	92;"	struct	struct:__anon0e8d8a030408
+__anon0e8d8a030808	./readtags.h	111;"	struct
+__anon0e8d8a030908	./readtags.h	122;"	struct
+__anon0e8d8a030a08	./readtags.h	132;"	struct	struct:__anon0e8d8a030908
+__anon0e8d8a030b08	./readtags.h	149;"	struct	struct:__anon0e8d8a030908
+__anonaee9ed590108	./geanyctags.c	57;"	struct	file:
+__anonaee9ed590203	./geanyctags.c	70;"	enum	file:
+__anonaee9ed590303	./geanyctags.c	369;"	enum	file:
