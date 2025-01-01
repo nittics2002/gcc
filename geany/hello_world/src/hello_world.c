@@ -34,8 +34,11 @@ static void hello_cleanup(GeanyPlugin *plugin, gpointer pdata)
 G_MODULE_EXPORT
 void geany_load_module(GeanyPlugin *plugin)
 {
-    plugin->info->name = "HelloWorld";
-    plugin->info->description = "Just another tool to say hello world";
+	/* Setup translation */
+	main_locale_init(LOCALEDIR, GETTEXT_PACKAGE);
+
+    plugin->info->name = _("HelloWorld");
+    plugin->info->description = _("Just another tool to say hello world");
     plugin->info->version = "1.0";
     plugin->info->author = "John Doe <john.doe@example.org>";
  

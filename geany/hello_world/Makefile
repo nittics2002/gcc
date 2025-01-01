@@ -20,7 +20,7 @@ LIBDIR := $(HOME)/.local/usr/lib/geany/plugins/
 
 
 #CFLAGS := -g3 -MMD -O0
-CFLAGS = -fPIC $(shell pkg-config --cflags geany)
+CFLAGS = -DLOCALEDIR=\"\" -DGETTEXT_PACKAGE=\"foobar\" -fPIC $(shell pkg-config --cflags geany)
 
 #LDFLAGS :=
 LDFLAGS = -shared $(shell pkg-config --libs geany)
