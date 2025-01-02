@@ -1,69 +1,72 @@
 #
-# @version 250101
 #
-CC := @gcc
+#
+PROJECT_NAME = my_project
+SRC_EXT = c
+EXEC_EXT = .out
 
-TARGET = $(shell basename $(shell pwd)).so
+#
+SRC_DIR = src
+INC_DIR = include
+LIB_DIR = lib
+BUILD_DIR = build
+INST_DIR = $(HOME)/.local/usr/lib/
 
-SRCDIR := src
+#
+CFLAGS = -Wall -Wextra -I$(INC_DIR)
+LDFLAGS =  # ここにリンク時のオプションを追加
 
-OUTDIR := dest
-BINDIR := $(OUTDIR)/.bin
-OBJDIR := $(OUTDIR)/.obj
-DEPDIR := $(OUTDIR)/.dep
+#
+SRCS = $(wildcard $(SRC_DIR)/*.$(SRC_EXT))
+LIB_SRCS = $(wildcard $(LIB_DIR)/*.$(SRC_EXT))
+ALL_SRCS = $(SRCS) $(LIB_SRCS)
+OBJS = $(patsubst $(SRC_DIR)/%,$(BUILD_DIR)/%,$(ALL_SRCS:.$(SRC_EXT)=.o))
 
-SRCS := $(wildcard $(SRCDIR)/*.c)
-OBJS := $(addprefix $(OBJDIR)/, $(notdir $(SRCS:.c=.o)))
-DEPS := $(addprefix $(DEPDIR)/, $(notdir $(SRCS:.c=.d)))
+#
+TARGET = $(BUILD_DIR)/$(PROJECT_NAME)$(EXEC_EXT)
 
-LIBDIR := $(HOME)/.local/usr/lib/geany/plugins/
+#
+all: $(TARGET)
 
+#
+$(TARGET): $(OBJS)
+	@echo "リンク中: $@"
+	$(CC) -o $@ $^ $(LDFLAGS)
 
-#CFLAGS := -g3 -MMD -O0
-CFLAGS = -fPIC $(shell pkg-config --cflags geany)
+#
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(BUILD_DIR)
+	@echo "コンパイル中: $<"
+	$(CC) $(CFLAGS) -c $< -o $@
 
-#LDFLAGS :=
-LDFLAGS = -shared $(shell pkg-config --libs geany)
+#
+$(BUILD_DIR)/%.o: $(LIB_DIR)/%.c
+	@mkdir -p $(BUILD_DIR)
+	@echo "コンパイル中: $<"
+	$(CC) $(CFLAGS) -c $< -o $@
 
-#DEPFLAGS = -MT $@ -MMD -MP -MF $(DEPDIR)/$*.d
-
-
-$(BINDIR)/$(TARGET): $(OBJS) | $(BINDIR)
-	@echo ...comple
-	$(CC) $(LDFLAGS) -o $@ $^
-
-$(OBJDIR)/%.o: $(SRCDIR)/%.c $(DEPDIR)/%.d | $(OBJDIR) $(DEPDIR)
-	@echo ...link
-	$(CC) $(DEPFLAGS) $(CFLAGS) -c -o $@ $<
-
-# The empty rule is required to handle the case where the dependency file is deleted.
-$(DEPS):
-
-include $(wildcard $(DEPS))
-
-$(BINDIR):
-	@mkdir -p $@
-
-$(OBJDIR):
-	@mkdir -p $@
-
-$(DEPDIR):
-	@mkdir -p $@
-
-.PHONY: all
-all: clean $(TARGET)
-
-.PHONY: install
+#
 install:
-	@mkdir -p $(LIBDIR)
-	@cp $(BINDIR)/$(TARGET) $(LIBDIR)
-	@echo ...installed $(LIBDIR)
+	mkdir -p $(INST_DIR)
+	cp $(TARGET) $(INST_DIR)
 
-.PHONY: uninstall
+#
 uninstall:
-	@rm $(LIBDIR)/$(TARGET)
-	@echo ...uninstalled $(LIBDIR)
+	rm -rf $(INST_DIR)/$(PROJECT_NAME)$(EXEC_EXT)
 
-.PHONY: clean
+#
 clean:
-	@rm -rf $(OUTDIR)
+	@echo "クリーン中..."
+	rm -rf $(BUILD_DIR)/* $(TARGET)
+
+#
+help:
+	@echo "使用方法:"
+	@echo "  make"
+	@echo "  make install"
+	@echo "  make uninstall"
+	@echo "  make clean"
+	@echo "  make help"
+
+#
+.PHONY: all install uninstall clean help
