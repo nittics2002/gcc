@@ -1,4 +1,6 @@
 #include <geanyplugin.h>
+
+
 #include "pluginextension.h"
 
 static gboolean autocomplete_provided(GeanyDocument *doc, gpointer data)
@@ -38,64 +40,77 @@ static void autocomplete_perform(GeanyDocument *doc, gboolean force, gpointer da
     g_free(word);
 }
 
-
 static PluginExtension extension = {
     .autocomplete_provided = autocomplete_provided,
     .autocomplete_perform = autocomplete_perform
 };
 
 
-static gboolean on_editor_notify(G_GNUC_UNUSED GObject *obj, GeanyEditor *editor, SCNotification *nt,
-    G_GNUC_UNUSED gpointer user_data)
-{
-    if (nt->nmhdr.code == SCN_AUTOCSELECTION)
-    {
-        if (plugin_extension_autocomplete_provided(editor->document, &extension))
-        {
-            /* we can be sure it was us who performed the autocompletion and
-             * not Geany or some other plugin extension */
-            msgwin_status_add("PluginExtensionDemo autocompleted '%s'", nt->text);
-        }
-    }
+////////////////////////////////////
 
-    return FALSE;
+static gboolean editor_notify_cb(GObject *object, GeanyEditor *editor,
+    SCNotification *nt, gpointer data)
+{
+	return TRUE;
 }
-
-
-static PluginCallback plugin_callbacks[] = {
-    {"editor-notify", (GCallback) &on_editor_notify, FALSE, NULL},
-    {NULL, NULL, FALSE, NULL}
-};
-
-
-static gboolean init_func(GeanyPlugin *plugin, gpointer pdata)
+ 
+static void item_activate_cb(GtkMenuItem *menuitem, gpointer user_data)
 {
-    plugin_extension_register(&extension, "Python keyword autocompletion", 450, NULL);
+    dialogs_show_msgbox(GTK_MESSAGE_INFO, "test11");
+}
+ 
+static gboolean test11_init(GeanyPlugin *plugin, gpointer pdata)
+{
+    GtkWidget *main_menu_item;
+ 
+    // Create a new menu item and show it
+    main_menu_item = gtk_menu_item_new_with_mnemonic("test11");
+    
+    gtk_widget_show(main_menu_item);
 
+    gtk_container_add(GTK_CONTAINER(plugin->geany_data->main_widgets->tools_menu),
+            main_menu_item);
+            
+    g_signal_connect(main_menu_item, "activate",
+            G_CALLBACK(item_activate_cb), NULL);
+ 
+    geany_plugin_set_data(plugin, main_menu_item, NULL);
 
-    msgwin_status_add("called init_func");
+    //extension register
+    plugin_extension_register(&extension, "test11", 150, NULL);
 
+    //
+    msgwin_status_add("called test11_init\n");
+    
     return TRUE;
 }
 
-
-static void cleanup_func(GeanyPlugin *plugin, gpointer pdata)
+PluginCallback test11_callbacks[] =
 {
+	{ "editor-notify", (GCallback) &editor_notify_cb, FALSE, NULL },
+	{ NULL, NULL, FALSE, NULL }
+};
+
+static void test11_cleanup(GeanyPlugin *plugin, gpointer pdata)
+{
+    GtkWidget *main_menu_item = (GtkWidget *) pdata;
+ 
+    gtk_widget_destroy(main_menu_item);
+
     plugin_extension_unregister(&extension);
 }
-
 
 G_MODULE_EXPORT
 void geany_load_module(GeanyPlugin *plugin)
 {
-    plugin->info->name = "MyPluginExtensionDemo";
-    plugin->info->description = "Demo performing simple Python keyword autocompletion";
+    plugin->info->name = "TEST11";
+    plugin->info->description = "テスト";
     plugin->info->version = "1.0";
-    plugin->info->author = "John Doe <john.doe@example.org>";
+    plugin->info->author = "demo";
 
-    plugin->funcs->init = init_func;
-    plugin->funcs->cleanup = cleanup_func;
-    plugin->funcs->callbacks = plugin_callbacks;
+    plugin->funcs->init = test11_init;
+    plugin->funcs->cleanup = test11_cleanup;
+    plugin->funcs->callbacks = test11_callbacks;
 
     GEANY_PLUGIN_REGISTER(plugin, 248);
 }

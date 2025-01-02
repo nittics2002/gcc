@@ -62,26 +62,54 @@ static gboolean on_editor_notify(G_GNUC_UNUSED GObject *obj, GeanyEditor *editor
 }
 
 
-static PluginCallback plugin_callbacks[] = {
+//////
+
+static void item_activate_cb(GtkMenuItem *menuitem, gpointer user_data)
+{
+    dialogs_show_msgbox(GTK_MESSAGE_INFO, "XML snippet");
+}
+
+static PluginCallback test03_callbacks[] = {
     {"editor-notify", (GCallback) &on_editor_notify, FALSE, NULL},
     {NULL, NULL, FALSE, NULL}
 };
 
-
-static gboolean init_func(GeanyPlugin *plugin, gpointer pdata)
+static gboolean test03_init(GeanyPlugin *plugin, gpointer pdata)
 {
-    plugin_extension_register(&extension, "Python keyword autocompletion", 450, NULL);
+    GtkWidget *main_menu_item;
+ 
+    // Create a new menu item and show it
+    main_menu_item = gtk_menu_item_new_with_mnemonic("test03");
+    
+    gtk_widget_show(main_menu_item);
+
+    gtk_container_add(GTK_CONTAINER(plugin->geany_data->main_widgets->tools_menu),
+            main_menu_item);
+            
+    g_signal_connect(main_menu_item, "activate",
+            G_CALLBACK(item_activate_cb), NULL);
+ 
+    geany_plugin_set_data(plugin, main_menu_item, NULL);
 
 
-    msgwin_status_add("called init_func");
+
+    //extension register
+    //plugin_extension_register(&extension, "Python keyword autocompletion", 450, NULL);
+
+
+    //msgwin_status_add("called test03_init\n");
 
     return TRUE;
 }
 
 
-static void cleanup_func(GeanyPlugin *plugin, gpointer pdata)
+static void test03_cleanup(GeanyPlugin *plugin, gpointer pdata)
 {
-    plugin_extension_unregister(&extension);
+    //plugin_extension_unregister(&extension);
+
+    GtkWidget *main_menu_item = (GtkWidget *) pdata;
+ 
+    gtk_widget_destroy(main_menu_item);
 }
 
 
@@ -93,9 +121,9 @@ void geany_load_module(GeanyPlugin *plugin)
     plugin->info->version = "1.0";
     plugin->info->author = "John Doe <john.doe@example.org>";
 
-    plugin->funcs->init = init_func;
-    plugin->funcs->cleanup = cleanup_func;
-    plugin->funcs->callbacks = plugin_callbacks;
+    plugin->funcs->init = test03_init;
+    plugin->funcs->cleanup = test03_cleanup;
+    plugin->funcs->callbacks = test03_callbacks;
 
     GEANY_PLUGIN_REGISTER(plugin, 248);
 }
