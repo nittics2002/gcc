@@ -20,7 +20,7 @@ LIBDIR := $(HOME)/.local/usr/lib/geany/plugins/
 
 
 #CFLAGS := -g3 -MMD -O0
-CFLAGS = -Isrc -fPIC $(shell pkg-config --cflags geany)
+CFLAGS = -fPIC $(shell pkg-config --cflags geany)
 
 #LDFLAGS :=
 LDFLAGS = -shared $(shell pkg-config --libs geany)
