@@ -1,20 +1,20 @@
 #
+# @version 250103
 #
-#
-PROJECT_NAME = my_project
+PROJECT_NAME = ctags_snippet
 SRC_EXT = c
-EXEC_EXT = .out
+EXEC_EXT = .so
 
 #
 SRC_DIR = src
 INC_DIR = include
 LIB_DIR = lib
 BUILD_DIR = build
-INST_DIR = $(HOME)/.local/usr/lib/
+INST_DIR = $(HOME)/.local/usr/lib/geany/plugin
 
 #
-CFLAGS = -Wall -Wextra -I$(INC_DIR)
-LDFLAGS =  # ここにリンク時のオプションを追加
+CFLAGS = -I$(INC_DIR) -fPIC $(shell pkg-config --cflags geany)
+LDFLAGS =  -shared $(shell pkg-config --libs geany)
 
 #
 SRCS = $(wildcard $(SRC_DIR)/*.$(SRC_EXT))
@@ -36,22 +36,24 @@ $(TARGET): $(OBJS)
 #
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(BUILD_DIR)
-	@echo "コンパイル中: $<"
+	@echo "srcコンパイル中: $<"
 	$(CC) $(CFLAGS) -c $< -o $@
 
 #
 $(BUILD_DIR)/%.o: $(LIB_DIR)/%.c
 	@mkdir -p $(BUILD_DIR)
-	@echo "コンパイル中: $<"
+	@echo "libコンパイル中: $<"
 	$(CC) $(CFLAGS) -c $< -o $@
 
 #
 install:
+	@echo "インストール中..."
 	mkdir -p $(INST_DIR)
 	cp $(TARGET) $(INST_DIR)
 
 #
 uninstall:
+	@echo "アンインストール中..."
 	rm -rf $(INST_DIR)/$(PROJECT_NAME)$(EXEC_EXT)
 
 #
