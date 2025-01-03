@@ -4,8 +4,8 @@
  * @version 
  */
 #include <geanyplugin.h>
-//#include <glib.h>
-#include <stdio.h>
+#include <glib.h>
+
 
 #include <SciLexer.h>
 
@@ -121,6 +121,32 @@ return TRUE;
 
 
 
+
+/**
+ * @brief ctags_snippet_get_base_path
+ * @return void
+ */
+static gchar *ctags_snippet_get_base_path(void)
+{
+    gchar *ret;
+    GeanyProject *prj = geany_data->app->project;
+    gchar *project_dir_utf8;
+
+    if (!prj)
+	return NULL;
+
+    if (g_path_is_absolute(prj->base_path))
+	    return g_strdup(prj->base_path);
+
+    project_dir_utf8 = g_path_get_dirname(prj->file_name);
+    
+    ret = g_build_filename(project_dir_utf8, prj->base_path, NULL);
+    
+    g_free(project_dir_utf8);
+
+    return ret;
+}
+
 /**
  * @brief ctags_snippet_get_tags_filename
  * @return *gchar
@@ -163,7 +189,7 @@ static gboolean ctags_snippet_on_read_tagfile(
     }
 
     FILE *fp;
-    fp = fopen(ctags_file_path, "r");
+    fp = g_fopen(ctags_file_path, 'r');
 
     if (fp == NULL) {
 	dialogs_show_msgbox(
@@ -174,9 +200,7 @@ static gboolean ctags_snippet_on_read_tagfile(
     }
 
     GVariantBuilder *builder = g_variant_builder_new(G_VARIANT_TYPE_ARRAY);
-    gchar buffer[512];
-    gchar *row_string;
-    gchar **splited;
+    gchar *buffer[512];
     
     while (fgets(buffer, sizeof(buffer), fp) != NULL) {
 	row_string = g_strdup(buffer);
@@ -189,13 +213,13 @@ static gboolean ctags_snippet_on_read_tagfile(
 	g_strfreev(splited);
     }    
     
-    fclose(fp);
+    g_fclose(fp);
 
     g_free(buffer);
     g_free(ctags_file_path);
 
     snippet_dict = g_variant_dict_new(
-	g_variant_builder_end(builder)
+	g_variant_builder_end(builder);
     );
     
     msgwin_switch_tab(MSG_MESSAGE, TRUE);
