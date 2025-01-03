@@ -148,7 +148,7 @@ static gboolean ctags_snippet_on_read_tagfile(
     GtkMenuItem *menuitem,
     gpointer user_data
 ) {
-    g_variant_dict_unref(snippet_dict);
+    //g_variant_dict_unref(snippet_dict);
 
     gchar *ctags_file_path;
 
@@ -173,30 +173,43 @@ static gboolean ctags_snippet_on_read_tagfile(
 	return FALSE;
     }
 
-    GVariantBuilder *builder = g_variant_builder_new(G_VARIANT_TYPE_ARRAY);
+//    GVariantBuilder *builder = g_variant_builder_new(G_VARIANT_TYPE_ARRAY);
     gchar buffer[512];
     gchar *row_string;
     gchar **splited;
-    
+    gchar *substr;
+
     while (fgets(buffer, sizeof(buffer), fp) != NULL) {
-	row_string = g_strdup(buffer);
-	
-	splited = g_strsplit(row_string, "\t", 3);
-	
-	g_variant_builder_add(builder, "s", splited[0]);
-	
-	g_free(row_string);
-	g_strfreev(splited);
+        row_string = g_strdup(buffer);
+        
+        splited = g_strsplit(row_string, "\t", 3);
+        
+        substr = g_strndup(splited[0], 6);
+
+        if (
+            g_strcmp0(substr, "!_TAG_") != 0 &&
+            g_strcmp0(substr, "__anon") != 0
+       ) {
+            
+            
+            msgwin_msg_add(COLOR_RED, -1, NULL, "%s", splited[0]);
+        
+
+    //	    g_variant_builder_add(builder, "s", splited[0]);
+        }
     }    
     
     fclose(fp);
+    
+    g_free(substr);
+	//g_free(row_string);
+	//g_strfreev(splited);
+    //g_free(buffer);
+    //g_free(ctags_file_path);
 
-    g_free(buffer);
-    g_free(ctags_file_path);
-
-    snippet_dict = g_variant_dict_new(
-	g_variant_builder_end(builder)
-    );
+//    snippet_dict = g_variant_dict_new(
+//	g_variant_builder_end(builder)
+//    );
     
     msgwin_switch_tab(MSG_MESSAGE, TRUE);
     msgwin_msg_add(COLOR_BLUE, -1, NULL, "Ctags Snippet loaded");
@@ -253,7 +266,7 @@ static void ctags_snippet_cleanup(
     GeanyPlugin *plugin,
     gpointer pdata
 ){
-    g_variant_dict_unref(snippet_dict);
+    //g_variant_dict_unref(snippet_dict);
 
     GtkWidget *main_menu_item = (GtkWidget *) pdata;
  

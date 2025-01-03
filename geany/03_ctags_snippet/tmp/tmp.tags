@@ -1,0 +1,38 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	number	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/user/document/src/gcc/geany/03_ctags_snippet/tmp/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+completion	./xmlsnippets.c	35;"	member	struct:Info::__anon9f66cf9a0108	typeref:typename:const gchar *	file:
+completion	./xmlsnippets.h	39;"	member	struct:CompletionInfo	typeref:typename:gchar *
+CompletionInfo	./xmlsnippets.h	37;"	struct
+CompletionInfo	./xmlsnippets.h	40;"	typedef	typeref:struct:CompletionInfo
+editor_notify_cb	./plugin.c	5;"	function	typeref:typename:gboolean	file:	signature:(GObject * object,GeanyEditor * editor,SCNotification * nt,gpointer data)
+geany_load_module	./plugin.c	95;"	function	typeref:typename:G_MODULE_EXPORT void	signature:(GeanyPlugin * plugin)
+get_completion	./xmlsnippets.c	127;"	function	typeref:typename:gboolean	signature:(GeanyEditor * editor,const gchar * sel,const gint size,CompletionInfo * c,InputInfo * i)
+get_completion	./xmlsnippets.h	42;"	prototype	typeref:typename:gboolean	signature:(GeanyEditor * editor,const gchar * sel,const gint size,CompletionInfo * c,InputInfo * i)
+Info	./xmlsnippets.c	31;"	struct	file:
+Info	./xmlsnippets.c	42;"	typedef	typeref:struct:Info	file:
+input	./xmlsnippets.c	41;"	member	struct:Info	typeref:struct:Info::__anon9f66cf9a0208	file:
+InputInfo	./xmlsnippets.h	32;"	struct
+InputInfo	./xmlsnippets.h	35;"	typedef	typeref:struct:InputInfo
+item_activate_cb	./plugin.c	56;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
+merge_attributes	./xmlsnippets.c	58;"	function	typeref:typename:gchar *	file:	signature:(const gchar * sel,gint size,const Info * info)
+py_snppet_callbacks	./plugin.c	81;"	variable	typeref:typename:PluginCallback[]
+py_snppet_cleanup	./plugin.c	87;"	function	typeref:typename:void	file:	signature:(GeanyPlugin * plugin,gpointer pdata)
+py_snppet_init	./plugin.c	61;"	function	typeref:typename:gboolean	file:	signature:(GeanyPlugin * plugin,gpointer pdata)
+skip_xml_tag_name	./xmlsnippets.c	45;"	function	typeref:typename:const gchar *	file:	signature:(const gchar * start)
+snippet	./xmlsnippets.c	37;"	member	struct:Info	typeref:struct:Info::__anon9f66cf9a0108	file:
+tag_name_end	./xmlsnippets.c	40;"	member	struct:Info::__anon9f66cf9a0208	typeref:typename:const gchar *	file:
+tag_name_start	./xmlsnippets.c	36;"	member	struct:Info::__anon9f66cf9a0108	typeref:typename:const gchar *	file:
+tag_start	./xmlsnippets.h	34;"	member	struct:InputInfo	typeref:typename:gint
+XMLSNIPPETS_PLUGIN_H	./plugin.h	24;"	macro
+XMLSNIPPETS_XMLSNIPPETS_H	./xmlsnippets.h	23;"	macro
+__anon9f66cf9a0108	./xmlsnippets.c	34;"	struct	struct:Info	file:
+__anon9f66cf9a0208	./xmlsnippets.c	39;"	struct	struct:Info	file:
