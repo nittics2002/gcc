@@ -4,10 +4,14 @@
  * @version 
  */
 #include <geanyplugin.h>
-//#include <glib.h>
 #include <stdio.h>
 
 #include <SciLexer.h>
+
+/**
+ * @const gint8 CTAGS_SNIPPET_DICT_INI_LEN
+ */
+const gint8 CTAGS_SNIPPET_DICT_INI_LEN = 100;
 
 /**
  * @var *gchar geany_plugin
@@ -20,9 +24,14 @@ static GeanyPlugin *geany_plugin = NULL;
 static GeanyData *geany_data = NULL;
 
 /**
- * @var *GVariantDict snippet_dict
+ * @var **gchar ctags_snippet_dict
  */
-GVariantDict *snippet_dict;
+gchar **ctags_snippet_dict;
+
+/**
+ * @var gint ctags_snippet_dict_count
+ */
+gint ctags_snippet_dict_count = 1;
 
 
 
@@ -148,13 +157,11 @@ static gboolean ctags_snippet_on_read_tagfile(
     GtkMenuItem *menuitem,
     gpointer user_data
 ) {
-    //g_variant_dict_unref(snippet_dict);
+    gchar *tags_file_path;
 
-    gchar *ctags_file_path;
+    tags_file_path = ctags_snippet_get_tags_filename();
 
-    ctags_file_path = ctags_snippet_get_tags_filename();
-
-    if (! g_file_test(ctags_file_path, G_FILE_TEST_EXISTS)) {
+    if (! g_file_test(tags_file_path, G_FILE_TEST_EXISTS)) {
 	dialogs_show_msgbox(
 	    GTK_MESSAGE_ERROR,
 	    "You need to create a ctags database with Geanyctags"
@@ -163,7 +170,7 @@ static gboolean ctags_snippet_on_read_tagfile(
     }
 
     FILE *fp;
-    fp = fopen(ctags_file_path, "r");
+    fp = fopen(tags_file_path, "r");
 
     if (fp == NULL) {
 	dialogs_show_msgbox(
@@ -173,50 +180,98 @@ static gboolean ctags_snippet_on_read_tagfile(
 	return FALSE;
     }
 
-//    GVariantBuilder *builder = g_variant_builder_new(G_VARIANT_TYPE_ARRAY);
     gchar buffer[512];
     gchar *row_string;
     gchar **splited;
-    gchar *substr;
+    gchar *tag_name;
+    gchar *prev_tag_name = NULL;
+    gchar count = 0;
 
     while (fgets(buffer, sizeof(buffer), fp) != NULL) {
         row_string = g_strdup(buffer);
         
         splited = g_strsplit(row_string, "\t", 3);
         
-        substr = g_strndup(splited[0], 6);
+        tag_name = g_strndup(splited[0], 6);
 
         if (
-            g_strcmp0(substr, "!_TAG_") != 0 &&
-            g_strcmp0(substr, "__anon") != 0
+            g_strcmp0(tag_name, "!_TAG_") != 0 &&
+            g_strcmp0(tag_name, "__anon") != 0 &&
+	    g_strcmp0(tag_name, prev_tag_name) != 0
        ) {
-            
-            
-            msgwin_msg_add(COLOR_RED, -1, NULL, "%s", splited[0]);
-        
+//            if (count % CTAGS_SNIPPET_DICT_INI_LEN == 0 &&
+//                    count > 0
+//               ){
+//                ctags_snippet_dict = (gchar**)realloc(
+//                        *ctags_snippet_dict,
+//	CTAGS_SNIPPET_DICT_INI_LEN * ctags_snippet_dict_count * sizeof(gchar *)
+//    );
+//            
+//            ctags_snippet_dict_count++;
+//            }
 
-    //	    g_variant_builder_add(builder, "s", splited[0]);
+	        //ctags_snippet_dict[count] = g_strdup(tag_name);
+            
+            msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",tag_name); 
+            
+//            msgwin_msg_add(COLOR_RED, -1, NULL, "%d=%s", 
+//                    ctags_snippet_dict_count,
+//                    ctags_snippet_dict[count]
+//                    );
+        
+            count++;
         }
+
+	prev_tag_name = g_strdup(buffer);
     }    
     
     fclose(fp);
-    
-    g_free(substr);
-	//g_free(row_string);
-	//g_strfreev(splited);
-    //g_free(buffer);
-    //g_free(ctags_file_path);
+    g_free(prev_tag_name);
+    g_free(tag_name);
+    g_free(row_string);
+    g_strfreev(splited);
+    g_free(row_string);
+    g_free(buffer);
+    g_free(tags_file_path);
 
-//    snippet_dict = g_variant_dict_new(
-//	g_variant_builder_end(builder)
-//    );
-    
     msgwin_switch_tab(MSG_MESSAGE, TRUE);
     msgwin_msg_add(COLOR_BLUE, -1, NULL, "Ctags Snippet loaded");
 
     return TRUE;
 }
+
+/**
+ * @brief ctags_snippet_add_menu
+ * @return void
+ */
+static void ctags_snippet_add_menu()
+{
+    GtkWidget *main_menu_item;
+    main_menu_item = gtk_menu_item_new_with_mnemonic(
+        "Ctags Snippet read tags"
+    );
+    
+    gtk_widget_show(main_menu_item);
+
+    gtk_container_add(
+	GTK_CONTAINER(geany_data->main_widgets->project_menu),
+	main_menu_item
+    );
+            
+    g_signal_connect(
+	main_menu_item,
+	"activate",
+	G_CALLBACK(ctags_snippet_on_read_tagfile),
+	NULL
+    );
  
+    geany_plugin_set_data(geany_plugin, main_menu_item, NULL);
+
+    msgwin_switch_tab(MSG_MESSAGE, TRUE);
+    msgwin_msg_add(COLOR_BLUE, -1, NULL, "Activate Ctags Snippet");
+
+}
+
 /**
  * @brief ctags_snippet_init
  * @param GeanyPlugin *plugin
@@ -228,32 +283,32 @@ static gboolean ctags_snippet_init(
     gpointer pdata
 ){
     geany_plugin = plugin;
-
     geany_data = plugin->geany_data;
 
-    GtkWidget *main_menu_item;
-    main_menu_item = gtk_menu_item_new_with_mnemonic("Ctags read");
-    
-    gtk_widget_show(main_menu_item);
-
-    gtk_container_add(
-	GTK_CONTAINER(plugin->geany_data->main_widgets->tools_menu),
-	main_menu_item
+    ctags_snippet_dict = (char **)malloc(
+	CTAGS_SNIPPET_DICT_INI_LEN * ctags_snippet_dict_count * sizeof(gchar *)
     );
-            
-    g_signal_connect(
-	main_menu_item,
-	"activate",
-	G_CALLBACK(ctags_snippet_on_read_tagfile),
-	NULL
-    );
- 
-    geany_plugin_set_data(plugin, main_menu_item, NULL);
 
-    msgwin_switch_tab(MSG_MESSAGE, TRUE);
-    msgwin_msg_add(COLOR_BLUE, -1, NULL, "Activate Ctags Snippet");
+    ctags_snippet_dict_count++;
+
+    if (ctags_snippet_dict == NULL) {
+	msgwin_switch_tab(MSG_MESSAGE, TRUE);
+	msgwin_msg_add(COLOR_RED, -1, NULL, "Faild to allocate memory");
+    return FALSE;
+    }
+
+    ctags_snippet_add_menu();
     
     return TRUE;
+}
+
+/**
+ * @brief ctags_snippet_add_menu
+ * @return void
+ */
+static void ctags_snippet_free_mem()
+{
+    free(ctags_snippet_dict);
 }
 
 /**
@@ -266,7 +321,7 @@ static void ctags_snippet_cleanup(
     GeanyPlugin *plugin,
     gpointer pdata
 ){
-    //g_variant_dict_unref(snippet_dict);
+    ctags_snippet_free_mem();
 
     GtkWidget *main_menu_item = (GtkWidget *) pdata;
  
