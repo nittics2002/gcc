@@ -183,28 +183,21 @@ static gboolean ctags_snippet_on_read_tagfile(
     gchar buffer[512];
     gchar *row_string;
     gchar **splited;
-    gchar *tag_name6;
-    gchar *prev_tag_name;
+    gchar *tag_name;
+    gchar *prev_tag_name = NULL;
     gchar count = 0;
-
-
-
-
-msgwin_msg_add(COLOR_BLUE, -1, NULL, "!!!!!!!!!!!!!!!!!!!!!!"); 
-
-    
 
     while (fgets(buffer, sizeof(buffer), fp) != NULL) {
         row_string = g_strdup(buffer);
         
         splited = g_strsplit(row_string, "\t", 3);
         
-        tag_name6 = g_strndup(splited[0], 6);
+        tag_name = g_strndup(splited[0], 6);
 
         if (
-            g_strcmp0(tag_name6, "!_TAG_") != 0 &&
-            g_strcmp0(tag_name6, "__anon") != 0 &&
-	    g_strcmp0(splited[0], prev_tag_name) != 0
+            g_strcmp0(tag_name, "!_TAG_") != 0 &&
+            g_strcmp0(tag_name, "__anon") != 0 &&
+	    g_strcmp0(tag_name, prev_tag_name) != 0
        ) {
 //            if (count % CTAGS_SNIPPET_DICT_INI_LEN == 0 &&
 //                    count > 0
@@ -217,9 +210,9 @@ msgwin_msg_add(COLOR_BLUE, -1, NULL, "!!!!!!!!!!!!!!!!!!!!!!");
 //            ctags_snippet_dict_count++;
 //            }
 
-	        //ctags_snippet_dict[count] = g_strdup(splited[0]);
+	        //ctags_snippet_dict[count] = g_strdup(tag_name);
             
-            msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",splited[0]); 
+            msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",tag_name); 
             
 //            msgwin_msg_add(COLOR_RED, -1, NULL, "%d=%s", 
 //                    ctags_snippet_dict_count,
@@ -229,19 +222,20 @@ msgwin_msg_add(COLOR_BLUE, -1, NULL, "!!!!!!!!!!!!!!!!!!!!!!");
             count++;
         }
 
-	prev_tag_name = g_strdup(splited[0]);
+	prev_tag_name = g_strdup(buffer);
     }    
     
     fclose(fp);
     g_free(prev_tag_name);
-    g_free(tag_name6);
+    g_free(tag_name);
+    g_free(row_string);
     g_strfreev(splited);
     g_free(row_string);
+    g_free(buffer);
     g_free(tags_file_path);
 
     msgwin_switch_tab(MSG_MESSAGE, TRUE);
     msgwin_msg_add(COLOR_BLUE, -1, NULL, "Ctags Snippet loaded");
-
 
     return TRUE;
 }
@@ -314,8 +308,7 @@ static gboolean ctags_snippet_init(
  */
 static void ctags_snippet_free_mem()
 {
-    //g_free(ctags_snippet_dict_count);
-    g_free(ctags_snippet_dict);
+    free(ctags_snippet_dict);
 }
 
 /**
