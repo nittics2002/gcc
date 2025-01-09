@@ -9,9 +9,9 @@
 #include <SciLexer.h>
 
 /**
- * @const gint8 DICT_INI_LEN
+ * @const gint8 CTAGS_SNIPPET_DICT_INI_LEN
  */
-const gint8 DICT_INI_LEN = 2;
+const gint8 CTAGS_SNIPPET_DICT_INI_LEN = 2;
 
 /**
  * @var *gchar geany_plugin
@@ -24,14 +24,14 @@ static GeanyPlugin *geany_plugin = NULL;
 static GeanyData *geany_data = NULL;
 
 /**
- * @var **gchar snippet_dict
+ * @var **gchar ctags_snippet_dict
  */
-static gchar **snippet_dict;
+static gchar **ctags_snippet_dict;
 
 /**
- * @var gint dict_count
+ * @var gint ctags_snippet_dict_count
  */
-static gint dict_count = 1;
+static gint ctags_snippet_dict_count = 1;
 
 
 
@@ -131,10 +131,10 @@ return TRUE;
 
 
 /**
- * @brief get_tags_filename
+ * @brief ctags_snippet_get_tags_filename
  * @return *gchar
  */
-static gchar *get_tags_filename(void)
+static gchar *ctags_snippet_get_tags_filename(void)
 {
     gchar *ret = NULL;
 
@@ -148,18 +148,18 @@ static gchar *get_tags_filename(void)
 }
 
 /**
- * @brief on_read_tagfile
+ * @brief ctags_snippet_on_read_tagfile
  * @param GtkMenuItem *menuitem
  * @param gpointer user_data
  * @return gboolean
  */
-static gboolean on_read_tagfile(
+static gboolean ctags_snippet_on_read_tagfile(
     GtkMenuItem *menuitem,
     gpointer user_data
 ) {
     gchar *tags_file_path;
 
-    tags_file_path = get_tags_filename();
+    tags_file_path = ctags_snippet_get_tags_filename();
 
     if (! g_file_test(tags_file_path, G_FILE_TEST_EXISTS)) {
 	dialogs_show_msgbox(
@@ -200,29 +200,29 @@ static gboolean on_read_tagfile(
 	    g_strcmp0(splited[0], prev_tag_name) != 0
        ) {
             if (
-		count % DICT_INI_LEN == 0 &&
+		count % CTAGS_SNIPPET_DICT_INI_LEN == 0 &&
 		count > 0
 	   ){
-                snippet_dict = (gchar**)realloc(
-		    snippet_dict,
-		    DICT_INI_LEN *
-			dict_count *
+                ctags_snippet_dict = (gchar**)realloc(
+		    ctags_snippet_dict,
+		    CTAGS_SNIPPET_DICT_INI_LEN *
+			ctags_snippet_dict_count *
                         sizeof(gchar *)
 		);
             
-                if (snippet_dict == NULL) {
+                if (ctags_snippet_dict == NULL) {
                     msgwin_switch_tab(MSG_MESSAGE, TRUE);
                     msgwin_msg_add(COLOR_RED, -1, NULL, "Faild to reallocate memory");
 		    return FALSE;
                 }
 
-		dict_count++;
+		ctags_snippet_dict_count++;
             }
 
-	    snippet_dict[count] = g_strdup(splited[0]);
+	    ctags_snippet_dict[count] = g_strdup(splited[0]);
             
 //msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",splited[0]); 
-msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",snippet_dict[count]); 
+msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",ctags_snippet_dict[count]); 
             
             count++;
         }
@@ -245,10 +245,10 @@ msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",snippet_dict[count]);
 }
 
 /**
- * @brief add_menu
+ * @brief ctags_snippet_add_menu
  * @return void
  */
-static void add_menu()
+static void ctags_snippet_add_menu()
 {
     GtkWidget *main_menu_item;
     main_menu_item = gtk_menu_item_new_with_mnemonic(
@@ -265,7 +265,7 @@ static void add_menu()
     g_signal_connect(
 	main_menu_item,
 	"activate",
-	G_CALLBACK(on_read_tagfile),
+	G_CALLBACK(ctags_snippet_on_read_tagfile),
 	NULL
     );
  
@@ -289,33 +289,33 @@ static gboolean ctags_snippet_init(
     geany_plugin = plugin;
     geany_data = plugin->geany_data;
 
-    snippet_dict = (gchar **)malloc(
-	    DICT_INI_LEN *
-        dict_count *
+    ctags_snippet_dict = (gchar **)malloc(
+	    CTAGS_SNIPPET_DICT_INI_LEN *
+        ctags_snippet_dict_count *
         sizeof(gchar *)
     );
 
-    dict_count++;
+    ctags_snippet_dict_count++;
 
-    if (snippet_dict == NULL) {
+    if (ctags_snippet_dict == NULL) {
 	msgwin_switch_tab(MSG_MESSAGE, TRUE);
 	msgwin_msg_add(COLOR_RED, -1, NULL, "Faild to allocate memory");
     return FALSE;
     }
 
-    add_menu();
+    ctags_snippet_add_menu();
     
     return TRUE;
 }
 
 /**
- * @brief free_memmory
+ * @brief ctags_snippet_add_menu
  * @return void
  */
-static void free_memmory()
+static void ctags_snippet_free_mem()
 {
-    //g_free(dict_count);
-    g_free(snippet_dict);
+    //g_free(ctags_snippet_dict_count);
+    g_free(ctags_snippet_dict);
 }
 
 /**
@@ -328,7 +328,7 @@ static void ctags_snippet_cleanup(
     GeanyPlugin *plugin,
     gpointer pdata
 ){
-    free_memmory();
+    ctags_snippet_free_mem();
 
     GtkWidget *main_menu_item = (GtkWidget *) pdata;
  
