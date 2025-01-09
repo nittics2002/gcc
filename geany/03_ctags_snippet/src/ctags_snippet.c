@@ -11,7 +11,7 @@
 /**
  * @const gint8 CTAGS_SNIPPET_DICT_INI_LEN
  */
-const gint8 CTAGS_SNIPPET_DICT_INI_LEN = 100;
+const gint8 CTAGS_SNIPPET_DICT_INI_LEN = 2;
 
 /**
  * @var *gchar geany_plugin
@@ -187,13 +187,6 @@ static gboolean ctags_snippet_on_read_tagfile(
     gchar *prev_tag_name;
     gchar count = 0;
 
-
-
-
-msgwin_msg_add(COLOR_BLUE, -1, NULL, "!!!!!!!!!!!!!!!!!!!!!!"); 
-
-    
-
     while (fgets(buffer, sizeof(buffer), fp) != NULL) {
         row_string = g_strdup(buffer);
         
@@ -206,20 +199,30 @@ msgwin_msg_add(COLOR_BLUE, -1, NULL, "!!!!!!!!!!!!!!!!!!!!!!");
             g_strcmp0(tag_name6, "__anon") != 0 &&
 	    g_strcmp0(splited[0], prev_tag_name) != 0
        ) {
-//            if (count % CTAGS_SNIPPET_DICT_INI_LEN == 0 &&
-//                    count > 0
-//               ){
-//                ctags_snippet_dict = (gchar**)realloc(
-//                        *ctags_snippet_dict,
-//	CTAGS_SNIPPET_DICT_INI_LEN * ctags_snippet_dict_count * sizeof(gchar *)
-//    );
-//            
-//            ctags_snippet_dict_count++;
-//            }
-
-	        //ctags_snippet_dict[count] = g_strdup(splited[0]);
+            if (
+		count % CTAGS_SNIPPET_DICT_INI_LEN == 0 &&
+		count > 0
+	   ){
+                ctags_snippet_dict = (gchar**)realloc(
+		    ctags_snippet_dict,
+		    CTAGS_SNIPPET_DICT_INI_LEN *
+			ctags_snippet_dict_count *
+                        sizeof(gchar *)
+		);
             
-            msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",splited[0]); 
+                if (ctags_snippet_dict == NULL) {
+                    msgwin_switch_tab(MSG_MESSAGE, TRUE);
+                    msgwin_msg_add(COLOR_RED, -1, NULL, "Faild to reallocate memory");
+		    return FALSE;
+                }
+
+		ctags_snippet_dict_count++;
+            }
+
+	    ctags_snippet_dict[count] = g_strdup(splited[0]);
+            
+//msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",splited[0]); 
+msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",ctags_snippet_dict[count]); 
             
 //            msgwin_msg_add(COLOR_RED, -1, NULL, "%d=%s", 
 //                    ctags_snippet_dict_count,
@@ -291,8 +294,10 @@ static gboolean ctags_snippet_init(
     geany_plugin = plugin;
     geany_data = plugin->geany_data;
 
-    ctags_snippet_dict = (char **)malloc(
-	CTAGS_SNIPPET_DICT_INI_LEN * ctags_snippet_dict_count * sizeof(gchar *)
+    ctags_snippet_dict = (gchar **)malloc(
+	    CTAGS_SNIPPET_DICT_INI_LEN *
+        ctags_snippet_dict_count *
+        sizeof(gchar *)
     );
 
     ctags_snippet_dict_count++;
