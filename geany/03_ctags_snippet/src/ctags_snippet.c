@@ -9,34 +9,36 @@
 #include <SciLexer.h>
 
 /**
- * @const gint8 DICT_INI_LEN
+ * @brief 辞書メモリ初期サイズ
  */
 const gint8 DICT_INI_LEN = 2;
 
 /**
- * @var *gchar geany_plugin
+ * @brief geany plugin
  */
 static GeanyPlugin *geany_plugin = NULL;
 
 /**
- * @var *gchar geany_data
+ * @brief geany data
  */
 static GeanyData *geany_data = NULL;
 
 /**
- * @var **gchar snippet_dict
+ * @brief snippet辞書
  */
 static gchar **snippet_dict;
 
 /**
- * @var gint dict_count
+ * @brief 辞書登録数
  */
 static gint dict_count = 1;
 
 /**
- * @var gchar[] snippet_dict
+ * @brief 辞書インデックス
+ *      idx=1:A, 2:B, ...,26:Z,0:その他
+ *      val=辞書idx
  */
-static gchar dict_index[27];;
+static gchar dict_index[27];
 
 
 
@@ -209,6 +211,7 @@ static gboolean on_read_tagfile(
             g_strcmp0(tag_name6, "__anon") != 0 &&
             g_strcmp0(splited[0], prev_tag_name) != 0
        ) {
+            //辞書サイズ再確保
             if (
             count % DICT_INI_LEN == 0 &&
             count > 0
@@ -228,26 +231,21 @@ static gboolean on_read_tagfile(
 
 		dict_count++;
 	    }
-            
+            //先頭文字を抽出し大文字小文字無視でindex
             tag_name1 = g_strndup(splited[0], 1);
             tag_name1_c = g_ascii_toupper(tag_name1[0]);
 
+            //先頭文字が変わった辞書indexを記憶
             if (prev_tag_name1_c != tag_name1_c) {
                 idx = tag_name1_c - 64;
                 idx = idx < 1 || idx > 26? 0:idx;
 
                 dict_index[idx] = count; 
-
-
-
-msgwin_msg_add(COLOR_BLUE, -1, NULL, "%d=%d",dict_index[idx],idx); 
-
-
             }
 
-	    snippet_dict[count] = g_strdup(splited[0]);
+            snippet_dict[count] = g_strdup(splited[0]);
 	    
-	    prev_tag_name1_c = tag_name1_c;
+            prev_tag_name1_c = tag_name1_c;
             
 //msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",snippet_dict[count]); 
             
@@ -258,7 +256,6 @@ msgwin_msg_add(COLOR_BLUE, -1, NULL, "%d=%d",dict_index[idx],idx);
     }    
     
     fclose(fp);
-    //g_free(prev_tag_name1);
     g_free(prev_tag_name);
     g_free(tag_name1);
     g_free(tag_name6);
@@ -268,7 +265,6 @@ msgwin_msg_add(COLOR_BLUE, -1, NULL, "%d=%d",dict_index[idx],idx);
 
     msgwin_switch_tab(MSG_MESSAGE, TRUE);
     msgwin_msg_add(COLOR_BLUE, -1, NULL, "Ctags Snippet loaded");
-
 
     return TRUE;
 }
