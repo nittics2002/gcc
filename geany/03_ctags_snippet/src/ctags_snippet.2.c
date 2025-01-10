@@ -142,7 +142,7 @@ static gboolean ctags_snippet_editor_notify(
 	}
 
 	//
-	msgwin_status_add("called ctags_snippet_editor_notify");
+	msgwin_status_add("called ctags_snippet_editor_notify\n");
 
 	
     }
@@ -244,8 +244,8 @@ static gboolean on_read_tagfile(
 		);
 		
 		if (snippet_dict == NULL) {
-		    msgwin_switch_tab(MSG_STATUS, TRUE);
-		    msgwin_status_add("Faild to reallocate memory");
+		    msgwin_switch_tab(MSG_MESSAGE, TRUE);
+		    msgwin_msg_add(COLOR_RED, -1, NULL, "Faild to reallocate memory");
 		    return FALSE;
 		}
 
@@ -267,7 +267,7 @@ static gboolean on_read_tagfile(
 	    
             prev_tag_name1_c = tag_name1_c;
             
-//msgwin_status_add("%s",snippet_dict[count]); 
+//msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",snippet_dict[count]); 
             
             count++;
         }
@@ -283,8 +283,8 @@ static gboolean on_read_tagfile(
     g_free(row_string);
     g_free(tags_file_path);
 
-    msgwin_switch_tab(MSG_STATUS, TRUE);
-    msgwin_status_add("Ctags Snippet loaded");
+    msgwin_switch_tab(MSG_MESSAGE, TRUE);
+    msgwin_msg_add(COLOR_BLUE, -1, NULL, "Ctags Snippet loaded");
 
     return TRUE;
 }
@@ -416,8 +416,8 @@ static void add_menu()
 	menu_item_view_snippets
     );
 
-    msgwin_switch_tab(MSG_STATUS, TRUE);
-    msgwin_status_add("Activate Ctags Snippet");
+    msgwin_switch_tab(MSG_MESSAGE, TRUE);
+    msgwin_msg_add(COLOR_BLUE, -1, NULL, "Activate Ctags Snippet");
 
 }
 
@@ -444,8 +444,8 @@ static gboolean ctags_snippet_init(
     dict_count++;
 
     if (snippet_dict == NULL) {
-        msgwin_switch_tab(MSG_STATUS, TRUE);
-        msgwin_status_add("Faild to allocate memory");
+        msgwin_switch_tab(MSG_MESSAGE, TRUE);
+        msgwin_msg_add(COLOR_RED, -1, NULL, "Faild to allocate memory");
         return FALSE;
     }
 
@@ -480,8 +480,8 @@ static void ctags_snippet_cleanup(
     gtk_widget_destroy(menu_item_read_tags);
     gtk_widget_destroy(menu_item_view_snippets);
 
-    msgwin_switch_tab(MSG_STATUS, TRUE);
-    msgwin_status_add("Deactive Ctags Snippet");
+    msgwin_switch_tab(MSG_MESSAGE, TRUE);
+    msgwin_msg_add(COLOR_BLUE, -1, NULL, "Deactive Ctags Snippet");
 }
 
 /**
