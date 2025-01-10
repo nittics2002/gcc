@@ -189,9 +189,9 @@ static gboolean on_read_tagfile(
     gchar **splited;
     gchar *tag_name6;
     gchar *tag_name1;
-    gchar tag_name1_c;
+    gchar tag_name1_t;
     gchar *prev_tag_name;
-    gchar prev_tag_name1_c;
+    gchar *prev_tag_name1;
     gchar count = 0;
     gchar idx;
 
@@ -230,24 +230,25 @@ static gboolean on_read_tagfile(
 	    }
             
             tag_name1 = g_strndup(splited[0], 1);
-            tag_name1_c = g_ascii_toupper(tag_name1[0]);
+            tag_name1_t = g_ascii_toupper(tag_name1[0]);
+            //tag_name1 = g_strdup(tag_name1_t[0]);
 
-            if (prev_tag_name1_c != tag_name1_c) {
-                idx = tag_name1_c - 64;
-                idx = idx < 1 || idx > 26? 0:idx;
-
-                dict_index[idx] = count; 
-
-
-
-msgwin_msg_add(COLOR_BLUE, -1, NULL, "%d=%d",dict_index[idx],idx); 
+//            if (!g_strcmp0(prev_tag_name1, tag_name1)) {
+//                idx = tag_name1[0] - 64;
+//                idx = idx < 1 || idx > 26? 0:idx;
+//
+//		dict_index[idx] = count; 
 
 
-            }
+
+msgwin_msg_add(COLOR_BLUE, -1, NULL, "%d",tag_name1_t); 
+
+
+//            }
 
 	    snippet_dict[count] = g_strdup(splited[0]);
 	    
-	    prev_tag_name1_c = tag_name1_c;
+	    prev_tag_name1 = tag_name1;
             
 //msgwin_msg_add(COLOR_BLUE, -1, NULL, "%s",snippet_dict[count]); 
             

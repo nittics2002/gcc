@@ -32,6 +32,7 @@ snippet	./xmlsnippets.c	37;"	member	struct:Info	typeref:struct:Info::__anon9f66c
 tag_name_end	./xmlsnippets.c	40;"	member	struct:Info::__anon9f66cf9a0208	typeref:typename:const gchar *	file:
 tag_name_start	./xmlsnippets.c	36;"	member	struct:Info::__anon9f66cf9a0108	typeref:typename:const gchar *	file:
 tag_start	./xmlsnippets.h	34;"	member	struct:InputInfo	typeref:typename:gint
+_tag_start	./xmlsnippets.h	34;"	member	struct:InputInfo	typeref:typename:gint
 XMLSNIPPETS_PLUGIN_H	./plugin.h	24;"	macro
 XMLSNIPPETS_XMLSNIPPETS_H	./xmlsnippets.h	23;"	macro
 __anon9f66cf9a0108	./xmlsnippets.c	34;"	struct	struct:Info	file:
