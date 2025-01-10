@@ -1,0 +1,508 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/user/document/src/gcc/geany/_addon/vimode/src/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+ARROW_MOTIONS	cmd-runner.c	/^#define ARROW_MOTIONS /;"	d	file:
+CONF_ENABLE_VIM	backends/backend-geany.c	/^#define CONF_ENABLE_VIM /;"	d	file:
+CONF_GROUP	backends/backend-geany.c	/^#define CONF_GROUP /;"	d	file:
+CONF_INSERT_FOR_DUMMIES	backends/backend-geany.c	/^#define CONF_INSERT_FOR_DUMMIES /;"	d	file:
+CONF_START_IN_INSERT	backends/backend-geany.c	/^#define CONF_START_IN_INSERT /;"	d	file:
+CharacterPredicate	cmds/motion-word.c	/^typedef gboolean (*CharacterPredicate)(gchar c);$/;"	t	typeref:typename:gboolean (*)(gchar c)	file:
+Cmd	cmd-params.h	/^typedef void (*Cmd)(CmdContext *c, CmdParams *p);$/;"	t	typeref:typename:void (*)(CmdContext * c,CmdParams * p)
+CmdContext	context.h	/^} CmdContext;$/;"	t	typeref:struct:__anon984b7ba00108
+CmdDef	cmd-runner.c	/^} CmdDef;$/;"	t	typeref:struct:__anon897f76510108	file:
+CmdParams	cmd-params.h	/^} CmdParams;$/;"	t	typeref:struct:__anonb5dcd8c00108
+DIFF	sci.h	/^#define DIFF(/;"	d
+EDIT_CMDS	cmd-runner.c	/^#define EDIT_CMDS /;"	d	file:
+ENTER_EX_CMDS	cmd-runner.c	/^#define ENTER_EX_CMDS /;"	d	file:
+ExCmd	excmd-params.h	/^typedef void (*ExCmd)(CmdContext *c, ExCmdParams *p);$/;"	t	typeref:typename:void (*)(CmdContext * c,ExCmdParams * p)
+ExCmdDef	excmd-runner.c	/^} ExCmdDef;$/;"	t	typeref:struct:__anond225dc8e0108	file:
+ExCmdParams	excmd-params.h	/^} ExCmdParams;$/;"	t	typeref:struct:__anonfe833efd0108
+GET_CUR_LINE	sci.h	/^#define GET_CUR_LINE(/;"	d
+GOTO_CONTRACTED_PARENT	cmds/fold.c	/^#define GOTO_CONTRACTED_PARENT	/;"	d	file:
+GOTO_NEAREST_PARENT	cmds/fold.c	/^#define GOTO_NEAREST_PARENT	/;"	d	file:
+GOTO_TOPMOST_PARENT	cmds/fold.c	/^#define GOTO_TOPMOST_PARENT	/;"	d	file:
+INSERT_BUF_LEN	context.h	/^#define INSERT_BUF_LEN /;"	d
+KB_COUNT	backends/backend-geany.c	/^	KB_COUNT$/;"	e	enum:__anoncf7013290103	file:
+KB_ENABLE_VIM	backends/backend-geany.c	/^	KB_ENABLE_VIM,$/;"	e	enum:__anoncf7013290103	file:
+KB_INSERT_FOR_DUMMIES	backends/backend-geany.c	/^	KB_INSERT_FOR_DUMMIES,$/;"	e	enum:__anoncf7013290103	file:
+KeyPress	keypress.h	/^} KeyPress;$/;"	t	typeref:struct:__anon451a11f10108
+MAX_CHAR_SIZE	sci.h	/^#define MAX_CHAR_SIZE /;"	d
+MOVEMENT_CMDS	cmd-runner.c	/^#define MOVEMENT_CMDS /;"	d	file:
+NEXT	sci.h	/^#define NEXT(/;"	d
+NTH	sci.h	/^#define NTH(/;"	d
+OPERATOR_CMDS	cmd-runner.c	/^#define OPERATOR_CMDS /;"	d	file:
+PREV	sci.h	/^#define PREV(/;"	d
+PROMPT_WIDTH	excmd-prompt.c	/^#define PROMPT_WIDTH /;"	d	file:
+SEARCH_CMDS	cmd-runner.c	/^#define SEARCH_CMDS /;"	d	file:
+SET_POS	sci.h	/^#define SET_POS(/;"	d
+SET_POS_NOX	sci.h	/^#define SET_POS_NOX(/;"	d
+SSM	backends/backend-viw.c	/^#define SSM(/;"	d	file:
+SSM	sci.h	/^#define SSM(/;"	d
+ST_AFTER_NUMBER	excmd-runner.c	/^	ST_AFTER_NUMBER,$/;"	e	enum:__anond225dc8e0303	file:
+ST_BEFORE_END	excmd-runner.c	/^	ST_BEFORE_END$/;"	e	enum:__anond225dc8e0303	file:
+ST_START	excmd-runner.c	/^	ST_START,$/;"	e	enum:__anond225dc8e0303	file:
+State	excmd-runner.c	/^} State;$/;"	t	typeref:enum:__anond225dc8e0303	file:
+TEXT_OBJECT_CMDS	cmd-runner.c	/^#define TEXT_OBJECT_CMDS /;"	d	file:
+TK_COLON	excmd-runner.c	/^	TK_COLON,$/;"	e	enum:__anond225dc8e0203	file:
+TK_DOLLAR	excmd-runner.c	/^	TK_DOLLAR,$/;"	e	enum:__anond225dc8e0203	file:
+TK_DOT	excmd-runner.c	/^	TK_DOT,$/;"	e	enum:__anond225dc8e0203	file:
+TK_END	excmd-runner.c	/^	TK_END,$/;"	e	enum:__anond225dc8e0203	file:
+TK_EOL	excmd-runner.c	/^	TK_EOL,$/;"	e	enum:__anond225dc8e0203	file:
+TK_ERROR	excmd-runner.c	/^	TK_ERROR,$/;"	e	enum:__anond225dc8e0203	file:
+TK_MINUS	excmd-runner.c	/^	TK_MINUS,$/;"	e	enum:__anond225dc8e0203	file:
+TK_NUMBER	excmd-runner.c	/^	TK_NUMBER,$/;"	e	enum:__anond225dc8e0203	file:
+TK_PATTERN	excmd-runner.c	/^	TK_PATTERN,$/;"	e	enum:__anond225dc8e0203	file:
+TK_PERCENT	excmd-runner.c	/^	TK_PERCENT,$/;"	e	enum:__anond225dc8e0203	file:
+TK_PLUS	excmd-runner.c	/^	TK_PLUS,$/;"	e	enum:__anond225dc8e0203	file:
+TK_SEMICOLON	excmd-runner.c	/^	TK_SEMICOLON,$/;"	e	enum:__anond225dc8e0203	file:
+TK_STAR	excmd-runner.c	/^	TK_STAR,$/;"	e	enum:__anond225dc8e0203	file:
+TK_VISUAL_END	excmd-runner.c	/^	TK_VISUAL_END,$/;"	e	enum:__anond225dc8e0203	file:
+TK_VISUAL_START	excmd-runner.c	/^	TK_VISUAL_START,$/;"	e	enum:__anond225dc8e0203	file:
+Token	excmd-runner.c	/^} Token;$/;"	t	typeref:struct:__anond225dc8e0408	file:
+TokenType	excmd-runner.c	/^} TokenType;$/;"	t	typeref:enum:__anond225dc8e0203	file:
+VI_IS_COMMAND	vi.h	/^#define VI_IS_COMMAND(/;"	d
+VI_IS_INSERT	vi.h	/^#define VI_IS_INSERT(/;"	d
+VI_IS_VISUAL	vi.h	/^#define VI_IS_VISUAL(/;"	d
+VI_MODE_COMMAND	vi.h	/^	VI_MODE_COMMAND,$/;"	e	enum:__anon7c9f893a0103
+VI_MODE_COMMAND_SINGLE	vi.h	/^	VI_MODE_COMMAND_SINGLE, \/\/performing single command from insert mode using Ctrl+O$/;"	e	enum:__anon7c9f893a0103
+VI_MODE_INSERT	vi.h	/^	VI_MODE_INSERT,$/;"	e	enum:__anon7c9f893a0103
+VI_MODE_REPLACE	vi.h	/^	VI_MODE_REPLACE,$/;"	e	enum:__anon7c9f893a0103
+VI_MODE_VISUAL	vi.h	/^	VI_MODE_VISUAL,$/;"	e	enum:__anon7c9f893a0103
+VI_MODE_VISUAL_BLOCK	vi.h	/^	VI_MODE_VISUAL_BLOCK, \/\/not implemented$/;"	e	enum:__anon7c9f893a0103
+VI_MODE_VISUAL_LINE	vi.h	/^	VI_MODE_VISUAL_LINE,$/;"	e	enum:__anon7c9f893a0103
+ViCallback	vi.h	/^} ViCallback;$/;"	t	typeref:struct:__anon7c9f893a0208
+ViMode	vi.h	/^} ViMode;$/;"	t	typeref:enum:__anon7c9f893a0103
+__CMD_PARAMS_H__	cmd-params.h	/^#define __CMD_PARAMS_H__$/;"	d
+__EXCMD_PARAMS_H__	excmd-params.h	/^#define __EXCMD_PARAMS_H__$/;"	d
+__UNDO_H__	cmds/undo.h	/^#define __UNDO_H__$/;"	d
+__VIMODE_CMDS_CHANGEMODE_H__	cmds/changemode.h	/^#define __VIMODE_CMDS_CHANGEMODE_H__$/;"	d
+__VIMODE_CMDS_EDIT_H__	cmds/edit.h	/^#define __VIMODE_CMDS_EDIT_H__$/;"	d
+__VIMODE_CMDS_EXCMDS_H__	cmds/excmds.h	/^#define __VIMODE_CMDS_EXCMDS_H__$/;"	d
+__VIMODE_CMDS_FOLD_H__	cmds/fold.h	/^#define __VIMODE_CMDS_FOLD_H__$/;"	d
+__VIMODE_CMDS_MOTION_H__	cmds/motion.h	/^#define __VIMODE_CMDS_MOTION_H__$/;"	d
+__VIMODE_CMDS_MOTION_WORD_H__	cmds/motion-word.h	/^#define __VIMODE_CMDS_MOTION_WORD_H__$/;"	d
+__VIMODE_CMDS_SPECIAL_H__	cmds/special.h	/^#define __VIMODE_CMDS_SPECIAL_H__$/;"	d
+__VIMODE_CMDS_TXTOBJS_H__	cmds/txtobjs.h	/^#define __VIMODE_CMDS_TXTOBJS_H__$/;"	d
+__VIMODE_CMD_RUNNER_H__	cmd-runner.h	/^#define __VIMODE_CMD_RUNNER_H__$/;"	d
+__VIMODE_CONTEXT_H__	context.h	/^#define __VIMODE_CONTEXT_H__$/;"	d
+__VIMODE_EXCMDS_H__	excmd-runner.h	/^#define __VIMODE_EXCMDS_H__$/;"	d
+__VIMODE_EXCMD_PROMPT_H__	excmd-prompt.h	/^#define __VIMODE_EXCMD_PROMPT_H__$/;"	d
+__VIMODE_KEYPRESS_H__	keypress.h	/^#define __VIMODE_KEYPRESS_H__$/;"	d
+__VIMODE_SCI_H__	sci.h	/^#define __VIMODE_SCI_H__$/;"	d
+__VIMODE_UTILS_H__	utils.h	/^#define __VIMODE_UTILS_H__$/;"	d
+__VIMODE_VI_H__	vi.h	/^#define __VIMODE_VI_H__$/;"	d
+__anon451a11f10108	keypress.h	/^{$/;"	s
+__anon7c9f89350108	vi.c	/^{$/;"	s	file:
+__anon7c9f893a0103	vi.h	/^typedef enum {$/;"	g
+__anon7c9f893a0208	vi.h	/^{$/;"	s
+__anon897f76510108	cmd-runner.c	/^typedef struct {$/;"	s	file:
+__anon984b7ba00108	context.h	/^{$/;"	s
+__anonb5dcd8c00108	cmd-params.h	/^{$/;"	s
+__anoncf7013290103	backends/backend-geany.c	/^{$/;"	g	file:
+__anoncf7013290208	backends/backend-geany.c	/^{$/;"	s	file:
+__anond225dc8e0108	excmd-runner.c	/^typedef struct {$/;"	s	file:
+__anond225dc8e0203	excmd-runner.c	/^{$/;"	g	file:
+__anond225dc8e0303	excmd-runner.c	/^{$/;"	g	file:
+__anond225dc8e0408	excmd-runner.c	/^{$/;"	s	file:
+__anonfe833efd0108	excmd-params.h	/^{$/;"	s
+_set_current_position	sci.c	/^void _set_current_position(ScintillaObject *sci, gint position, gboolean scroll_to_caret,$/;"	f	typeref:typename:void
+cb	backends/backend-geany.c	/^static ViCallback cb;$/;"	v	typeref:typename:ViCallback	file:
+cb	context.h	/^	ViCallback *cb;$/;"	m	struct:__anon984b7ba00108	typeref:typename:ViCallback *
+clamp_cursor_pos	utils.c	/^void clamp_cursor_pos(ScintillaObject *sci)$/;"	f	typeref:typename:void
+close_prompt	excmd-prompt.c	/^static void close_prompt()$/;"	f	typeref:typename:void	file:
+cmd	cmd-runner.c	/^	Cmd cmd;$/;"	m	struct:__anon897f76510108	typeref:typename:Cmd	file:
+cmd	excmd-runner.c	/^	ExCmd cmd;$/;"	m	struct:__anond225dc8e0108	typeref:typename:ExCmd	file:
+cmd_clear_right	cmds/edit.c	/^void cmd_clear_right(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_close_fold	cmds/fold.c	/^void cmd_close_fold(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_close_fold_all	cmds/fold.c	/^void cmd_close_fold_all(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_close_fold_child	cmds/fold.c	/^void cmd_close_fold_child(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_copy_char_from_above	cmds/edit.c	/^void cmd_copy_char_from_above(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_copy_char_from_below	cmds/edit.c	/^void cmd_copy_char_from_below(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_copy_line	cmds/edit.c	/^void cmd_copy_line(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_del_word_left	cmds/edit.c	/^void cmd_del_word_left(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_delete_char	cmds/edit.c	/^void cmd_delete_char(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_delete_char_back	cmds/edit.c	/^void cmd_delete_char_back(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_delete_char_back_copy	cmds/edit.c	/^void cmd_delete_char_back_copy(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_delete_char_copy	cmds/edit.c	/^void cmd_delete_char_copy(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_delete_line	cmds/edit.c	/^void cmd_delete_line(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_command	cmds/changemode.c	/^void cmd_enter_command(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_command_copy_line_sel	cmds/changemode.c	/^void cmd_enter_command_copy_line_sel(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_command_copy_sel	cmds/changemode.c	/^void cmd_enter_command_copy_sel(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_command_cut_line_sel	cmds/changemode.c	/^void cmd_enter_command_cut_line_sel(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_command_cut_sel	cmds/changemode.c	/^void cmd_enter_command_cut_sel(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_command_single	cmds/changemode.c	/^void cmd_enter_command_single(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_ex	cmds/changemode.c	/^void cmd_enter_ex(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert	cmds/changemode.c	/^void cmd_enter_insert(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_after	cmds/changemode.c	/^void cmd_enter_insert_after(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_clear_right	cmds/changemode.c	/^void cmd_enter_insert_clear_right(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_cut_line	cmds/changemode.c	/^void cmd_enter_insert_cut_line(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_cut_line_sel	cmds/changemode.c	/^void cmd_enter_insert_cut_line_sel(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_cut_sel	cmds/changemode.c	/^void cmd_enter_insert_cut_sel(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_delete_char	cmds/changemode.c	/^void cmd_enter_insert_delete_char(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_line_end	cmds/changemode.c	/^void cmd_enter_insert_line_end(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_line_start	cmds/changemode.c	/^void cmd_enter_insert_line_start(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_line_start_nonempty	cmds/changemode.c	/^void cmd_enter_insert_line_start_nonempty(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_next_line	cmds/changemode.c	/^void cmd_enter_insert_next_line(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_insert_prev_line	cmds/changemode.c	/^void cmd_enter_insert_prev_line(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_replace	cmds/changemode.c	/^void cmd_enter_replace(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_visual	cmds/changemode.c	/^void cmd_enter_visual(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_enter_visual_line	cmds/changemode.c	/^void cmd_enter_visual_line(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_first_char	excmd-prompt.c	/^static gchar cmd_first_char;$/;"	v	typeref:typename:gchar	file:
+cmd_force_exit	cmds/special.c	/^void cmd_force_exit(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_char_repeat	cmds/motion.c	/^void cmd_goto_char_repeat(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_char_repeat_opposite	cmds/motion.c	/^void cmd_goto_char_repeat_opposite(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_column	cmds/motion.c	/^void cmd_goto_column(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_doc_percentage	cmds/motion.c	/^void cmd_goto_doc_percentage(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_down	cmds/motion.c	/^void cmd_goto_down(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_down_nonempty	cmds/motion.c	/^void cmd_goto_down_nonempty(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_down_one_less_nonempty	cmds/motion.c	/^void cmd_goto_down_one_less_nonempty(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_halfpage_down	cmds/motion.c	/^void cmd_goto_halfpage_down(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_halfpage_up	cmds/motion.c	/^void cmd_goto_halfpage_up(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_left	cmds/motion.c	/^void cmd_goto_left(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_line	cmds/motion.c	/^void cmd_goto_line(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_line_end	cmds/motion.c	/^void cmd_goto_line_end(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_line_last	cmds/motion.c	/^void cmd_goto_line_last(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_line_start	cmds/motion.c	/^void cmd_goto_line_start(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_line_start_nonempty	cmds/motion.c	/^void cmd_goto_line_start_nonempty(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_matching_brace	cmds/motion.c	/^void cmd_goto_matching_brace(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_next_char	cmds/motion.c	/^void cmd_goto_next_char(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_next_char_before	cmds/motion.c	/^void cmd_goto_next_char_before(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_next_word	cmds/motion-word.c	/^void cmd_goto_next_word(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_next_word_end	cmds/motion-word.c	/^void cmd_goto_next_word_end(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_next_word_end_space	cmds/motion-word.c	/^void cmd_goto_next_word_end_space(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_next_word_space	cmds/motion-word.c	/^void cmd_goto_next_word_space(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_page_down	cmds/motion.c	/^void cmd_goto_page_down(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_page_up	cmds/motion.c	/^void cmd_goto_page_up(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_prev_char	cmds/motion.c	/^void cmd_goto_prev_char(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_prev_char_before	cmds/motion.c	/^void cmd_goto_prev_char_before(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_previous_word	cmds/motion-word.c	/^void cmd_goto_previous_word(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_previous_word_end	cmds/motion-word.c	/^void cmd_goto_previous_word_end(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_previous_word_end_space	cmds/motion-word.c	/^void cmd_goto_previous_word_end_space(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_previous_word_space	cmds/motion-word.c	/^void cmd_goto_previous_word_space(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_right	cmds/motion.c	/^void cmd_goto_right(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_screen_bottom	cmds/motion.c	/^void cmd_goto_screen_bottom(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_screen_middle	cmds/motion.c	/^void cmd_goto_screen_middle(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_screen_top	cmds/motion.c	/^void cmd_goto_screen_top(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_up	cmds/motion.c	/^void cmd_goto_up(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_goto_up_nonempty	cmds/motion.c	/^void cmd_goto_up_nonempty(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_history	excmd-prompt.c	/^static GPtrArray *cmd_history;$/;"	v	typeref:typename:GPtrArray *	file:
+cmd_indent	cmds/edit.c	/^void cmd_indent(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_indent_ins	cmds/edit.c	/^void cmd_indent_ins(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_indent_sel	cmds/edit.c	/^void cmd_indent_sel(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_join_lines	cmds/edit.c	/^void cmd_join_lines(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_join_lines_sel	cmds/edit.c	/^void cmd_join_lines_sel(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_lower_case	cmds/edit.c	/^void cmd_lower_case(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_mode_cmds	cmd-runner.c	/^CmdDef cmd_mode_cmds[] = {$/;"	v	typeref:typename:CmdDef[]
+cmd_newline	cmds/edit.c	/^void cmd_newline(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_nop	cmds/special.c	/^void cmd_nop(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_open_fold	cmds/fold.c	/^void cmd_open_fold(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_open_fold_all	cmds/fold.c	/^void cmd_open_fold_all(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_open_fold_child	cmds/fold.c	/^void cmd_open_fold_child(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_params_init	cmd-params.c	/^void cmd_params_init(CmdParams *param, ScintillaObject *sci,$/;"	f	typeref:typename:void
+cmd_paste_after	cmds/edit.c	/^void cmd_paste_after(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_paste_before	cmds/edit.c	/^void cmd_paste_before(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_paste_inserted_text	cmds/special.c	/^void cmd_paste_inserted_text(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_paste_inserted_text_leave_ins	cmds/special.c	/^void cmd_paste_inserted_text_leave_ins(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_perform_cmd	cmd-runner.c	/^gboolean cmd_perform_cmd(CmdContext *ctx)$/;"	f	typeref:typename:gboolean
+cmd_perform_ins	cmd-runner.c	/^gboolean cmd_perform_ins(CmdContext *ctx)$/;"	f	typeref:typename:gboolean
+cmd_perform_vis	cmd-runner.c	/^gboolean cmd_perform_vis(CmdContext *ctx)$/;"	f	typeref:typename:gboolean
+cmd_redo	cmds/edit.c	/^void cmd_redo(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_repeat_last_command	cmds/special.c	/^void cmd_repeat_last_command(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_repeat_subst	cmds/edit.c	/^void cmd_repeat_subst(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_replace_char	cmds/edit.c	/^void cmd_replace_char(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_replace_char_sel	cmds/edit.c	/^void cmd_replace_char_sel(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_scroll_bottom	cmds/motion.c	/^void cmd_scroll_bottom(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_scroll_bottom_nonempty	cmds/motion.c	/^void cmd_scroll_bottom_nonempty(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_scroll_center	cmds/motion.c	/^void cmd_scroll_center(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_scroll_center_nonempty	cmds/motion.c	/^void cmd_scroll_center_nonempty(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_scroll_down	cmds/motion.c	/^void cmd_scroll_down(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_scroll_top	cmds/motion.c	/^void cmd_scroll_top(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_scroll_top_next_nonempty	cmds/motion.c	/^void cmd_scroll_top_next_nonempty(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_scroll_top_nonempty	cmds/motion.c	/^void cmd_scroll_top_nonempty(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_scroll_up	cmds/motion.c	/^void cmd_scroll_up(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_search_current_next	cmds/special.c	/^void cmd_search_current_next(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_search_current_prev	cmds/special.c	/^void cmd_search_current_prev(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_search_next	cmds/special.c	/^void cmd_search_next(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_apostrophe	cmds/txtobjs.c	/^void cmd_select_apostrophe(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_apostrophe_inner	cmds/txtobjs.c	/^void cmd_select_apostrophe_inner(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_brace	cmds/txtobjs.c	/^void cmd_select_brace(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_brace_inner	cmds/txtobjs.c	/^void cmd_select_brace_inner(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_bracket	cmds/txtobjs.c	/^void cmd_select_bracket(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_bracket_inner	cmds/txtobjs.c	/^void cmd_select_bracket_inner(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_less	cmds/txtobjs.c	/^void cmd_select_less(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_less_inner	cmds/txtobjs.c	/^void cmd_select_less_inner(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_paren	cmds/txtobjs.c	/^void cmd_select_paren(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_paren_inner	cmds/txtobjs.c	/^void cmd_select_paren_inner(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_quotedbl	cmds/txtobjs.c	/^void cmd_select_quotedbl(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_quotedbl_inner	cmds/txtobjs.c	/^void cmd_select_quotedbl_inner(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_quoteleft	cmds/txtobjs.c	/^void cmd_select_quoteleft(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_quoteleft_inner	cmds/txtobjs.c	/^void cmd_select_quoteleft_inner(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_word	cmds/txtobjs.c	/^void cmd_select_word(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_word_inner	cmds/txtobjs.c	/^void cmd_select_word_inner(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_word_space	cmds/txtobjs.c	/^void cmd_select_word_space(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_select_word_space_inner	cmds/txtobjs.c	/^void cmd_select_word_space_inner(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_swap_anchor	cmds/special.c	/^void cmd_swap_anchor(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_switch_case	cmds/edit.c	/^void cmd_switch_case(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_tab	cmds/edit.c	/^void cmd_tab(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_toggle_fold	cmds/fold.c	/^void cmd_toggle_fold(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_toggle_fold_child	cmds/fold.c	/^void cmd_toggle_fold_child(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_undo	cmds/edit.c	/^void cmd_undo(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_unindent	cmds/edit.c	/^void cmd_unindent(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_unindent_ins	cmds/edit.c	/^void cmd_unindent_ins(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_unindent_sel	cmds/edit.c	/^void cmd_unindent_sel(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_upper_case	cmds/edit.c	/^void cmd_upper_case(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+cmd_write_exit	cmds/special.c	/^void cmd_write_exit(CmdContext *c, CmdParams *p)$/;"	f	typeref:typename:void
+copy_char	cmds/edit.c	/^static void copy_char(CmdContext *c, CmdParams *p, gboolean above)$/;"	f	typeref:typename:void	file:
+ctx	excmd-prompt.c	/^static CmdContext *ctx;$/;"	v	typeref:typename:CmdContext *	file:
+ctx	vi.c	/^CmdContext ctx =$/;"	v	typeref:typename:CmdContext
+cut_range_change_mode	cmds/changemode.c	/^static void cut_range_change_mode(CmdContext *c, CmdParams *p,$/;"	f	typeref:typename:void	file:
+default_caret_period	vi.c	/^	gint default_caret_period;$/;"	m	struct:__anon7c9f89350108	typeref:typename:gint	file:
+default_caret_style	vi.c	/^	gint default_caret_style;$/;"	m	struct:__anon7c9f89350108	typeref:typename:gint	file:
+delete_char	cmds/edit.c	/^static void delete_char(CmdContext *c, CmdParams *p, gboolean yank)$/;"	f	typeref:typename:void	file:
+delete_char_back	cmds/edit.c	/^static void delete_char_back(CmdContext *c, CmdParams *p, gboolean yank)$/;"	f	typeref:typename:void	file:
+dest	excmd-params.h	/^	gint dest;$/;"	m	struct:__anonfe833efd0108	typeref:typename:gint
+doc_line_from_visible_delta	cmds/motion.c	/^static gint doc_line_from_visible_delta(CmdParams *p, gint line, gint delta, gboolean *overflow)$/;"	f	typeref:typename:gint	file:
+edit_cmds	cmd-runner.c	/^CmdDef edit_cmds[] = {$/;"	v	typeref:typename:CmdDef[]
+enable_vim_item	backends/backend-geany.c	/^	GtkWidget *enable_vim_item;$/;"	m	struct:__anoncf7013290208	typeref:typename:GtkWidget *	file:
+ensure_current_line_expanded	utils.c	/^void ensure_current_line_expanded(ScintillaObject *sci)$/;"	f	typeref:typename:void
+entered_text	excmd-prompt.c	/^static gchar *entered_text;$/;"	v	typeref:typename:gchar *	file:
+entry	excmd-prompt.c	/^static GtkWidget *entry;$/;"	v	typeref:typename:GtkWidget *	file:
+ex_cmds	excmd-runner.c	/^ExCmdDef ex_cmds[] = {$/;"	v	typeref:typename:ExCmdDef[]
+ex_prompt_cleanup	excmd-prompt.c	/^void ex_prompt_cleanup(void)$/;"	f	typeref:typename:void
+ex_prompt_init	excmd-prompt.c	/^void ex_prompt_init(GtkWidget *parent_window, CmdContext *c)$/;"	f	typeref:typename:void
+ex_prompt_show	excmd-prompt.c	/^void ex_prompt_show(const gchar *val)$/;"	f	typeref:typename:void
+excmd_copy	cmds/excmds.c	/^void excmd_copy(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_delete	cmds/excmds.c	/^void excmd_delete(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_join	cmds/excmds.c	/^void excmd_join(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_move	cmds/excmds.c	/^void excmd_move(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_perform	excmd-runner.c	/^void excmd_perform(CmdContext *ctx, const gchar *cmd)$/;"	f	typeref:typename:void
+excmd_put	cmds/excmds.c	/^void excmd_put(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_quit	cmds/excmds.c	/^void excmd_quit(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_redo	cmds/excmds.c	/^void excmd_redo(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_repeat_subst	cmds/excmds.c	/^void excmd_repeat_subst(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_repeat_subst_orig_flags	cmds/excmds.c	/^void excmd_repeat_subst_orig_flags(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_save	cmds/excmds.c	/^void excmd_save(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_save_all	cmds/excmds.c	/^void excmd_save_all(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_save_all_quit	cmds/excmds.c	/^void excmd_save_all_quit(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_save_quit	cmds/excmds.c	/^void excmd_save_quit(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_shift_left	cmds/excmds.c	/^void excmd_shift_left(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_shift_right	cmds/excmds.c	/^void excmd_shift_right(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_undo	cmds/excmds.c	/^void excmd_undo(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+excmd_yank	cmds/excmds.c	/^void excmd_yank(CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void
+find_char	cmds/motion.c	/^static void find_char(CmdContext *c, CmdParams *p, gboolean invert)$/;"	f	typeref:typename:void	file:
+find_char	cmds/txtobjs.c	/^static gint find_char(ScintillaObject *sci, gint pos, gint ch, gboolean forward)$/;"	f	typeref:typename:gint	file:
+find_next_word	cmds/motion-word.c	/^static gint find_next_word(ScintillaObject *sci, gint pos, gint num)$/;"	f	typeref:typename:gint	file:
+find_next_word_end	cmds/motion-word.c	/^static gint find_next_word_end(ScintillaObject *sci, gint pos, gint num, gboolean include_last)$/;"	f	typeref:typename:gint	file:
+find_next_word_end_space	cmds/motion-word.c	/^static gint find_next_word_end_space(ScintillaObject *sci, gint pos, gint num, gboolean include_/;"	f	typeref:typename:gint	file:
+find_next_word_space	cmds/motion-word.c	/^static gint find_next_word_space(ScintillaObject *sci, gint pos, gint num)$/;"	f	typeref:typename:gint	file:
+find_previous_word	cmds/motion-word.c	/^static gint find_previous_word(ScintillaObject *sci, gint pos, gint num)$/;"	f	typeref:typename:gint	file:
+find_previous_word_end	cmds/motion-word.c	/^static gint find_previous_word_end(ScintillaObject *sci, gint pos, gint num)$/;"	f	typeref:typename:gint	file:
+find_previous_word_end_space	cmds/motion-word.c	/^static gint find_previous_word_end_space(ScintillaObject *sci, gint pos, gint num)$/;"	f	typeref:typename:gint	file:
+find_previous_word_space	cmds/motion-word.c	/^static gint find_previous_word_space(ScintillaObject *sci, gint pos, gint num)$/;"	f	typeref:typename:gint	file:
+find_upper_level_brace	cmds/txtobjs.c	/^static gint find_upper_level_brace(ScintillaObject *sci, gint pos, gint open_brace, gint close_b/;"	f	typeref:typename:gint	file:
+fname	backends/backend-viw.c	/^static const gchar *fname = NULL;$/;"	v	typeref:typename:const gchar *	file:
+force	excmd-params.h	/^	gboolean force;$/;"	m	struct:__anonfe833efd0108	typeref:typename:gboolean
+geany_data	backends/backend-geany.c	/^GeanyData *geany_data;$/;"	v	typeref:typename:GeanyData *
+geany_plugin	backends/backend-geany.c	/^GeanyPlugin *geany_plugin;$/;"	v	typeref:typename:GeanyPlugin *
+geanyplugins_LTLIBRARIES	Makefile.am	/^geanyplugins_LTLIBRARIES = vimode.la$/;"	m
+get_cmd_to_run	cmd-runner.c	/^static CmdDef *get_cmd_to_run(GSList *kpl, CmdDef *cmds, gboolean have_selection)$/;"	f	typeref:typename:CmdDef *	file:
+get_config_filename	backends/backend-geany.c	/^static gchar *get_config_filename(void)$/;"	f	typeref:typename:gchar *	file:
+get_contents_range	utils.c	/^static gchar *get_contents_range(ScintillaObject *sci, gint start, gint end)$/;"	f	typeref:typename:gchar *	file:
+get_current_word	utils.c	/^gchar *get_current_word(ScintillaObject *sci)$/;"	f	typeref:typename:gchar *
+get_line_number_rel	utils.c	/^gint get_line_number_rel(ScintillaObject *sci, gint shift)$/;"	f	typeref:typename:gint
+get_mode_name	backends/backend-geany.c	/^static const gchar *get_mode_name(ViMode vi_mode)$/;"	f	typeref:typename:const gchar *	file:
+get_mode_name	backends/backend-viw.c	/^static const gchar *get_mode_name(ViMode vi_mode)$/;"	f	typeref:typename:const gchar *	file:
+get_simple_token_type	excmd-runner.c	/^static TokenType get_simple_token_type(gchar c)$/;"	f	typeref:typename:TokenType	file:
+get_word_range	cmds/motion-word.c	/^void get_word_range(ScintillaObject *sci, gboolean word_space, gboolean inner,$/;"	f	typeref:typename:void
+goto_above_fold	cmds/fold.c	/^static gint goto_above_fold(CmdParams *p, gint type)$/;"	f	typeref:typename:gint	file:
+goto_down	cmds/motion.c	/^static void goto_down(CmdParams *p, gint num)$/;"	f	typeref:typename:void	file:
+goto_nonempty	utils.c	/^void goto_nonempty(ScintillaObject *sci, gint line, gboolean scroll)$/;"	f	typeref:typename:void
+gtk_widget_get_allocated_height	excmd-prompt.c	/^# define gtk_widget_get_allocated_height(/;"	d	file:
+gtk_widget_get_allocated_width	excmd-prompt.c	/^# define gtk_widget_get_allocated_width(/;"	d	file:
+history	excmd-prompt.c	/^static GPtrArray *history;$/;"	v	typeref:typename:GPtrArray *	file:
+history_pos	excmd-prompt.c	/^static gint history_pos;$/;"	v	typeref:typename:gint	file:
+ignore_change	excmd-prompt.c	/^static gboolean ignore_change;$/;"	v	typeref:typename:gboolean	file:
+include_dest_char_movement_cmds	cmd-runner.c	/^CmdDef include_dest_char_movement_cmds[] = {$/;"	v	typeref:typename:CmdDef[]
+indent	cmds/edit.c	/^static void indent(ScintillaObject *sci, gboolean unindent, gint pos, gint num, gint indent_num)$/;"	f	typeref:typename:void	file:
+indent_ins	cmds/edit.c	/^static void indent_ins(CmdContext *c, CmdParams *p, gboolean indent)$/;"	f	typeref:typename:void	file:
+init_cb	vi.c	/^static void init_cb(ViCallback *cb)$/;"	f	typeref:typename:void	file:
+init_tk	excmd-runner.c	/^static void init_tk(Token *tk, TokenType type, gint num, gchar *str)$/;"	f	typeref:typename:void	file:
+ins_mode_cmds	cmd-runner.c	/^CmdDef ins_mode_cmds[] = {$/;"	v	typeref:typename:CmdDef[]
+insert_buf	context.h	/^	gchar insert_buf[INSERT_BUF_LEN];$/;"	m	struct:__anon984b7ba00108	typeref:typename:gchar[]
+insert_buf_len	context.h	/^	gint insert_buf_len;$/;"	m	struct:__anon984b7ba00108	typeref:typename:gint
+insert_eof_nl_if_missing	cmds/edit.c	/^static gboolean insert_eof_nl_if_missing(CmdParams *p)$/;"	f	typeref:typename:gboolean	file:
+insert_for_dummies	vi.c	/^	gboolean insert_for_dummies;$/;"	m	struct:__anon7c9f89350108	typeref:typename:gboolean	file:
+insert_for_dummies_item	backends/backend-geany.c	/^	GtkWidget *insert_for_dummies_item;$/;"	m	struct:__anoncf7013290208	typeref:typename:GtkWidget *	file:
+is_cmdpart	cmd-runner.c	/^static gboolean is_cmdpart(GSList *kpl, CmdDef *cmds)$/;"	f	typeref:typename:gboolean	file:
+is_in_cmd_group	cmd-runner.c	/^static gboolean is_in_cmd_group(CmdDef *cmds, CmdDef *def)$/;"	f	typeref:typename:gboolean	file:
+is_nonspace	cmds/motion-word.c	/^static gboolean is_nonspace(gchar c)$/;"	f	typeref:typename:gboolean	file:
+is_nonwordchar	cmds/motion-word.c	/^static gboolean is_nonwordchar(gchar c)$/;"	f	typeref:typename:gboolean	file:
+is_operator_cmd	cmd-params.h	/^	gboolean is_operator_cmd;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gboolean
+is_printable	cmd-runner.c	/^static gboolean is_printable(GSList *kpl)$/;"	f	typeref:typename:gboolean	file:
+is_space	cmds/motion-word.c	/^static gboolean is_space(gchar c)$/;"	f	typeref:typename:gboolean	file:
+is_start_of_line	cmds/undo.c	/^static gboolean is_start_of_line(ScintillaObject *sci, gint pos)$/;"	f	typeref:typename:gboolean	file:
+is_wordchar	cmds/motion-word.c	/^static gboolean is_wordchar(gchar c)$/;"	f	typeref:typename:gboolean	file:
+join_lines	cmds/edit.c	/^static void join_lines(CmdContext *c, CmdParams *p, gint line, gint num)$/;"	f	typeref:typename:void	file:
+jump_to_expended_parent	utils.c	/^gint jump_to_expended_parent(ScintillaObject *sci, gint line)$/;"	f	typeref:typename:gint
+key	keypress.h	/^	guint key;$/;"	m	struct:__anon451a11f10108	typeref:typename:guint
+key1	cmd-runner.c	/^	guint key1;$/;"	m	struct:__anon897f76510108	typeref:typename:guint	file:
+key2	cmd-runner.c	/^	guint key2;$/;"	m	struct:__anon897f76510108	typeref:typename:guint	file:
+key_equals	cmd-runner.c	/^static gboolean key_equals(KeyPress *kp, guint key, guint modif)$/;"	f	typeref:typename:gboolean	file:
+kp_from_event_key	keypress.c	/^KeyPress *kp_from_event_key(GdkEventKey *ev)$/;"	f	typeref:typename:KeyPress *
+kp_isdigit	keypress.c	/^gboolean kp_isdigit(KeyPress *kp)$/;"	f	typeref:typename:gboolean
+kp_to_str	keypress.c	/^const gchar *kp_to_str(KeyPress *kp)$/;"	f	typeref:typename:const gchar *
+kp_todigit	keypress.c	/^static gint kp_todigit(KeyPress *kp)$/;"	f	typeref:typename:gint	file:
+kpl	context.h	/^	GSList *kpl;$/;"	m	struct:__anon984b7ba00108	typeref:typename:GSList *
+kpl_get_int	keypress.c	/^gint kpl_get_int(GSList *kpl, GSList **new_kpl)$/;"	f	typeref:typename:gint
+kpl_printf	keypress.c	/^void kpl_printf(GSList *kpl)$/;"	f	typeref:typename:void
+last_kp	cmd-params.h	/^	KeyPress *last_kp;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:KeyPress *
+line	cmd-params.h	/^	gint line;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+line_copy	context.h	/^	gboolean line_copy;$/;"	m	struct:__anon984b7ba00108	typeref:typename:gboolean
+line_end_pos	cmd-params.h	/^	gint line_end_pos;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+line_num	cmd-params.h	/^	gint line_num;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+line_start_pos	cmd-params.h	/^	gint line_start_pos;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+line_visible_first	cmd-params.h	/^	gint line_visible_first;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+line_visible_num	cmd-params.h	/^	gint line_visible_num;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+load_config	backends/backend-geany.c	/^static void load_config(void)$/;"	f	typeref:typename:void	file:
+main	backends/backend-viw.c	/^int main(int argc, char **argv)$/;"	f	typeref:typename:int
+menu_items	backends/backend-geany.c	/^} menu_items =$/;"	v	typeref:struct:__anoncf7013290208
+modif	keypress.h	/^	guint modif;$/;"	m	struct:__anon451a11f10108	typeref:typename:guint
+modif1	cmd-runner.c	/^	guint modif1;$/;"	m	struct:__anon897f76510108	typeref:typename:guint	file:
+modif2	cmd-runner.c	/^	guint modif2;$/;"	m	struct:__anon897f76510108	typeref:typename:guint	file:
+move_left	cmds/motion-word.c	/^static void move_left(ScintillaObject *sci, gchar *ch, gint *pos)$/;"	f	typeref:typename:void	file:
+move_right	cmds/motion-word.c	/^static void move_right(ScintillaObject *sci, gchar *ch, gint *pos)$/;"	f	typeref:typename:void	file:
+movement_cmds	cmd-runner.c	/^CmdDef movement_cmds[] = {$/;"	v	typeref:typename:CmdDef[]
+name	excmd-runner.c	/^	const gchar *name;$/;"	m	struct:__anond225dc8e0108	typeref:typename:const gchar *	file:
+needs_selection	cmd-runner.c	/^	gboolean needs_selection;$/;"	m	struct:__anon897f76510108	typeref:typename:gboolean	file:
+newline_insert	context.h	/^	gboolean newline_insert;$/;"	m	struct:__anon984b7ba00108	typeref:typename:gboolean
+next_token	excmd-runner.c	/^static void next_token(const gchar **p, Token *tk)$/;"	f	typeref:typename:void	file:
+noinst_PROGRAMS	Makefile.am	/^noinst_PROGRAMS = viw$/;"	m
+num	cmd-params.h	/^	gint num;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+num	context.h	/^	gint num;$/;"	m	struct:__anon984b7ba00108	typeref:typename:gint
+num	excmd-runner.c	/^	gint num;$/;"	m	struct:__anond225dc8e0408	typeref:typename:gint	file:
+num_present	cmd-params.h	/^	gboolean num_present;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gboolean
+on_doc_activate	backends/backend-geany.c	/^static void on_doc_activate(G_GNUC_UNUSED GObject *obj, GeanyDocument *doc,$/;"	f	typeref:typename:void	file:
+on_doc_close	backends/backend-geany.c	/^static void on_doc_close(G_GNUC_UNUSED GObject * obj, GeanyDocument * doc,$/;"	f	typeref:typename:void	file:
+on_doc_open	backends/backend-geany.c	/^static void on_doc_open(G_GNUC_UNUSED GObject *obj, GeanyDocument *doc,$/;"	f	typeref:typename:void	file:
+on_editor_notify	backends/backend-geany.c	/^static gboolean on_editor_notify(GObject *object, GeanyEditor *editor,$/;"	f	typeref:typename:gboolean	file:
+on_enable_vim_mode	backends/backend-geany.c	/^static void on_enable_vim_mode(void)$/;"	f	typeref:typename:void	file:
+on_enable_vim_mode_kb	backends/backend-geany.c	/^static gboolean on_enable_vim_mode_kb(GeanyKeyBinding *kb, guint key_id, gpointer data)$/;"	f	typeref:typename:gboolean	file:
+on_entry_text_notify	excmd-prompt.c	/^static void on_entry_text_notify(GObject *object, GParamSpec *pspec, gpointer dummy)$/;"	f	typeref:typename:void	file:
+on_insert_for_dummies	backends/backend-geany.c	/^static void on_insert_for_dummies(void)$/;"	f	typeref:typename:void	file:
+on_insert_for_dummies_kb	backends/backend-geany.c	/^static gboolean on_insert_for_dummies_kb(GeanyKeyBinding *kb, guint key_id, gpointer data)$/;"	f	typeref:typename:gboolean	file:
+on_key_press	backends/backend-geany.c	/^static gboolean on_key_press(GtkWidget *widget, GdkEventKey *event, gpointer user_data)$/;"	f	typeref:typename:gboolean	file:
+on_key_press_cb	backends/backend-viw.c	/^static gboolean on_key_press_cb(GtkWidget *widget, GdkEventKey *ev, gpointer user_data)$/;"	f	typeref:typename:gboolean	file:
+on_mode_change	backends/backend-geany.c	/^static void on_mode_change(ViMode mode)$/;"	f	typeref:typename:void	file:
+on_mode_change	backends/backend-viw.c	/^static void on_mode_change(ViMode mode)$/;"	f	typeref:typename:void	file:
+on_mode_change	vi.h	/^	void (*on_mode_change)(ViMode mode);$/;"	m	struct:__anon7c9f893a0208	typeref:typename:void (*)(ViMode mode)
+on_prompt_key_press_event	excmd-prompt.c	/^static gboolean on_prompt_key_press_event(GtkWidget *widget, GdkEventKey *event, gpointer dummy)$/;"	f	typeref:typename:gboolean	file:
+on_prompt_show	excmd-prompt.c	/^static void on_prompt_show(GtkWidget *widget, gpointer dummy)$/;"	f	typeref:typename:void	file:
+on_quit	backends/backend-geany.c	/^static void on_quit(gboolean force)$/;"	f	typeref:typename:void	file:
+on_quit	backends/backend-viw.c	/^static void on_quit(gboolean force)$/;"	f	typeref:typename:void	file:
+on_quit	vi.h	/^	void (*on_quit)(gboolean force);$/;"	m	struct:__anon7c9f893a0208	typeref:typename:void (*)(gboolean force)
+on_save	backends/backend-geany.c	/^static gboolean on_save(gboolean force)$/;"	f	typeref:typename:gboolean	file:
+on_save	backends/backend-viw.c	/^static gboolean on_save(gboolean force)$/;"	f	typeref:typename:gboolean	file:
+on_save	vi.h	/^	gboolean (*on_save)(gboolean force);$/;"	m	struct:__anon7c9f893a0208	typeref:typename:gboolean (*)(gboolean force)
+on_save_all	backends/backend-geany.c	/^static gboolean on_save_all(gboolean force)$/;"	f	typeref:typename:gboolean	file:
+on_save_all	backends/backend-viw.c	/^static gboolean on_save_all(gboolean force)$/;"	f	typeref:typename:gboolean	file:
+on_save_all	vi.h	/^	gboolean (*on_save_all)(gboolean force);$/;"	m	struct:__anon7c9f893a0208	typeref:typename:gboolean (*)(gboolean force)
+on_sci_notify_cb	backends/backend-viw.c	/^static void on_sci_notify_cb(G_GNUC_UNUSED GtkWidget *widget, G_GNUC_UNUSED gint scn,$/;"	f	typeref:typename:void	file:
+on_start_in_insert	backends/backend-geany.c	/^static void on_start_in_insert(void)$/;"	f	typeref:typename:void	file:
+on_wrong_quit	backends/backend-viw.c	/^static gboolean on_wrong_quit(GtkWidget *widget, GdkEvent *event, gpointer parent_window)$/;"	f	typeref:typename:gboolean	file:
+open_file	backends/backend-viw.c	/^static void open_file(const gchar *name)$/;"	f	typeref:typename:void	file:
+operator_cmds	cmd-runner.c	/^CmdDef operator_cmds[] = {$/;"	v	typeref:typename:CmdDef[]
+param	cmd-runner.c	/^	gboolean param;$/;"	m	struct:__anon897f76510108	typeref:typename:gboolean	file:
+param1	excmd-params.h	/^	const gchar *param1;$/;"	m	struct:__anonfe833efd0108	typeref:typename:const gchar *
+parent_item	backends/backend-geany.c	/^	GtkWidget *parent_item;$/;"	m	struct:__anoncf7013290208	typeref:typename:GtkWidget *	file:
+parse_ex_range	excmd-runner.c	/^static gboolean parse_ex_range(const gchar **p, CmdContext *ctx, gint *from, gint *to)$/;"	f	typeref:typename:gboolean	file:
+paste	cmds/edit.c	/^static void paste(CmdContext *c, CmdParams *p, gboolean after)$/;"	f	typeref:typename:void	file:
+perform_cmd	cmd-runner.c	/^static void perform_cmd(CmdDef *def, CmdContext *ctx)$/;"	f	typeref:typename:void	file:
+perform_repeat_cmd	cmd-runner.c	/^static gboolean perform_repeat_cmd(CmdContext *ctx)$/;"	f	typeref:typename:gboolean	file:
+perform_search	utils.c	/^gint perform_search(ScintillaObject *sci, const gchar *search_text,$/;"	f	typeref:typename:gint
+perform_simple_ex_cmd	excmd-runner.c	/^static void perform_simple_ex_cmd(CmdContext *ctx, const gchar *cmd)$/;"	f	typeref:typename:void	file:
+perform_substitute	utils.c	/^void perform_substitute(ScintillaObject *sci, const gchar *cmd, gint from, gint to,$/;"	f	typeref:typename:void
+plugin	Makefile.am	/^plugin = vimode$/;"	m
+plugin_callbacks	backends/backend-geany.c	/^PluginCallback plugin_callbacks[] = {$/;"	v	typeref:typename:PluginCallback[]
+plugin_cleanup	backends/backend-geany.c	/^void plugin_cleanup(void)$/;"	f	typeref:typename:void
+plugin_help	backends/backend-geany.c	/^void plugin_help(void)$/;"	f	typeref:typename:void
+plugin_init	backends/backend-geany.c	/^void plugin_init(GeanyData *data)$/;"	f	typeref:typename:void
+pos	cmd-params.h	/^	gint pos;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+position_prompt	excmd-prompt.c	/^static void position_prompt(void)$/;"	f	typeref:typename:void	file:
+prepare_cmd_params	cmds/excmds.c	/^static void prepare_cmd_params(CmdParams *params, CmdContext *c, ExCmdParams *p)$/;"	f	typeref:typename:void	file:
+process_cmd	cmd-runner.c	/^static gboolean process_cmd(CmdDef *cmds, CmdContext *ctx, gboolean ins_mode)$/;"	f	typeref:typename:gboolean	file:
+prompt	excmd-prompt.c	/^static GtkWidget *prompt;$/;"	v	typeref:typename:GtkWidget *	file:
+range_from	excmd-params.h	/^	gint range_from;$/;"	m	struct:__anonfe833efd0108	typeref:typename:gint
+range_to	excmd-params.h	/^	gint range_to;$/;"	m	struct:__anonfe833efd0108	typeref:typename:gint
+remove_char_from_eof	cmds/edit.c	/^static void remove_char_from_eof(CmdParams *p)$/;"	f	typeref:typename:void	file:
+repeat_insert	vi.c	/^static void repeat_insert(gboolean replace)$/;"	f	typeref:typename:void	file:
+repeat_kpl	context.h	/^	GSList *repeat_kpl;$/;"	m	struct:__anon984b7ba00108	typeref:typename:GSList *
+replace_char	cmds/edit.c	/^static void replace_char(ScintillaObject *sci, gint pos, gint num, gint line,$/;"	f	typeref:typename:void	file:
+save_config	backends/backend-geany.c	/^static void save_config(void)$/;"	f	typeref:typename:void	file:
+sci	backends/backend-viw.c	/^static ScintillaObject *sci;$/;"	v	typeref:typename:ScintillaObject *	file:
+sci	cmd-params.h	/^	ScintillaObject *sci;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:ScintillaObject *
+sci	context.h	/^	ScintillaObject *sci;$/;"	m	struct:__anon984b7ba00108	typeref:typename:ScintillaObject *
+scroll_to_line	cmds/motion.c	/^static void scroll_to_line(CmdParams *p, gint offset, gboolean nonempty)$/;"	f	typeref:typename:void	file:
+search_char	context.h	/^	gchar *search_char;$/;"	m	struct:__anon984b7ba00108	typeref:typename:gchar *
+search_current	cmds/special.c	/^static void search_current(CmdContext *c, CmdParams *p, gboolean next)$/;"	f	typeref:typename:void	file:
+search_history	excmd-prompt.c	/^static GPtrArray *search_history;$/;"	v	typeref:typename:GPtrArray *	file:
+search_text	context.h	/^	gchar *search_text;$/;"	m	struct:__anon984b7ba00108	typeref:typename:gchar *
+sel_anchor	context.h	/^	gint sel_anchor;$/;"	m	struct:__anon984b7ba00108	typeref:typename:gint
+sel_first_line	cmd-params.h	/^	gint sel_first_line;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+sel_first_line_begin_pos	cmd-params.h	/^	gint sel_first_line_begin_pos;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+sel_last_line	cmd-params.h	/^	gint sel_last_line;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+sel_last_line_end_pos	cmd-params.h	/^	gint sel_last_line_end_pos;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+sel_len	cmd-params.h	/^	gint sel_len;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+sel_start	cmd-params.h	/^	gint sel_start;$/;"	m	struct:__anonb5dcd8c00108	typeref:typename:gint
+select_brace	cmds/txtobjs.c	/^static void select_brace(CmdContext *c, CmdParams *p, gint open_brace, gint close_brace, gboolea/;"	f	typeref:typename:void	file:
+select_word	cmds/txtobjs.c	/^static void select_word(CmdContext *c, CmdParams *p, gboolean word_space, gboolean inner)$/;"	f	typeref:typename:void	file:
+set_prompt_text	excmd-prompt.c	/^static void set_prompt_text(const gchar *val)$/;"	f	typeref:typename:void	file:
+set_statusbar_text	backends/backend-viw.c	/^static void set_statusbar_text(const gchar *text)$/;"	f	typeref:typename:void	file:
+skip_to_left	cmds/motion-word.c	/^static gboolean skip_to_left(CharacterPredicate is_in_group, ScintillaObject *sci, gchar *ch, gi/;"	f	typeref:typename:gboolean	file:
+skip_to_right	cmds/motion-word.c	/^static gboolean skip_to_right(CharacterPredicate is_in_group, ScintillaObject *sci, gchar *ch, g/;"	f	typeref:typename:gboolean	file:
+start_in_insert	backends/backend-geany.c	/^static gboolean start_in_insert;$/;"	v	typeref:typename:gboolean	file:
+start_in_insert_item	backends/backend-geany.c	/^	GtkWidget *start_in_insert_item;$/;"	m	struct:__anoncf7013290208	typeref:typename:GtkWidget *	file:
+state	vi.c	/^} state =$/;"	v	typeref:struct:__anon7c9f89350108
+statusbar	backends/backend-viw.c	/^static GtkWidget *statusbar;$/;"	v	typeref:typename:GtkWidget *	file:
+str	excmd-runner.c	/^	gchar *str;$/;"	m	struct:__anond225dc8e0408	typeref:typename:gchar *	file:
+substitute_text	context.h	/^	gchar *substitute_text;$/;"	m	struct:__anon984b7ba00108	typeref:typename:gchar *
+switch_case	cmds/edit.c	/^static void switch_case(CmdContext *c, CmdParams *p,$/;"	f	typeref:typename:void	file:
+text_object_cmds	cmd-runner.c	/^CmdDef text_object_cmds[] = {$/;"	v	typeref:typename:CmdDef[]
+type	excmd-runner.c	/^	TokenType type;$/;"	m	struct:__anond225dc8e0408	typeref:typename:TokenType	file:
+undo_apply	cmds/undo.c	/^void undo_apply(CmdContext *c, gint num)$/;"	f	typeref:typename:void
+undo_pos	context.h	/^	gint undo_pos;$/;"	m	struct:__anon984b7ba00108	typeref:typename:gint
+undo_update	cmds/undo.c	/^void undo_update(CmdContext *c, gint pos)$/;"	f	typeref:typename:void
+use_monospaced_font	backends/backend-viw.c	/^static void use_monospaced_font(void)$/;"	f	typeref:typename:void	file:
+vi_cleanup	vi.c	/^void vi_cleanup(void)$/;"	f	typeref:typename:void
+vi_enter_ex_mode	vi.c	/^void vi_enter_ex_mode()$/;"	f	typeref:typename:void
+vi_get_enabled	vi.c	/^gboolean vi_get_enabled(void)$/;"	f	typeref:typename:gboolean
+vi_get_insert_for_dummies	vi.c	/^gboolean vi_get_insert_for_dummies(void)$/;"	f	typeref:typename:gboolean
+vi_get_mode	vi.c	/^ViMode vi_get_mode(void)$/;"	f	typeref:typename:ViMode
+vi_init	vi.c	/^void vi_init(GtkWidget *parent_window, ViCallback *cb)$/;"	f	typeref:typename:void
+vi_mode	vi.c	/^	ViMode vi_mode;$/;"	m	struct:__anon7c9f89350108	typeref:typename:ViMode	file:
+vi_notify_key_press	vi.c	/^gboolean vi_notify_key_press(GdkEventKey *event)$/;"	f	typeref:typename:gboolean
+vi_notify_sci	vi.c	/^gboolean vi_notify_sci(SCNotification *nt)$/;"	f	typeref:typename:gboolean
+vi_set_active_sci	vi.c	/^void vi_set_active_sci(ScintillaObject *sci)$/;"	f	typeref:typename:void
+vi_set_enabled	vi.c	/^void vi_set_enabled(gboolean enabled)$/;"	f	typeref:typename:void
+vi_set_insert_for_dummies	vi.c	/^void vi_set_insert_for_dummies(gboolean enabled)$/;"	f	typeref:typename:void
+vi_set_mode	vi.c	/^void vi_set_mode(ViMode mode)$/;"	f	typeref:typename:void
+vi_srcs	Makefile.am	/^vi_srcs = \\$/;"	m
+vim_enabled	vi.c	/^	gboolean vim_enabled;$/;"	m	struct:__anon7c9f89350108	typeref:typename:gboolean	file:
+vimode.la	Makefile.am	/^geanyplugins_LTLIBRARIES = vimode.la$/;"	T	directory:geanyplugins
+vimode_la_CFLAGS	Makefile.am	/^vimode_la_CFLAGS = $(AM_CFLAGS)$/;"	m
+vimode_la_CPPFLAGS	Makefile.am	/^vimode_la_CPPFLAGS = $(AM_CPPFLAGS) \\$/;"	m
+vimode_la_LIBADD	Makefile.am	/^vimode_la_LIBADD = $(COMMONLIBS)$/;"	m
+vimode_la_SOURCES	Makefile.am	/^vimode_la_SOURCES = \\$/;"	m
+vis_mode_cmds	cmd-runner.c	/^CmdDef vis_mode_cmds[] = {$/;"	v	typeref:typename:CmdDef[]
+viw_CFLAGS	Makefile.am	/^viw_CFLAGS = $(AM_CFLAGS)$/;"	m
+viw_CPPFLAGS	Makefile.am	/^viw_CPPFLAGS = $(AM_CPPFLAGS) \\$/;"	m
+viw_LDADD	Makefile.am	/^viw_LDADD = $(COMMONLIBS)$/;"	m
+viw_SOURCES	Makefile.am	/^viw_SOURCES = \\$/;"	m
+window	backends/backend-viw.c	/^static GtkWidget *window;$/;"	v	typeref:typename:GtkWidget *	file:

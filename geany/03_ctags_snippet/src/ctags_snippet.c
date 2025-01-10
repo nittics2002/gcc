@@ -24,6 +24,25 @@ static GeanyPlugin *geany_plugin = NULL;
 static GeanyData *geany_data = NULL;
 
 /**
+ * @brief メニュー read tags
+ */
+static GtkWidget *menu_item_read_tags;
+
+/**
+ * @brief メニュー view snippets
+ */
+static GtkWidget *menu_item_view_snippets;
+
+/**
+ * @brief メニューキーバインド
+ */
+enum{
+   KB_CTAGS_SNIPPET,
+   KB_READ_TAGS,
+   KB_VIEW_SNIPPETS
+};
+
+/**
  * @brief snippet辞書
  */
 static gchar **snippet_dict;
@@ -153,6 +172,7 @@ static gchar *get_tags_filename(void)
     return ret;
 }
 
+
 /**
  * @brief on_read_tagfile
  * @param GtkMenuItem *menuitem
@@ -270,31 +290,104 @@ static gboolean on_read_tagfile(
 }
 
 /**
+ * @brief on_view_snippet
+ * @param GtkMenuItem *menuitem
+ * @param gpointer user_data
+ * @return gboolean
+ */
+static gboolean on_view_snippet(
+    GtkMenuItem *menuitem,
+    gpointer user_data
+) {
+    return TRUE;
+}
+
+/**
+ * @brief kb_read_tags
+ * @param G_GNUC_UNUSED guint key_id
+ * @return void
+ */
+static void kb_read_tags(
+    G_GNUC_UNUSED guint key_id
+){
+   /* sanity check */
+   if (document_get_current() == NULL){
+	return;
+   }
+   on_read_tagfile(NULL, NULL);
+}
+
+/**
  * @brief add_menu
  * @return void
  */
 static void add_menu()
 {
-    GtkWidget *main_menu_item;
-    main_menu_item = gtk_menu_item_new_with_mnemonic(
+    //キー割り当てグループ
+    GeanyKeyGroup *key_group;
+    key_group = plugin_set_key_group(
+	geany_plugin,
+	"CtagsSnippet",
+	KB_CTAGS_SNIPPET,
+	NULL
+    );
+
+    //メニューread ctags
+    menu_item_read_tags = gtk_menu_item_new_with_mnemonic(
         "Ctags Snippet read tags"
     );
     
-    gtk_widget_show(main_menu_item);
+    gtk_widget_show(menu_item_read_tags);
 
     gtk_container_add(
 	GTK_CONTAINER(geany_data->main_widgets->project_menu),
-	main_menu_item
+	menu_item_read_tags
     );
             
     g_signal_connect(
-	main_menu_item,
+	menu_item_read_tags,
 	"activate",
 	G_CALLBACK(on_read_tagfile),
 	NULL
     );
  
-    geany_plugin_set_data(geany_plugin, main_menu_item, NULL);
+    geany_plugin_set_data(geany_plugin, menu_item_read_tags, NULL);
+
+//    keybindings_set_item(
+//	key_group,
+//	KB_READ_TAGS,
+//	kb_read_tags,
+//	0,
+//	GDK_CONTROL_MASK,
+//	"read_tags",
+//	_("Read Tags"),
+//	menu_item_read_tags
+//    );
+
+
+    //メニュー view snippets
+    menu_item_view_snippets = gtk_menu_item_new_with_mnemonic(
+        "Ctags Snippet view snippets"
+    );
+    
+    gtk_widget_show(menu_item_view_snippets);
+
+    gtk_container_add(
+	GTK_CONTAINER(geany_data->main_widgets->project_menu),
+	menu_item_view_snippets
+    );
+            
+    g_signal_connect(
+	menu_item_view_snippets,
+	"activate",
+	G_CALLBACK(on_view_snippet),
+	NULL
+    );
+ 
+    geany_plugin_set_data(geany_plugin, menu_item_view_snippets, NULL);
+
+
+
 
     msgwin_switch_tab(MSG_MESSAGE, TRUE);
     msgwin_msg_add(COLOR_BLUE, -1, NULL, "Activate Ctags Snippet");
@@ -357,9 +450,8 @@ static void ctags_snippet_cleanup(
 ){
     free_memmory();
 
-    GtkWidget *main_menu_item = (GtkWidget *) pdata;
- 
-    gtk_widget_destroy(main_menu_item);
+    gtk_widget_destroy(menu_item_read_tags);
+    gtk_widget_destroy(menu_item_view_snippets);
 
     msgwin_switch_tab(MSG_MESSAGE, TRUE);
     msgwin_msg_add(COLOR_BLUE, -1, NULL, "Deactive Ctags Snippet");
