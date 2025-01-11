@@ -358,8 +358,9 @@ static gboolean on_view_snippet(
     gint pos;
     gchar chr;
     gchar buffer[512];
-    gchar *fragment;
-    gint pt = 0;
+    //gchar *fragment;
+    gint i = 0;
+    gint j, k;
 
     sci = document_get_current()
         ->editor
@@ -377,28 +378,25 @@ static gboolean on_view_snippet(
         chr = sci_get_char_at(sci, pos);
 
         if (is_delimiter(chr)) {
-            buffer[pt] = '\0';
+            gchar fragment[i+1];
+            k = i;
 
-            //fragment = g_strreverse(buffer);
+            for(j = 0; j < i; j++) {
+                fragment[j] = buffer[k];
+                msgwin_status_add("char=%d", buffer[j]);
+                k++;
+            }
 
-//msgwin_status_add("char=%s", fragment);
+            fragment[j] = '\0';
 
-gint j;
+msgwin_status_add("fragment=%s",fragment);
 
-for(j=0; j<=pt;j++) {
-msgwin_status_add("char=%d", buffer[j]);
-}
-
-
-
-
-            //g_free(fragment);
 
             break;
         }
         
-        buffer[pt] = chr;
-        pt++;
+        buffer[i] = chr;
+        i++;
         pos--;
     }
 
