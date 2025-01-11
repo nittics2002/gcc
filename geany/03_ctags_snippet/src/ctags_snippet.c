@@ -59,102 +59,6 @@ static gint dict_count = 1;
  */
 static gchar dict_index[27];
 
-
-
-typedef struct InputInfo
-{
-    gint tag_start;
-} InputInfo;
-
-typedef struct CompletionInfo
-{
-    gchar *completion;
-} CompletionInfo;
-
-gboolean get_completion(
-    GeanyEditor *editor,
-    const gchar *sel,
-    const gint size,
-    CompletionInfo * c,
-    InputInfo * i
-) {
-    return FALSE;
-}
-
-
-
-
-/**
- * @brief ctags_snippet_editor_notify
- * @param GObject *object
- * @param GeanyEditor *editor
- * @param SCNotification *nt
- * @param gpointer data
- * @return gboolean
- */
-static gboolean ctags_snippet_editor_notify(
-    GObject *object,
-    GeanyEditor *editor,
-    SCNotification *nt,
-    gpointer data
-) {
-/*
-
-    gint lexer, pos, style, min, size;
-    gboolean handled = FALSE;
-
-    if (nt->nmhdr.code == SCN_CHARADDED && nt->ch == '>') {
-	pos = sci_get_current_position(editor->sci);
-	style = sci_get_style_at(editor->sci, pos);
-
-	if (
-	    (style <= SCE_H_XCCOMMENT || highlighting_is_string_style(lexer, style)) &&
-	    !highlighting_is_comment_style(lexer, style)
-	){
-	    CompletionInfo c;
-	    InputInfo i;
-	    gchar *sel;
-
-	    //Grab the last 512 characters or so
-	    min = pos - 512;
-	    if (min < 0) min = 0;
-	    size = pos - min;
-
-	    sel = sci_get_contents_range(editor->sci, min, pos);
-
-	    if (get_completion(editor, sel, size, &c, &i))
-	    {
-		//Remove typed opening tag
-		sci_set_selection_start(editor->sci, min + i.tag_start);
-		sci_set_selection_end(editor->sci, pos);
-		sci_replace_sel(editor->sci, "");
-		pos -= (size - i.tag_start); //pos has changed while deleting
-
-		//Insert the completion
-		editor_insert_snippet(editor, pos, c.completion);
-		sci_scroll_caret(editor->sci);
-
-		g_free((gchar *)c.completion);
-		handled = TRUE;
-	    }
-
-	    g_free(sel);
-	}
-
-	//
-	msgwin_status_add("called ctags_snippet_editor_notify");
-
-	
-    }
-
-    //return handled;
-*/
-
-return TRUE;
-}
-
-
-
 /**
  * @brief get_tags_filename
  * @return *gchar
@@ -171,7 +75,6 @@ static gchar *get_tags_filename(void)
 
     return ret;
 }
-
 
 /**
  * @brief on_read_tagfile
@@ -640,16 +543,6 @@ static void ctags_snippet_cleanup(
 }
 
 /**
- * @brief ctags_snippet_callbacks
- * @var PluginCallback ctags_snippet_callbacks[]
- */
-PluginCallback ctags_snippet_callbacks[] =
-{
-	{ "editor-notify", (GCallback) &ctags_snippet_editor_notify, FALSE, NULL },
-	{ NULL, NULL, FALSE, NULL }
-};
-
-/**
  * @brief geany_load_module
  * @param GeanyPlugin *plugin
  * @return void
@@ -665,7 +558,6 @@ void geany_load_module(
 
     plugin->funcs->init = ctags_snippet_init;
     plugin->funcs->cleanup = ctags_snippet_cleanup;
-    //plugin->funcs->callbacks = ctags_snippet_callbacks;
 
     GEANY_PLUGIN_REGISTER(plugin, 248);
 }
