@@ -48,7 +48,7 @@ enum{
 static gchar **snippet_dict;
 
 /**
- * @brief 辞書登録数
+ * @brief 辞書エリア数
  */
 static gint dict_count = 1;
 
@@ -299,6 +299,31 @@ static gboolean on_view_snippet(
     GtkMenuItem *menuitem,
     gpointer user_data
 ) {
+    if (snippet_dict == NULL) {
+	dialogs_show_msgbox(
+	    GTK_MESSAGE_ERROR,
+	    "tags file not loaded"
+	);
+	return FALSE;
+    }
+
+    ScintillaObject *sci;
+    gint pos;
+    gchar chr;
+
+    sci = document_get_current()
+        ->editor
+        ->sci;
+
+    pos = sci_get_current_position(sci);
+
+    chr = sci_get_char_at(sci, pos);
+
+    msgwin_status_add("char=%d", chr);
+    
+
+
+
     return TRUE;
 }
 
@@ -510,7 +535,7 @@ void geany_load_module(
 
     plugin->funcs->init = ctags_snippet_init;
     plugin->funcs->cleanup = ctags_snippet_cleanup;
-    plugin->funcs->callbacks = ctags_snippet_callbacks;
+    //plugin->funcs->callbacks = ctags_snippet_callbacks;
 
     GEANY_PLUGIN_REGISTER(plugin, 248);
 }
