@@ -383,8 +383,8 @@ static gboolean on_view_snippet(
 
             for(j = 0; j < i; j++) {
                 fragment[j] = buffer[k];
-                msgwin_status_add("char=%d", buffer[j]);
-                k++;
+                msgwin_status_add("char=%d", fragment[j]);
+                k--;
             }
 
             fragment[j] = '\0';
