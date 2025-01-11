@@ -318,17 +318,21 @@ static gboolean is_delimiter(
             return TRUE;
         }
     }
-    
-msgwin_status_add("aaaaaaaaaaaa=%d", c);
-
 
     if (c == 96) return TRUE;
     
-    for(i = 123; i <= 127; i++) {
+msgwin_status_add("aaaaaaaaaaaa=%d", c);
+
+    
+    for(i = 123; i <= 126; i++) {
         if (c == i) {
             return TRUE;
         }
     }
+    
+msgwin_status_add("bbbbbbbbbbbbbb=%d", c);
+
+    
     
     for(i = 0; i <= 31; i++) {
         if (c == i) {
@@ -385,10 +389,11 @@ gboolean x;
 x= is_delimiter(chr);
 
 
-msgwin_status_add("xxxx=%d", chr? 1:0);
+msgwin_status_add("xxxx=%d", x? 1:0);
 
 
-        if (! is_delimiter(chr)) {
+        //if (! is_delimiter(chr)) {
+        if (!x) {
 
 
     msgwin_status_add("!!!!!!!!!!111");
