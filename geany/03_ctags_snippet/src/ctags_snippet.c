@@ -55,7 +55,7 @@ static gint dict_count = 1;
 /**
  * @brief 辞書インデックス
  *      idx=1:A, 2:B, ...,26:Z,0:その他
- *      val=辞書idx
+ *      val=辞書idx(1〜) 0:登録なし
  */
 static gchar dict_index[27];
 
@@ -158,12 +158,12 @@ static gboolean on_read_tagfile(
             tag_name1 = g_strndup(splited[0], 1);
             tag_name1_c = g_ascii_toupper(tag_name1[0]);
 
-            //先頭文字が変わった辞書indexを記憶
+            //先頭文字が変わった辞書index+1を記憶
             if (prev_tag_name1_c != tag_name1_c) {
                 idx = tag_name1_c - 64;
                 idx = idx < 1 || idx > 26? 0:idx;
 
-                dict_index[idx] = count; 
+                dict_index[idx] = count + 1; 
             }
 
             snippet_dict[count] = g_strdup(splited[0]);
@@ -185,6 +185,15 @@ static gboolean on_read_tagfile(
     g_strfreev(splited);
     g_free(row_string);
     g_free(tags_file_path);
+
+
+
+gint z;
+for(z=0; z<=26;z++) {
+    msgwin_status_add("z=%d idx=%d", z, dict_index[z]);
+
+}
+
 
     msgwin_switch_tab(MSG_STATUS, TRUE);
     msgwin_status_add("Ctags Snippet loaded");
@@ -271,8 +280,21 @@ static gchar* prefix(
         dict_end = dict_index[index + 1];
     }
 
+/*
+msgwin_status_add("fragment=%s", fragment);
+
+msgwin_status_add("dict=%s", snippet_dict[0]);
+
+msgwin_status_add("index=%d", index);
+
+msgwin_status_add("start=%d end=%d", dict_start, dict_end);
+*/
+
     for (i = dict_start; i < dict_end; i++) {
-        msgwin_status_add("%s", snippet_dict[i]);
+        
+        
+        
+//msgwin_status_add("%s", snippet_dict[i]);
     }
 
     g_free(first_char);
