@@ -298,50 +298,40 @@ static gboolean is_delimiter(
     gchar c
 )
 {
-    gchar i;
+    gint i;
 
     for(i = 32; i <= 47; i++) {
-        if (c == i) {
+        if (c == (gchar)i) {
             return TRUE;
         }
     }
 
     for(i = 58; i <= 64; i++) {
-        if (c == i) {
+        if (c == (gchar)i) {
             return TRUE;
         }
     }
     
     //_を除外
     for(i = 91; i <= 94; i++) {
-        if (c == i) {
+        if (c == (gchar)i) {
             return TRUE;
         }
     }
 
     if (c == 96) return TRUE;
     
-msgwin_status_add("aaaaaaaaaaaa=%d", c);
-
-    
-    for(i = 123; i <= 126; i++) {
-        if (c == i) {
+    for(i = 123; i <= 127; i++) {
+        if (c == (gchar)i) {
             return TRUE;
         }
     }
-    
-msgwin_status_add("bbbbbbbbbbbbbb=%d", c);
-
-    
     
     for(i = 0; i <= 31; i++) {
         if (c == i) {
             return TRUE;
         }
     }
-    
-msgwin_status_add("function=%d", c);
-
     
     return FALSE;
 }
@@ -367,49 +357,50 @@ static gboolean on_view_snippet(
     ScintillaObject *sci;
     gint pos;
     gchar chr;
+    gchar buffer[512];
+    gchar *fragment;
+    gint pt = 0;
 
     sci = document_get_current()
         ->editor
         ->sci;
 
     pos = sci_get_current_position(sci);
-    pos--;
 
     if (pos == 0) {
         return TRUE;
     }
-   
+    
+    pos--;
 
-gboolean x;
-
-    while(pos){
-
+    while(pos >= 0){
         chr = sci_get_char_at(sci, pos);
-        
-x= is_delimiter(chr);
+
+        if (is_delimiter(chr)) {
+            buffer[pt] = '\0';
+
+            //fragment = g_strreverse(buffer);
+
+//msgwin_status_add("char=%s", fragment);
+
+gint j;
+
+for(j=0; j<=pt;j++) {
+msgwin_status_add("char=%d", buffer[j]);
+}
 
 
-msgwin_status_add("xxxx=%d", x? 1:0);
 
 
-        //if (! is_delimiter(chr)) {
-        if (!x) {
+            //g_free(fragment);
 
-
-    msgwin_status_add("!!!!!!!!!!111");
-            pos--;
-            continue;
+            break;
         }
-
-
-msgwin_status_add("char=%d", chr);
-
-
-        break;    
+        
+        buffer[pt] = chr;
+        pt++;
+        pos--;
     }
-
-
-
 
     return TRUE;
 }
