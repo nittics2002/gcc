@@ -290,6 +290,59 @@ static gboolean on_read_tagfile(
 }
 
 /**
+ * @brief is_delimiter
+ * @param gchar c
+ * @return gboolean
+ */
+static gboolean is_delimiter(
+    gchar c
+)
+{
+    gchar i;
+
+    for(i = 32; i <= 47; i++) {
+        if (c == i) {
+            return TRUE;
+        }
+    }
+
+    for(i = 58; i <= 64; i++) {
+        if (c == i) {
+            return TRUE;
+        }
+    }
+    
+    //_を除外
+    for(i = 91; i <= 94; i++) {
+        if (c == i) {
+            return TRUE;
+        }
+    }
+    
+msgwin_status_add("aaaaaaaaaaaa=%d", c);
+
+
+    if (c == 96) return TRUE;
+    
+    for(i = 123; i <= 127; i++) {
+        if (c == i) {
+            return TRUE;
+        }
+    }
+    
+    for(i = 0; i <= 31; i++) {
+        if (c == i) {
+            return TRUE;
+        }
+    }
+    
+msgwin_status_add("function=%d", c);
+
+    
+    return FALSE;
+}
+
+/**
  * @brief on_view_snippet
  * @param GtkMenuItem *menuitem
  * @param gpointer user_data
@@ -316,11 +369,40 @@ static gboolean on_view_snippet(
         ->sci;
 
     pos = sci_get_current_position(sci);
+    pos--;
 
-    chr = sci_get_char_at(sci, pos);
+    if (pos == 0) {
+        return TRUE;
+    }
+   
 
-    msgwin_status_add("char=%d", chr);
-    
+gboolean x;
+
+    while(pos){
+
+        chr = sci_get_char_at(sci, pos);
+        
+x= is_delimiter(chr);
+
+
+msgwin_status_add("xxxx=%d", chr? 1:0);
+
+
+        if (! is_delimiter(chr)) {
+
+
+    msgwin_status_add("!!!!!!!!!!111");
+            pos--;
+            continue;
+        }
+
+
+msgwin_status_add("char=%d", chr);
+
+
+        break;    
+    }
+
 
 
 
