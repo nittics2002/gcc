@@ -378,8 +378,8 @@ static gboolean on_view_snippet(
         chr = sci_get_char_at(sci, pos);
 
         if (is_delimiter(chr)) {
-            gchar fragment[i+1];
-            k = i;
+            gchar fragment[i];
+            k = i - 1;
 
             for(j = 0; j < i; j++) {
                 fragment[j] = buffer[k];
