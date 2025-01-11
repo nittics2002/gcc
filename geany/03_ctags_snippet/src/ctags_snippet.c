@@ -336,6 +336,49 @@ static gboolean is_delimiter(
     return FALSE;
 }
 
+
+
+
+
+
+static gchar* prefix(
+    gchar* fragment
+){
+    gchar *first_char;
+    gchar first_code;
+    gchar index;
+    gint snippet_length;
+    gint dict_start;
+    gint dict_end;
+    gint i;
+
+    first_char = g_strndup(fragment, 1);
+
+    first_code = g_ascii_toupper(first_char[0]);
+
+    index = first_code - 64;
+
+    if (index < 0 || index > 26) index = 0;
+    
+    dict_start = dict_index[index];
+    
+    if (index == 26) {
+        dict_end = INT_MAX;
+    } else {
+        dict_end = dict_index[index + 1];
+    }
+
+    for (i = dict_start; i < dict_end; i++) {
+        msgwin_status_add("%s", snippet_dict[i]);
+    }
+
+    g_free(first_char);
+    
+return snippet_dict[0];
+
+
+}
+
 /**
  * @brief on_view_snippet
  * @param GtkMenuItem *menuitem
@@ -358,9 +401,9 @@ static gboolean on_view_snippet(
     gint pos;
     gchar chr;
     gchar buffer[512];
-    //gchar *fragment;
     gint i = 0;
     gint j, k;
+    //gchar *snippets;
 
     sci = document_get_current()
         ->editor
@@ -379,17 +422,28 @@ static gboolean on_view_snippet(
 
         if (is_delimiter(chr)) {
             gchar fragment[i];
+
             k = i - 1;
 
             for(j = 0; j < i; j++) {
                 fragment[j] = buffer[k];
-                msgwin_status_add("char=%d", fragment[j]);
                 k--;
             }
 
             fragment[j] = '\0';
 
-msgwin_status_add("fragment=%s",fragment);
+            prefix(fragment) ;
+
+
+
+
+
+
+
+
+
+
+//msgwin_status_add("fragment=%s",fragment);
 
 
             break;
