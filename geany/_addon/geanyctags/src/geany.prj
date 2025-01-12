@@ -29,8 +29,7 @@ long_line_column=80
 
 [files]
 current_page=0
-FILE_NAME_0=422;Make;0;EUTF-8;1;1;0;%2Fhome%2Fuser%2Fdocument%2Fsrc%2Fgcc%2Fgeany%2Fdemo_py_snippet%2FMakefile;0;4
-FILE_NAME_1=559;C;0;EUTF-8;0;1;0;%2Fhome%2Fuser%2Fdocument%2Fsrc%2Fgcc%2Fgeany%2Fdemo_py_snippet%2Fsrc%2Fdemo_py_snippet.c;0;4
+FILE_NAME_0=459;None;0;EUTF-8;0;1;0;%2Fhome%2Fuser%2Fdocument%2Fsrc%2Fgcc%2Fgeany%2F_addon%2Fgeanyctags%2Fsrc%2Fgeany.tags;0;4
 
 [VTE]
 last_dir=/home/user

@@ -46,6 +46,8 @@
 #endif
 
 
+static gint _dummy;
+
 static GeanyPlugin *geany_plugin = NULL;    //plugin_init 引数 GeanyPlugin *plugin
 static GeanyData *geany_data = NULL;    //plugin->geany_data; 
 

@@ -54,7 +54,7 @@ static gint dict_count = 1;
 
 /**
  * @brief 辞書インデックス
- *      idx=1:A, 2:B, ...,26:Z,0:その他
+ *      idx=0:A, 1:B, ...,25:Z,26:その他
  *      val=辞書idx(1〜) 0:登録なし
  */
 static gchar dict_index[27];
@@ -160,8 +160,8 @@ static gboolean on_read_tagfile(
 
             //先頭文字が変わった辞書index+1を記憶
             if (prev_tag_name1_c != tag_name1_c) {
-                idx = tag_name1_c - 64;
-                idx = idx < 1 || idx > 26? 0:idx;
+                idx = tag_name1_c - 65;
+                idx = idx < 0 || idx > 25? 26:idx;
 
                 dict_index[idx] = count + 1; 
             }
@@ -185,15 +185,6 @@ static gboolean on_read_tagfile(
     g_strfreev(splited);
     g_free(row_string);
     g_free(tags_file_path);
-
-
-
-gint z;
-for(z=0; z<=26;z++) {
-    msgwin_status_add("z=%d idx=%d", z, dict_index[z]);
-
-}
-
 
     msgwin_switch_tab(MSG_STATUS, TRUE);
     msgwin_status_add("Ctags Snippet loaded");
@@ -264,21 +255,42 @@ static gchar* prefix(
     gint dict_end;
     gint i;
 
+msgwin_status_add("-------------=");
+
     first_char = g_strndup(fragment, 1);
 
     first_code = g_ascii_toupper(first_char[0]);
 
-    index = first_code - 64;
+    index = first_code - 65;
 
-    if (index < 0 || index > 26) index = 0;
+    if (index < 0 || index > 25) index = 27;
     
     dict_start = dict_index[index];
     
-    if (index == 26) {
+    //先頭文字マッチなし
+    if (dict_start == 0) {
+        return NULL;
+    }
+
+    //A-Z以外で始まる場合
+    if (index == 27) {
         dict_end = INT_MAX;
     } else {
-        dict_end = dict_index[index + 1];
+        for (i = index + 1; i <= 27; i++) {
+            if (dict_index[i] != 0){
+                dict_end = dict_index[i];
+                break;
+            }
+        }
     }
+
+    if (!dict_end) {
+        dict_end = INT_MAX;
+    }
+
+msgwin_status_add("start=%d", dict_start);
+msgwin_status_add("end=%d", dict_end);
+
 
 /*
 msgwin_status_add("fragment=%s", fragment);
