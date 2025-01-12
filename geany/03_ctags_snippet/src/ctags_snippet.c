@@ -276,7 +276,7 @@ static gboolean is_delimiter(
 
 
 
-static gchar* prefix(
+static void prefix(
     gchar* fragment
 ){
     gchar *first_char;
@@ -287,8 +287,6 @@ static gchar* prefix(
     gint dict_end;
     gint list_length;
     gint i;
-
-//msgwin_status_add("-------------=");
 
     first_char = g_strndup(fragment, 1);
 
@@ -302,7 +300,7 @@ static gchar* prefix(
     
     //先頭文字マッチなし
     if (dict_start == 0) {
-        return NULL;
+        return;
     }
 
     //A-Z以外で始まる場合
@@ -331,11 +329,6 @@ static gchar* prefix(
 
     if (snippet_list != 0) {
         g_free(snippet_list);
-
-
-        msgwin_status_add("Fee snnipet_list");
-
-
     }
 
 
@@ -348,7 +341,7 @@ static gchar* prefix(
     if (snippet_dict == NULL) {
         msgwin_switch_tab(MSG_STATUS, TRUE);
         msgwin_status_add("Faild to allocate memory");
-        return FALSE;
+        return;
     }
 
     for (i = dict_start - 1; i < dict_end - 1; i++) {
@@ -362,13 +355,14 @@ static gchar* prefix(
     }
 
 
-msgwin_status_add("snippet_list_length=%d", snippet_list_length);
+//msgwin_status_add("snippet_list_length=%d", snippet_list_length);
 
 
 
     g_free(first_char);
     
-return snippet_dict[0];
+return;
+
 
 
 }
@@ -426,6 +420,7 @@ static gboolean on_view_snippet(
 
             fragment[j] = '\0';
 
+            //snippets = prefix(fragment) ;
             prefix(fragment) ;
 
 
@@ -447,6 +442,10 @@ static gboolean on_view_snippet(
         i++;
         pos--;
     }
+
+
+    //g_free(snippets);
+
 
     return TRUE;
 }
