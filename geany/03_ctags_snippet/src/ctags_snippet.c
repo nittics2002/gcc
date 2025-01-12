@@ -48,7 +48,12 @@ enum{
 static gchar **snippet_dict;
 
 /**
- * @brief 辞書エリア数
+ * @brief snippet辞書サイズ
+ */
+static gint snippet_dict_length = 0;
+
+/**
+ * @brief 辞書メモリエリア数
  */
 static gint dict_count = 1;
 
@@ -170,7 +175,7 @@ static gboolean on_read_tagfile(
 	    
             prev_tag_name1_c = tag_name1_c;
             
-//msgwin_status_add("%s",snippet_dict[count]); 
+//msgwin_status_add("%d=%s",count, snippet_dict[count]); 
             
             count++;
         }
@@ -178,6 +183,17 @@ static gboolean on_read_tagfile(
 	prev_tag_name = g_strdup(splited[0]);
     }    
     
+    count;
+    snippet_dict_length = count;
+
+/*
+
+msgwin_status_add("xxxxxxxxxxxxxxxxx"); 
+msgwin_status_add("size=%d",snippet_dict_length); 
+
+*/
+
+
     fclose(fp);
     g_free(prev_tag_name);
     g_free(tag_name1);
@@ -186,7 +202,7 @@ static gboolean on_read_tagfile(
     g_free(row_string);
     g_free(tags_file_path);
 
-    msgwin_switch_tab(MSG_STATUS, TRUE);
+    //msgwin_switch_tab(MSG_STATUS, TRUE);
     msgwin_status_add("Ctags Snippet loaded");
 
     return TRUE;
@@ -268,9 +284,9 @@ msgwin_status_add("-------------=");
     dict_start = dict_index[index];
 
     
-msgwin_status_add("if=%s", first_char);
-msgwin_status_add("if=%d", index);
-msgwin_status_add("if=%d", dict_start);
+msgwin_status_add("first_char=%s", first_char);
+msgwin_status_add("index=%d", index);
+msgwin_status_add("dict_start=%d", dict_start);
     
     //先頭文字マッチなし
     if (dict_start == 0) {
@@ -279,9 +295,9 @@ msgwin_status_add("if=%d", dict_start);
 
     //A-Z以外で始まる場合
     if (index == 26) {
-        dict_end = INT_MAX;
+        dict_end = snippet_dict_length + 1;
     } else {
-        for (i = index; i <= 26; i++) {
+        for (i = index + 1; i <= 26; i++) {
             if (dict_index[i] != 0){
                 dict_end = dict_index[i];
                 break;
@@ -290,23 +306,25 @@ msgwin_status_add("if=%d", dict_start);
     }
 
     if (!dict_end) {
-        dict_end = INT_MAX;
+        dict_end = snippet_dict_length + 1;
     }
 
 
 msgwin_status_add("start=%d", dict_start);
 msgwin_status_add("end=%d", dict_end);
 
+    for (i = dict_start - 1; i < dict_end - 1; i++) {
 
-
-    for (i = dict_start; i < dict_end; i++) {
-       if (snippet_dict[i - 1][0] == '\0') {
-          break; 
+ 
+        //if (snippet_dict[i - 1][0] == '\0') {
+          //break; 
         
         
 msgwin_status_add("%d", i);
-//msgwin_status_add("%s", snippet_dict[i - 1]);
-        }
+msgwin_status_add("%s", snippet_dict[i]);
+        //}
+
+
 
     }
 
