@@ -271,7 +271,7 @@ static gchar* prefix(
     gint dict_end;
     gint i;
 
-msgwin_status_add("-------------=");
+//msgwin_status_add("-------------=");
 
     first_char = g_strndup(fragment, 1);
 
@@ -284,9 +284,9 @@ msgwin_status_add("-------------=");
     dict_start = dict_index[index];
 
     
-msgwin_status_add("first_char=%s", first_char);
-msgwin_status_add("index=%d", index);
-msgwin_status_add("dict_start=%d", dict_start);
+//msgwin_status_add("first_char=%s", first_char);
+//msgwin_status_add("index=%d", index);
+//msgwin_status_add("dict_start=%d", dict_start);
     
     //先頭文字マッチなし
     if (dict_start == 0) {
@@ -310,19 +310,19 @@ msgwin_status_add("dict_start=%d", dict_start);
     }
 
 
-msgwin_status_add("start=%d", dict_start);
-msgwin_status_add("end=%d", dict_end);
+//msgwin_status_add("start=%d", dict_start);
+//msgwin_status_add("end=%d", dict_end);
 
     for (i = dict_start - 1; i < dict_end - 1; i++) {
 
  
-        //if (snippet_dict[i - 1][0] == '\0') {
+        if (g_str_has_prefix(snippet_dict[i], fragment)) {
           //break; 
         
         
 msgwin_status_add("%d", i);
 msgwin_status_add("%s", snippet_dict[i]);
-        //}
+        }
 
 
 
@@ -578,7 +578,7 @@ static void free_memmory()
 
 /**
  * @brief ctags_snippet_cleanup
- * @param GeanyPlugin *plugin
+ `b\\* @param GeanyPlugin *plugin
  * @param gpointer pdata
  * @return void
  */
