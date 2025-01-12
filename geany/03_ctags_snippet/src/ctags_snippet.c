@@ -271,12 +271,12 @@ static gboolean is_delimiter(
     return FALSE;
 }
 
-
-
-
-
-
-static void prefix(
+/**
+ * @brief search_prefix
+ * @param gchar *fragment
+ * @return void
+ */
+static void search_prefix(
     gchar* fragment
 ){
     gchar *first_char;
@@ -331,8 +331,6 @@ static void prefix(
         g_free(snippet_list);
     }
 
-
-
     snippet_list = (gchar **)malloc(
         list_length *
         sizeof(gchar *)
@@ -346,25 +344,14 @@ static void prefix(
 
     for (i = dict_start - 1; i < dict_end - 1; i++) {
         if (g_str_has_prefix(snippet_dict[i], fragment)) {
-            snippet_list[i] = snippet_dict[i]; 
+            snippet_list[snippet_list_length] = snippet_dict[i]; 
             snippet_list_length++;
-            
-            
-            //msgwin_status_add("%s", snippet_dict[i]);
         }
     }
 
-
-//msgwin_status_add("snippet_list_length=%d", snippet_list_length);
-
-
-
     g_free(first_char);
     
-return;
-
-
-
+    return;
 }
 
 /**
@@ -393,6 +380,9 @@ static gboolean on_view_snippet(
     gint j, k;
     //gchar *snippets;
 
+gint m;
+
+
     sci = document_get_current()
         ->editor
         ->sci;
@@ -420,13 +410,21 @@ static gboolean on_view_snippet(
 
             fragment[j] = '\0';
 
-            //snippets = prefix(fragment) ;
-            prefix(fragment) ;
+            search_prefix(fragment) ;
+
+            
+            for (m  = 0; m < snippet_list_length; m++) {
+                
+                
+                
+                msgwin_status_add("SNP=%s", snippet_list[m]);
+            
+            
+            }
 
 
 
-
-
+ 
 
 
 
