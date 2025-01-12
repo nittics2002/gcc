@@ -9,31 +9,90 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	//
-completion	./xmlsnippets.c	35;"	member	struct:Info::__anon9f66cf9a0108	typeref:typename:const gchar *	file:
+case_sensitive	./aaa.c	69;"	member	struct:__anon4d6b1a360108	typeref:typename:GtkWidget *	file:
+combo	./aaa.c	67;"	member	struct:__anon4d6b1a360108	typeref:typename:GtkWidget *	file:
+combo_match	./aaa.c	68;"	member	struct:__anon4d6b1a360108	typeref:typename:GtkWidget *	file:
+completion	./xmlsnippets.c	37;"	member	struct:Info::__anon9f66cf9a0108	typeref:typename:const gchar *	file:
 completion	./xmlsnippets.h	39;"	member	struct:CompletionInfo	typeref:typename:gchar *
 CompletionInfo	./xmlsnippets.h	37;"	struct
 CompletionInfo	./xmlsnippets.h	40;"	typedef	typeref:struct:CompletionInfo
+create_dialog_find_file	./aaa.c	614;"	function	typeref:typename:void	file:	signature:(void)
+declaration	./aaa.c	70;"	member	struct:__anon4d6b1a360108	typeref:typename:GtkWidget *	file:
+editor_notify_cb	./plugin.1.c	5;"	function	typeref:typename:gboolean	file:	signature:(GObject * object,GeanyEditor * editor,SCNotification * nt,gpointer data)
 editor_notify_cb	./plugin.c	5;"	function	typeref:typename:gboolean	file:	signature:(GObject * object,GeanyEditor * editor,SCNotification * nt,gpointer data)
+filter_tag	./aaa.c	463;"	function	typeref:typename:gboolean	file:	signature:(tagEntry * entry,GPatternSpec * name,gboolean declaration,gboolean case_sensitive)
+find_first	./aaa.c	422;"	function	typeref:typename:gboolean	file:	signature:(tagFile * tf,tagEntry * entry,const gchar * name,MatchType match_type)
+find_next	./aaa.c	441;"	function	typeref:typename:gboolean	file:	signature:(tagFile * tf,tagEntry * entry,MatchType match_type)
+find_tags	./aaa.c	494;"	function	typeref:typename:void	file:	signature:(const gchar * name,gboolean declaration,gboolean case_sensitive,MatchType match_type)
+geany_data	./aaa.c	50;"	variable	typeref:typename:GeanyData *	file:
+geany_load_module	./aaa.c	820;"	function	typeref:typename:G_MODULE_EXPORT void	signature:(GeanyPlugin * plugin)
+geany_load_module	./plugin.1.c	95;"	function	typeref:typename:G_MODULE_EXPORT void	signature:(GeanyPlugin * plugin)
 geany_load_module	./plugin.c	95;"	function	typeref:typename:G_MODULE_EXPORT void	signature:(GeanyPlugin * plugin)
-get_completion	./xmlsnippets.c	127;"	function	typeref:typename:gboolean	signature:(GeanyEditor * editor,const gchar * sel,const gint size,CompletionInfo * c,InputInfo * i)
+geany_plugin	./aaa.c	49;"	variable	typeref:typename:GeanyPlugin *	file:
+generate_find_string	./aaa.c	207;"	function	typeref:typename:gchar *	file:	signature:(GeanyProject * prj)
+get_base_path	./aaa.c	226;"	function	typeref:typename:gchar *	file:	signature:(void)
+get_completion	./xmlsnippets.c	129;"	function	typeref:typename:gboolean	signature:(GeanyEditor * editor,const gchar * sel,const gint size,CompletionInfo * c,InputInfo * i)
 get_completion	./xmlsnippets.h	42;"	prototype	typeref:typename:gboolean	signature:(GeanyEditor * editor,const gchar * sel,const gint size,CompletionInfo * c,InputInfo * i)
-Info	./xmlsnippets.c	31;"	struct	file:
-Info	./xmlsnippets.c	42;"	typedef	typeref:struct:Info	file:
-input	./xmlsnippets.c	41;"	member	struct:Info	typeref:struct:Info::__anon9f66cf9a0208	file:
+get_selection	./aaa.c	354;"	function	typeref:typename:gchar *	file:	signature:(void)
+get_tags_filename	./aaa.c	194;"	function	typeref:typename:gchar *	file:	signature:(void)
+GTK_COMBO_BOX_TEXT	./aaa.c	43;"	macro	file:
+gtk_combo_box_text_append_text	./aaa.c	45;"	macro	file:
+gtk_combo_box_text_new	./aaa.c	44;"	macro	file:
+g_pattern_spec_match_string	./aaa.c	457;"	macro	file:
+Info	./xmlsnippets.c	33;"	struct	file:
+Info	./xmlsnippets.c	44;"	typedef	typeref:struct:Info	file:
+input	./xmlsnippets.c	43;"	member	struct:Info	typeref:struct:Info::__anon9f66cf9a0208	file:
 InputInfo	./xmlsnippets.h	32;"	struct
 InputInfo	./xmlsnippets.h	35;"	typedef	typeref:struct:InputInfo
+item_activate_cb	./plugin.1.c	56;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
 item_activate_cb	./plugin.c	56;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
-merge_attributes	./xmlsnippets.c	58;"	function	typeref:typename:gchar *	file:	signature:(const gchar * sel,gint size,const Info * info)
+kb_callback	./aaa.c	726;"	function	typeref:typename:gboolean	file:	signature:(guint key_id)
+KB_COUNT	./aaa.c	80;"	enumerator	enum:__anon4d6b1a360203	file:
+KB_FIND_TAG	./aaa.c	78;"	enumerator	enum:__anon4d6b1a360203	file:
+KB_GENERATE_TAGS	./aaa.c	79;"	enumerator	enum:__anon4d6b1a360203	file:
+MatchType	./aaa.c	418;"	typedef	typeref:enum:__anon4d6b1a360303	file:
+MATCH_FULL	./aaa.c	415;"	enumerator	enum:__anon4d6b1a360303	file:
+MATCH_PATTERN	./aaa.c	417;"	enumerator	enum:__anon4d6b1a360303	file:
+MATCH_PREFIX	./aaa.c	416;"	enumerator	enum:__anon4d6b1a360303	file:
+merge_attributes	./xmlsnippets.c	60;"	function	typeref:typename:gchar *	file:	signature:(const gchar * sel,gint size,const Info * info)
+on_find_declaration	./aaa.c	588;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
+on_find_definition	./aaa.c	601;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
+on_find_tag	./aaa.c	685;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
+on_generate_tags	./aaa.c	250;"	function	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)
+on_project_close	./aaa.c	102;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,G_GNUC_UNUSED gpointer user_data)
+on_project_open	./aaa.c	97;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,GKeyFile * config,G_GNUC_UNUSED gpointer user_data)
+on_project_save	./aaa.c	107;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,GKeyFile * config,G_GNUC_UNUSED gpointer user_data)
+plugin_geanyctags_callbacks	./aaa.c	112;"	variable	typeref:typename:PluginCallback[]	file:
+plugin_geanyctags_cleanup	./aaa.c	802;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)
+plugin_geanyctags_help	./aaa.c	123;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)
+plugin_geanyctags_init	./aaa.c	741;"	function	typeref:typename:gboolean	file:	signature:(GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)
+py_snppet_callbacks	./plugin.1.c	81;"	variable	typeref:typename:PluginCallback[]
 py_snppet_callbacks	./plugin.c	81;"	variable	typeref:typename:PluginCallback[]
+py_snppet_cleanup	./plugin.1.c	87;"	function	typeref:typename:void	file:	signature:(GeanyPlugin * plugin,gpointer pdata)
 py_snppet_cleanup	./plugin.c	87;"	function	typeref:typename:void	file:	signature:(GeanyPlugin * plugin,gpointer pdata)
+py_snppet_init	./plugin.1.c	61;"	function	typeref:typename:gboolean	file:	signature:(GeanyPlugin * plugin,gpointer pdata)
 py_snppet_init	./plugin.c	61;"	function	typeref:typename:gboolean	file:	signature:(GeanyPlugin * plugin,gpointer pdata)
-skip_xml_tag_name	./xmlsnippets.c	45;"	function	typeref:typename:const gchar *	file:	signature:(const gchar * start)
-snippet	./xmlsnippets.c	37;"	member	struct:Info	typeref:struct:Info::__anon9f66cf9a0108	file:
-tag_name_end	./xmlsnippets.c	40;"	member	struct:Info::__anon9f66cf9a0208	typeref:typename:const gchar *	file:
-tag_name_start	./xmlsnippets.c	36;"	member	struct:Info::__anon9f66cf9a0108	typeref:typename:const gchar *	file:
+set_widgets_sensitive	./aaa.c	85;"	function	typeref:typename:void	file:	signature:(gboolean sensitive)
+show_entry	./aaa.c	299;"	function	typeref:typename:void	file:	signature:(tagEntry * entry)
+skip_xml_tag_name	./xmlsnippets.c	47;"	function	typeref:typename:const gchar *	file:	signature:(const gchar * start)
+snippet	./xmlsnippets.c	39;"	member	struct:Info	typeref:struct:Info::__anon9f66cf9a0108	file:
+spawn_cmd	./aaa.c	130;"	function	typeref:typename:void	file:	signature:(const gchar * cmd,const gchar * dir)
+s_context_fdec_item	./aaa.c	54;"	variable	typeref:typename:GtkWidget *	file:
+s_context_fdef_item	./aaa.c	55;"	variable	typeref:typename:GtkWidget *	file:
+s_context_sep_item	./aaa.c	56;"	variable	typeref:typename:GtkWidget *	file:
+s_ft_dialog	./aaa.c	71;"	variable	typeref:struct:__anon4d6b1a360108
+s_ft_item	./aaa.c	59;"	variable	typeref:typename:GtkWidget *	file:
+s_gt_item	./aaa.c	57;"	variable	typeref:typename:GtkWidget *	file:
+s_sep_item	./aaa.c	58;"	variable	typeref:typename:GtkWidget *	file:
+tag_name_end	./xmlsnippets.c	42;"	member	struct:Info::__anon9f66cf9a0208	typeref:typename:const gchar *	file:
+tag_name_start	./xmlsnippets.c	38;"	member	struct:Info::__anon9f66cf9a0108	typeref:typename:const gchar *	file:
 tag_start	./xmlsnippets.h	34;"	member	struct:InputInfo	typeref:typename:gint
-_tag_start	./xmlsnippets.h	34;"	member	struct:InputInfo	typeref:typename:gint
+widget	./aaa.c	65;"	member	struct:__anon4d6b1a360108	typeref:typename:GtkWidget *	file:
 XMLSNIPPETS_PLUGIN_H	./plugin.h	24;"	macro
 XMLSNIPPETS_XMLSNIPPETS_H	./xmlsnippets.h	23;"	macro
-__anon9f66cf9a0108	./xmlsnippets.c	34;"	struct	struct:Info	file:
-__anon9f66cf9a0208	./xmlsnippets.c	39;"	struct	struct:Info	file:
+_DUMMY	./xmlsnippets.c	30;"	variable	typeref:typename:gint
+__anon4d6b1a360108	./aaa.c	64;"	struct	file:
+__anon4d6b1a360203	./aaa.c	77;"	enum	file:
+__anon4d6b1a360303	./aaa.c	414;"	enum	file:
+__anon9f66cf9a0108	./xmlsnippets.c	36;"	struct	struct:Info	file:
+__anon9f66cf9a0208	./xmlsnippets.c	41;"	struct	struct:Info	file:

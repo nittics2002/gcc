@@ -263,9 +263,14 @@ msgwin_status_add("-------------=");
 
     index = first_code - 65;
 
-    if (index < 0 || index > 25) index = 27;
+    if (index < 0 || index > 25) index = 26;
     
     dict_start = dict_index[index];
+
+    
+msgwin_status_add("if=%s", first_char);
+msgwin_status_add("if=%d", index);
+msgwin_status_add("if=%d", dict_start);
     
     //先頭文字マッチなし
     if (dict_start == 0) {
@@ -273,10 +278,10 @@ msgwin_status_add("-------------=");
     }
 
     //A-Z以外で始まる場合
-    if (index == 27) {
+    if (index == 26) {
         dict_end = INT_MAX;
     } else {
-        for (i = index + 1; i <= 27; i++) {
+        for (i = index; i <= 26; i++) {
             if (dict_index[i] != 0){
                 dict_end = dict_index[i];
                 break;
@@ -288,25 +293,21 @@ msgwin_status_add("-------------=");
         dict_end = INT_MAX;
     }
 
+
 msgwin_status_add("start=%d", dict_start);
 msgwin_status_add("end=%d", dict_end);
 
 
-/*
-msgwin_status_add("fragment=%s", fragment);
-
-msgwin_status_add("dict=%s", snippet_dict[0]);
-
-msgwin_status_add("index=%d", index);
-
-msgwin_status_add("start=%d end=%d", dict_start, dict_end);
-*/
 
     for (i = dict_start; i < dict_end; i++) {
+       if (snippet_dict[i - 1][0] == '\0') {
+          break; 
         
         
-        
-//msgwin_status_add("%s", snippet_dict[i]);
+msgwin_status_add("%d", i);
+//msgwin_status_add("%s", snippet_dict[i - 1]);
+        }
+
     }
 
     g_free(first_char);

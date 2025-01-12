@@ -27,6 +27,8 @@
 #include <ctype.h>
 #include <string.h>
 
+gint _DUMMY;
+
 
 typedef struct Info
 {
