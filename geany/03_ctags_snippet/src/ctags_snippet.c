@@ -65,6 +65,22 @@ static gint dict_count = 1;
 static gchar dict_index[27];
 
 /**
+ * @brief snippetリスト
+ */
+static gchar **snippet_list;
+
+/**
+ * @brief snippetリストサイズ
+ */
+static gint snippet_list_length = 0;
+
+
+
+
+
+
+
+/**
  * @brief get_tags_filename
  * @return *gchar
  */
@@ -269,6 +285,7 @@ static gchar* prefix(
     gint snippet_length;
     gint dict_start;
     gint dict_end;
+    gint list_length;
     gint i;
 
 //msgwin_status_add("-------------=");
@@ -282,11 +299,6 @@ static gchar* prefix(
     if (index < 0 || index > 25) index = 26;
     
     dict_start = dict_index[index];
-
-    
-//msgwin_status_add("first_char=%s", first_char);
-//msgwin_status_add("index=%d", index);
-//msgwin_status_add("dict_start=%d", dict_start);
     
     //先頭文字マッチなし
     if (dict_start == 0) {
@@ -309,24 +321,50 @@ static gchar* prefix(
         dict_end = snippet_dict_length + 1;
     }
 
+    //snippet_list配列確保
+    snippet_list_length = 0;
 
-//msgwin_status_add("start=%d", dict_start);
-//msgwin_status_add("end=%d", dict_end);
+    list_length = dict_end - dict_start;
 
-    for (i = dict_start - 1; i < dict_end - 1; i++) {
+    list_length = list_length < 0?
+        0:list_length;
 
- 
-        if (g_str_has_prefix(snippet_dict[i], fragment)) {
-          //break; 
-        
-        
-msgwin_status_add("%d", i);
-msgwin_status_add("%s", snippet_dict[i]);
-        }
+    if (snippet_list != 0) {
+        g_free(snippet_list);
 
+
+        msgwin_status_add("Fee snnipet_list");
 
 
     }
+
+
+
+    snippet_list = (gchar **)malloc(
+        list_length *
+        sizeof(gchar *)
+    );
+
+    if (snippet_dict == NULL) {
+        msgwin_switch_tab(MSG_STATUS, TRUE);
+        msgwin_status_add("Faild to allocate memory");
+        return FALSE;
+    }
+
+    for (i = dict_start - 1; i < dict_end - 1; i++) {
+        if (g_str_has_prefix(snippet_dict[i], fragment)) {
+            snippet_list[i] = snippet_dict[i]; 
+            snippet_list_length++;
+            
+            
+            //msgwin_status_add("%s", snippet_dict[i]);
+        }
+    }
+
+
+msgwin_status_add("snippet_list_length=%d", snippet_list_length);
+
+
 
     g_free(first_char);
     
@@ -573,6 +611,7 @@ static gboolean ctags_snippet_init(
 static void free_memmory()
 {
     //g_free(dict_count);
+    g_free(snippet_list);
     g_free(snippet_dict);
 }
 
