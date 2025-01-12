@@ -11,7 +11,7 @@
 /**
  * @brief 辞書メモリ初期サイズ
  */
-const gint8 DICT_INI_LEN = 2;
+const gint8 DICT_INI_LEN = 100;
 
 /**
  * @brief geany plugin
