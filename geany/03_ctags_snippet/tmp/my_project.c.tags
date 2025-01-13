@@ -1,0 +1,97 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/;"	extras:pseudo
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/;"	extras:pseudo
+!_TAG_OUTPUT_EXCMD	number	/number, pattern, mixed, or combineV2/;"	extras:pseudo
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/;"	extras:pseudo
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/;"	extras:pseudo
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/;"	extras:pseudo
+!_TAG_PROC_CWD	/home/user/document/src/gcc/geany/03_ctags_snippet/tmp/	//;"	extras:pseudo
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//;"	extras:pseudo
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/;"	extras:pseudo
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/;"	extras:pseudo
+!_TAG_PROGRAM_VERSION	5.9.0	//;"	extras:pseudo
+CompletionInfo	xmlsnippets.h	37;"	s	language:C++
+CompletionInfo	xmlsnippets.h	40;"	t	language:C++	typeref:struct:CompletionInfo
+GTK_COMBO_BOX_TEXT	aaa.c	43;"	d	language:C	file:	extras:fileScope
+Info	xmlsnippets.c	33;"	s	language:C	file:	extras:fileScope
+Info	xmlsnippets.c	44;"	t	language:C	typeref:struct:Info	file:	extras:fileScope
+InputInfo	xmlsnippets.h	32;"	s	language:C++
+InputInfo	xmlsnippets.h	35;"	t	language:C++	typeref:struct:InputInfo
+KB_COUNT	aaa.c	80;"	e	language:C	scope:enum:__anon0f111cb90203	file:	extras:fileScope
+KB_FIND_TAG	aaa.c	78;"	e	language:C	scope:enum:__anon0f111cb90203	file:	extras:fileScope
+KB_GENERATE_TAGS	aaa.c	79;"	e	language:C	scope:enum:__anon0f111cb90203	file:	extras:fileScope
+MATCH_FULL	aaa.c	415;"	e	language:C	scope:enum:__anon0f111cb90303	file:	extras:fileScope
+MATCH_PATTERN	aaa.c	417;"	e	language:C	scope:enum:__anon0f111cb90303	file:	extras:fileScope
+MATCH_PREFIX	aaa.c	416;"	e	language:C	scope:enum:__anon0f111cb90303	file:	extras:fileScope
+MatchType	aaa.c	418;"	t	language:C	typeref:enum:__anon0f111cb90303	file:	extras:fileScope
+XMLSNIPPETS_PLUGIN_H	plugin.h	24;"	d	language:C++
+XMLSNIPPETS_XMLSNIPPETS_H	xmlsnippets.h	23;"	d	language:C++
+_DUMMY	xmlsnippets.c	30;"	v	language:C	typeref:typename:gint
+__anon0f111cb90108	aaa.c	64;"	s	language:C	file:	extras:fileScope,anonymous
+__anon0f111cb90203	aaa.c	77;"	g	language:C	file:	extras:fileScope,anonymous
+__anon0f111cb90303	aaa.c	414;"	g	language:C	file:	extras:fileScope,anonymous
+__anon3b9ca51d0108	xmlsnippets.c	36;"	s	language:C	scope:struct:Info	file:	extras:fileScope,anonymous
+__anon3b9ca51d0208	xmlsnippets.c	41;"	s	language:C	scope:struct:Info	file:	extras:fileScope,anonymous
+case_sensitive	aaa.c	69;"	m	language:C	scope:struct:__anon0f111cb90108	typeref:typename:GtkWidget *	file:	extras:fileScope
+combo	aaa.c	67;"	m	language:C	scope:struct:__anon0f111cb90108	typeref:typename:GtkWidget *	file:	extras:fileScope
+combo_match	aaa.c	68;"	m	language:C	scope:struct:__anon0f111cb90108	typeref:typename:GtkWidget *	file:	extras:fileScope
+completion	xmlsnippets.c	37;"	m	language:C	scope:struct:Info::__anon3b9ca51d0108	typeref:typename:const gchar *	file:	extras:fileScope
+completion	xmlsnippets.h	39;"	m	language:C++	scope:struct:CompletionInfo	typeref:typename:gchar *
+create_dialog_find_file	aaa.c	614;"	f	language:C	typeref:typename:void	file:	signature:(void)	extras:fileScope
+declaration	aaa.c	70;"	m	language:C	scope:struct:__anon0f111cb90108	typeref:typename:GtkWidget *	file:	extras:fileScope
+editor_notify_cb	plugin.1.c	5;"	f	language:C	typeref:typename:gboolean	file:	signature:(GObject * object,GeanyEditor * editor,SCNotification * nt,gpointer data)	extras:fileScope
+editor_notify_cb	plugin.c	5;"	f	language:C	typeref:typename:gboolean	file:	signature:(GObject * object,GeanyEditor * editor,SCNotification * nt,gpointer data)	extras:fileScope
+filter_tag	aaa.c	463;"	f	language:C	typeref:typename:gboolean	file:	signature:(tagEntry * entry,GPatternSpec * name,gboolean declaration,gboolean case_sensitive)	extras:fileScope
+find_first	aaa.c	422;"	f	language:C	typeref:typename:gboolean	file:	signature:(tagFile * tf,tagEntry * entry,const gchar * name,MatchType match_type)	extras:fileScope
+find_next	aaa.c	441;"	f	language:C	typeref:typename:gboolean	file:	signature:(tagFile * tf,tagEntry * entry,MatchType match_type)	extras:fileScope
+find_tags	aaa.c	494;"	f	language:C	typeref:typename:void	file:	signature:(const gchar * name,gboolean declaration,gboolean case_sensitive,MatchType match_type)	extras:fileScope
+g_pattern_spec_match_string	aaa.c	457;"	d	language:C	file:	extras:fileScope
+geany_data	aaa.c	50;"	v	language:C	typeref:typename:GeanyData *	file:	extras:fileScope
+geany_load_module	aaa.c	820;"	f	language:C	typeref:typename:G_MODULE_EXPORT void	signature:(GeanyPlugin * plugin)
+geany_load_module	plugin.1.c	95;"	f	language:C	typeref:typename:G_MODULE_EXPORT void	signature:(GeanyPlugin * plugin)
+geany_load_module	plugin.c	95;"	f	language:C	typeref:typename:G_MODULE_EXPORT void	signature:(GeanyPlugin * plugin)
+geany_plugin	aaa.c	49;"	v	language:C	typeref:typename:GeanyPlugin *	file:	extras:fileScope
+generate_find_string	aaa.c	207;"	f	language:C	typeref:typename:gchar *	file:	signature:(GeanyProject * prj)	extras:fileScope
+get_base_path	aaa.c	226;"	f	language:C	typeref:typename:gchar *	file:	signature:(void)	extras:fileScope
+get_completion	xmlsnippets.c	129;"	f	language:C	typeref:typename:gboolean	signature:(GeanyEditor * editor,const gchar * sel,const gint size,CompletionInfo * c,InputInfo * i)
+get_selection	aaa.c	354;"	f	language:C	typeref:typename:gchar *	file:	signature:(void)	extras:fileScope
+get_tags_filename	aaa.c	194;"	f	language:C	typeref:typename:gchar *	file:	signature:(void)	extras:fileScope
+gtk_combo_box_text_append_text	aaa.c	45;"	d	language:C	file:	extras:fileScope
+gtk_combo_box_text_new	aaa.c	44;"	d	language:C	file:	extras:fileScope
+input	xmlsnippets.c	43;"	m	language:C	scope:struct:Info	typeref:struct:Info::__anon3b9ca51d0208	file:	extras:fileScope
+item_activate_cb	plugin.1.c	56;"	f	language:C	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)	extras:fileScope
+item_activate_cb	plugin.c	56;"	f	language:C	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)	extras:fileScope
+kb_callback	aaa.c	726;"	f	language:C	typeref:typename:gboolean	file:	signature:(guint key_id)	extras:fileScope
+merge_attributes	xmlsnippets.c	60;"	f	language:C	typeref:typename:gchar *	file:	signature:(const gchar * sel,gint size,const Info * info)	extras:fileScope
+on_find_declaration	aaa.c	588;"	f	language:C	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)	extras:fileScope
+on_find_definition	aaa.c	601;"	f	language:C	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)	extras:fileScope
+on_find_tag	aaa.c	685;"	f	language:C	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)	extras:fileScope
+on_generate_tags	aaa.c	250;"	f	language:C	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)	extras:fileScope
+on_project_close	aaa.c	102;"	f	language:C	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,G_GNUC_UNUSED gpointer user_data)	extras:fileScope
+on_project_open	aaa.c	97;"	f	language:C	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,GKeyFile * config,G_GNUC_UNUSED gpointer user_data)	extras:fileScope
+on_project_save	aaa.c	107;"	f	language:C	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,GKeyFile * config,G_GNUC_UNUSED gpointer user_data)	extras:fileScope
+plugin_geanyctags_callbacks	aaa.c	112;"	v	language:C	typeref:typename:PluginCallback[]	file:	extras:fileScope
+plugin_geanyctags_cleanup	aaa.c	802;"	f	language:C	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)	extras:fileScope
+plugin_geanyctags_help	aaa.c	123;"	f	language:C	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)	extras:fileScope
+plugin_geanyctags_init	aaa.c	741;"	f	language:C	typeref:typename:gboolean	file:	signature:(GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)	extras:fileScope
+py_snppet_callbacks	plugin.1.c	81;"	v	language:C	typeref:typename:PluginCallback[]
+py_snppet_callbacks	plugin.c	81;"	v	language:C	typeref:typename:PluginCallback[]
+py_snppet_cleanup	plugin.1.c	87;"	f	language:C	typeref:typename:void	file:	signature:(GeanyPlugin * plugin,gpointer pdata)	extras:fileScope
+py_snppet_cleanup	plugin.c	87;"	f	language:C	typeref:typename:void	file:	signature:(GeanyPlugin * plugin,gpointer pdata)	extras:fileScope
+py_snppet_init	plugin.1.c	61;"	f	language:C	typeref:typename:gboolean	file:	signature:(GeanyPlugin * plugin,gpointer pdata)	extras:fileScope
+py_snppet_init	plugin.c	61;"	f	language:C	typeref:typename:gboolean	file:	signature:(GeanyPlugin * plugin,gpointer pdata)	extras:fileScope
+s_context_fdec_item	aaa.c	54;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+s_context_fdef_item	aaa.c	55;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+s_context_sep_item	aaa.c	56;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+s_ft_dialog	aaa.c	71;"	v	language:C	typeref:struct:__anon0f111cb90108
+s_ft_item	aaa.c	59;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+s_gt_item	aaa.c	57;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+s_sep_item	aaa.c	58;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+set_widgets_sensitive	aaa.c	85;"	f	language:C	typeref:typename:void	file:	signature:(gboolean sensitive)	extras:fileScope
+show_entry	aaa.c	299;"	f	language:C	typeref:typename:void	file:	signature:(tagEntry * entry)	extras:fileScope
+skip_xml_tag_name	xmlsnippets.c	47;"	f	language:C	typeref:typename:const gchar *	file:	signature:(const gchar * start)	extras:fileScope
+snippet	xmlsnippets.c	39;"	m	language:C	scope:struct:Info	typeref:struct:Info::__anon3b9ca51d0108	file:	extras:fileScope
+spawn_cmd	aaa.c	130;"	f	language:C	typeref:typename:void	file:	signature:(const gchar * cmd,const gchar * dir)	extras:fileScope
+tag_name_end	xmlsnippets.c	42;"	m	language:C	scope:struct:Info::__anon3b9ca51d0208	typeref:typename:const gchar *	file:	extras:fileScope
+tag_name_start	xmlsnippets.c	38;"	m	language:C	scope:struct:Info::__anon3b9ca51d0108	typeref:typename:const gchar *	file:	extras:fileScope
+tag_start	xmlsnippets.h	34;"	m	language:C++	scope:struct:InputInfo	typeref:typename:gint
+widget	aaa.c	65;"	m	language:C	scope:struct:__anon0f111cb90108	typeref:typename:GtkWidget *	file:	extras:fileScope

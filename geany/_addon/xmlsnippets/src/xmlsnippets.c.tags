@@ -1,0 +1,61 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/;"	extras:pseudo
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/;"	extras:pseudo
+!_TAG_OUTPUT_EXCMD	number	/number, pattern, mixed, or combineV2/;"	extras:pseudo
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/;"	extras:pseudo
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/;"	extras:pseudo
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/;"	extras:pseudo
+!_TAG_PROC_CWD	/home/user/document/src/gcc/geany/_addon/xmlsnippets/src/	//;"	extras:pseudo
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//;"	extras:pseudo
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/;"	extras:pseudo
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/;"	extras:pseudo
+!_TAG_PROGRAM_VERSION	5.9.0	//;"	extras:pseudo
+CompletionInfo	xmlsnippets.h	37;"	s	language:C++
+CompletionInfo	xmlsnippets.h	40;"	t	language:C++	typeref:struct:CompletionInfo
+GeanyEditor	test-stubs.h	28;"	d	language:C++
+Info	xmlsnippets.c	31;"	s	language:C	file:	extras:fileScope
+Info	xmlsnippets.c	42;"	t	language:C	typeref:struct:Info	file:	extras:fileScope
+InputInfo	xmlsnippets.h	32;"	s	language:C++
+InputInfo	xmlsnippets.h	35;"	t	language:C++	typeref:struct:InputInfo
+TESTS	Makefile.am	24;"	m	language:Make
+XMLSNIPPETS_PLUGIN_H	plugin.h	24;"	d	language:C++
+XMLSNIPPETS_TEST_STUBS_H	test-stubs.h	24;"	d	language:C++
+XMLSNIPPETS_XMLSNIPPETS_H	xmlsnippets.h	23;"	d	language:C++
+__anon3b9ca51d0108	xmlsnippets.c	34;"	s	language:C	scope:struct:Info	file:	extras:fileScope,anonymous
+__anon3b9ca51d0208	xmlsnippets.c	39;"	s	language:C	scope:struct:Info	file:	extras:fileScope,anonymous
+check_PROGRAMS	Makefile.am	6;"	m	language:Make
+common_sources	Makefile.am	8;"	m	language:Make
+completion	xmlsnippets.c	35;"	m	language:C	scope:struct:Info::__anon3b9ca51d0108	typeref:typename:const gchar *	file:	extras:fileScope
+completion	xmlsnippets.h	39;"	m	language:C++	scope:struct:CompletionInfo	typeref:typename:gchar *
+completions	test-stubs.c	32;"	v	language:C	typeref:typename:GHashTable *
+editor_find_snippet	test-stubs.c	44;"	f	language:C	typeref:typename:const gchar *	signature:(GeanyEditor * editor,const gchar * snippet_name)
+editor_notify_cb	plugin.c	64;"	f	language:C	typeref:typename:gboolean	file:	signature:(GObject * object,GeanyEditor * editor,SCNotification * nt,gpointer data)	extras:fileScope
+fill_completions	tests.c	100;"	f	language:C	typeref:typename:void	file:	signature:(void)	extras:fileScope
+finalize	tests.c	46;"	f	language:C	typeref:typename:void	file:	signature:(void)	extras:fileScope
+geany_data	plugin.c	37;"	v	language:C	typeref:typename:GeanyData *
+geany_plugin	plugin.c	38;"	v	language:C	typeref:typename:GeanyPlugin *
+geanyplugins_LTLIBRARIES	Makefile.am	4;"	m	language:Make
+get_completion	xmlsnippets.c	127;"	f	language:C	typeref:typename:gboolean	signature:(GeanyEditor * editor,const gchar * sel,const gint size,CompletionInfo * c,InputInfo * i)
+init	tests.c	40;"	f	language:C	typeref:typename:void	file:	signature:(void)	extras:fileScope
+input	xmlsnippets.c	41;"	m	language:C	scope:struct:Info	typeref:struct:Info::__anon3b9ca51d0208	file:	extras:fileScope
+main	tests.c	179;"	f	language:C	typeref:typename:int	signature:(int argc,char ** argv)
+merge_attributes	xmlsnippets.c	58;"	f	language:C	typeref:typename:gchar *	file:	signature:(const gchar * sel,gint size,const Info * info)	extras:fileScope
+plugin	Makefile.am	2;"	m	language:Make
+plugin_cleanup	plugin.c	59;"	f	language:C	typeref:typename:void	signature:(void)
+plugin_init	plugin.c	55;"	f	language:C	typeref:typename:void	signature:(GeanyData * data)
+run_tests	tests.c	115;"	f	language:C	typeref:typename:gboolean	file:	signature:(void)	extras:fileScope
+skip_xml_tag_name	xmlsnippets.c	45;"	f	language:C	typeref:typename:const gchar *	file:	signature:(const gchar * start)	extras:fileScope
+snippet	xmlsnippets.c	37;"	m	language:C	scope:struct:Info	typeref:struct:Info::__anon3b9ca51d0108	file:	extras:fileScope
+tag_name_end	xmlsnippets.c	40;"	m	language:C	scope:struct:Info::__anon3b9ca51d0208	typeref:typename:const gchar *	file:	extras:fileScope
+tag_name_start	xmlsnippets.c	36;"	m	language:C	scope:struct:Info::__anon3b9ca51d0108	typeref:typename:const gchar *	file:	extras:fileScope
+tag_start	xmlsnippets.h	34;"	m	language:C++	scope:struct:InputInfo	typeref:typename:gint
+test	tests.c	52;"	f	language:C	typeref:typename:gboolean	file:	signature:(gint ordinal,const gchar * input,const gchar * completion_needed)	extras:fileScope
+test_stubs_finalize	test-stubs.c	39;"	f	language:C	typeref:typename:void	signature:(void)
+test_stubs_init	test-stubs.c	34;"	f	language:C	typeref:typename:void	signature:(void)
+utils_find_open_xml_tag_pos	test-stubs.c	55;"	f	language:C	typeref:typename:const gchar *	signature:(const gchar sel[],gint size)
+xmlsnippets.la	Makefile.am	4;"	T	language:Automake	scope:directory:geanyplugins	extras:subparser
+xmlsnippets_check_CPPFLAGS	Makefile.am	22;"	m	language:Make
+xmlsnippets_check_LDADD	Makefile.am	23;"	m	language:Make
+xmlsnippets_check_SOURCES	Makefile.am	17;"	m	language:Make
+xmlsnippets_la_CPPFLAGS	Makefile.am	14;"	m	language:Make
+xmlsnippets_la_LIBADD	Makefile.am	15;"	m	language:Make
+xmlsnippets_la_SOURCES	Makefile.am	10;"	m	language:Make

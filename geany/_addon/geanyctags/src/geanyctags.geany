@@ -18,10 +18,9 @@ detect_indent_width=false
 indent_mode=2
 
 [project]
-name=tmp
-base_path=/home/user/document/src/gcc/geany/03_ctags_snippet/tmp
+name=aaaa
+base_path=/home/user/document/src/gcc/geany/_addon/geanyctags/src/
 description=
-file_patterns=*.c;*.h;
 
 [long line marker]
 long_line_behaviour=1
@@ -29,7 +28,6 @@ long_line_column=80
 
 [files]
 current_page=0
-FILE_NAME_0=806;C;0;EUTF-8;1;1;0;%2Fhome%2Fuser%2Fdocument%2Fsrc%2Fgcc%2Fgeany%2F03_ctags_snippet%2Ftmp%2Faaa.c;0;4
 
 [VTE]
 last_dir=/home/user

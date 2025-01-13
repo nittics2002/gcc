@@ -1,0 +1,219 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/;"	extras:pseudo
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/;"	extras:pseudo
+!_TAG_OUTPUT_EXCMD	number	/number, pattern, mixed, or combineV2/;"	extras:pseudo
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/;"	extras:pseudo
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/;"	extras:pseudo
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/;"	extras:pseudo
+!_TAG_PROC_CWD	/home/user/document/src/gcc/geany/_addon/geanyctags/src/	//;"	extras:pseudo
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//;"	extras:pseudo
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/;"	extras:pseudo
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/;"	extras:pseudo
+!_TAG_PROGRAM_VERSION	5.9.0	//;"	extras:pseudo
+EmptyString	readtags.c	103;"	v	language:C	typeref:typename:const char * const	file:	extras:fileScope
+GTK_COMBO_BOX_TEXT	geanyctags.c	43;"	d	language:C	file:	extras:fileScope
+JUMP_BACK	readtags.c	1044;"	d	language:C	file:	extras:fileScope
+KB_COUNT	geanyctags.c	82;"	e	language:C	scope:enum:__anonc3299e7c0203	file:	extras:fileScope
+KB_FIND_TAG	geanyctags.c	80;"	e	language:C	scope:enum:__anonc3299e7c0203	file:	extras:fileScope
+KB_GENERATE_TAGS	geanyctags.c	81;"	e	language:C	scope:enum:__anonc3299e7c0203	file:	extras:fileScope
+MATCH_FULL	geanyctags.c	417;"	e	language:C	scope:enum:__anonc3299e7c0303	file:	extras:fileScope
+MATCH_PATTERN	geanyctags.c	419;"	e	language:C	scope:enum:__anonc3299e7c0303	file:	extras:fileScope
+MATCH_PREFIX	geanyctags.c	418;"	e	language:C	scope:enum:__anonc3299e7c0303	file:	extras:fileScope
+MatchType	geanyctags.c	420;"	t	language:C	typeref:enum:__anonc3299e7c0303	file:	extras:fileScope
+PseudoTagPrefix	readtags.c	104;"	v	language:C	typeref:typename:const char * const	file:	extras:fileScope
+PseudoTagPrefixLength	readtags.c	105;"	v	language:C	typeref:typename:const size_t	file:	extras:fileScope
+READTAGS_H	readtags.h	20;"	d	language:C++
+TAB	readtags.c	24;"	d	language:C	file:	extras:fileScope
+TAG_FOLDSORTED	readtags.h	32;"	e	language:C++	scope:enum:__anona3d896660103
+TAG_FULLMATCH	readtags.h	43;"	d	language:C++
+TAG_IGNORECASE	readtags.h	47;"	d	language:C++
+TAG_OBSERVECASE	readtags.h	46;"	d	language:C++
+TAG_PARTIALMATCH	readtags.h	44;"	d	language:C++
+TAG_SORTED	readtags.h	32;"	e	language:C++	scope:enum:__anona3d896660103
+TAG_UNSORTED	readtags.h	32;"	e	language:C++	scope:enum:__anona3d896660103
+TagErrnoFileMaybeTooBig	readtags.h	62;"	e	language:C++	scope:enum:__anona3d896660303
+TagErrnoInvalidArgument	readtags.h	60;"	e	language:C++	scope:enum:__anona3d896660303
+TagErrnoUnexpectedFormat	readtags.h	57;"	e	language:C++	scope:enum:__anona3d896660303
+TagErrnoUnexpectedLineno	readtags.h	58;"	e	language:C++	scope:enum:__anona3d896660303
+TagErrnoUnexpectedSortedMethod	readtags.h	56;"	e	language:C++	scope:enum:__anona3d896660303
+TagFailure	readtags.h	53;"	e	language:C++	scope:enum:__anona3d896660203
+TagSuccess	readtags.h	53;"	e	language:C++	scope:enum:__anona3d896660203
+__anona3d896610108	readtags.c	30;"	s	language:C	file:	extras:fileScope,anonymous
+__anona3d896610208	readtags.c	65;"	s	language:C	scope:struct:sTagFile	file:	extras:fileScope,anonymous
+__anona3d896610308	readtags.c	78;"	s	language:C	scope:struct:sTagFile	file:	extras:fileScope,anonymous
+__anona3d896610408	readtags.c	85;"	s	language:C	scope:struct:sTagFile	file:	extras:fileScope,anonymous
+__anona3d896660103	readtags.h	31;"	g	language:C++	extras:anonymous
+__anona3d896660203	readtags.h	53;"	g	language:C++	extras:anonymous
+__anona3d896660303	readtags.h	55;"	g	language:C++	extras:anonymous
+__anona3d896660408	readtags.h	70;"	s	language:C++	extras:anonymous
+__anona3d896660508	readtags.h	72;"	s	language:C++	scope:struct:__anona3d896660408	extras:anonymous
+__anona3d896660608	readtags.h	82;"	s	language:C++	scope:struct:__anona3d896660408	extras:anonymous
+__anona3d896660708	readtags.h	92;"	s	language:C++	scope:struct:__anona3d896660408	extras:anonymous
+__anona3d896660808	readtags.h	111;"	s	language:C++	extras:anonymous
+__anona3d896660908	readtags.h	122;"	s	language:C++	extras:anonymous
+__anona3d896660a08	readtags.h	132;"	s	language:C++	scope:struct:__anona3d896660908	extras:anonymous
+__anona3d896660b08	readtags.h	149;"	s	language:C++	scope:struct:__anona3d896660908	extras:anonymous
+__anonc3299e7c0108	geanyctags.c	66;"	s	language:C	file:	extras:fileScope,anonymous
+__anonc3299e7c0203	geanyctags.c	79;"	g	language:C	file:	extras:fileScope,anonymous
+__anonc3299e7c0303	geanyctags.c	416;"	g	language:C	file:	extras:fileScope,anonymous
+_dummy	geanyctags.c	49;"	v	language:C	typeref:typename:gint	file:	extras:fileScope
+address	readtags.h	140;"	m	language:C++	scope:struct:__anona3d896660908	typeref:struct:__anona3d896660908::__anona3d896660a08
+author	readtags.c	87;"	m	language:C	scope:struct:sTagFile::__anona3d896610408	typeref:typename:char *	file:	extras:fileScope
+author	readtags.h	94;"	m	language:C++	scope:struct:__anona3d896660408::__anona3d896660708	typeref:typename:const char *
+buffer	readtags.c	32;"	m	language:C	scope:struct:__anona3d896610108	typeref:typename:char *	file:	extras:fileScope
+case_sensitive	geanyctags.c	71;"	m	language:C	scope:struct:__anonc3299e7c0108	typeref:typename:GtkWidget *	file:	extras:fileScope
+combo	geanyctags.c	69;"	m	language:C	scope:struct:__anonc3299e7c0108	typeref:typename:GtkWidget *	file:	extras:fileScope
+combo_match	geanyctags.c	70;"	m	language:C	scope:struct:__anonc3299e7c0108	typeref:typename:GtkWidget *	file:	extras:fileScope
+copyName	readtags.c	285;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file)	extras:fileScope
+count	readtags.h	151;"	m	language:C++	scope:struct:__anona3d896660908::__anona3d896660b08	typeref:typename:unsigned short
+countContinuousBackslashesBackward	readtags.c	514;"	f	language:C	typeref:typename:unsigned int	file:	signature:(const char * from,const char * till)	extras:fileScope
+create_dialog_find_file	geanyctags.c	616;"	f	language:C	typeref:typename:void	file:	signature:(void)	extras:fileScope
+declaration	geanyctags.c	72;"	m	language:C	scope:struct:__anonc3299e7c0108	typeref:typename:GtkWidget *	file:	extras:fileScope
+doesFilePointPseudoTag	readtags.c	817;"	f	language:C	typeref:typename:int	file:	signature:(tagFile * const file,void * unused)	extras:fileScope
+duplicate	readtags.c	675;"	f	language:C	typeref:typename:char *	file:	signature:(const char * str)	extras:fileScope
+err	readtags.c	97;"	m	language:C	scope:struct:sTagFile	typeref:typename:int	file:	extras:fileScope
+error_number	readtags.h	78;"	m	language:C++	scope:struct:__anona3d896660408::__anona3d896660508	typeref:typename:int
+fields	readtags.c	83;"	m	language:C	scope:struct:sTagFile	typeref:struct:sTagFile::__anona3d896610308	file:	extras:fileScope
+fields	readtags.h	155;"	m	language:C++	scope:struct:__anona3d896660908	typeref:struct:__anona3d896660908::__anona3d896660b08
+file	readtags.h	129;"	m	language:C++	scope:struct:__anona3d896660908	typeref:typename:const char *
+file	readtags.h	88;"	m	language:C++	scope:struct:__anona3d896660408	typeref:struct:__anona3d896660408::__anona3d896660608
+fileScope	readtags.h	146;"	m	language:C++	scope:struct:__anona3d896660908	typeref:typename:short
+filter_tag	geanyctags.c	465;"	f	language:C	typeref:typename:gboolean	file:	signature:(tagEntry * entry,GPatternSpec * name,gboolean declaration,gboolean case_sensitive)	extras:fileScope
+find	readtags.c	1164;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry,const char * const name,const int options)	extras:fileScope
+findBinary	readtags.c	1081;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file)	extras:fileScope
+findFirstMatchBefore	readtags.c	1063;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file)	extras:fileScope
+findFirstNonMatchBefore	readtags.c	1042;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file)	extras:fileScope
+findNext	readtags.c	1242;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry)	extras:fileScope
+findNextFull	readtags.c	1221;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry,int sorted,int (* isAcceptable)(tagFile * const,void *),void * data)	extras:fileScope
+findPseudoTag	readtags.c	1250;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file,int rewindBeforeFinding,tagEntry * const entry)	extras:fileScope
+findSequential	readtags.c	1159;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file)	extras:fileScope
+findSequentialFull	readtags.c	1130;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file,int (* isAcceptable)(tagFile * const,void *),void * data)	extras:fileScope
+find_first	geanyctags.c	424;"	f	language:C	typeref:typename:gboolean	file:	signature:(tagFile * tf,tagEntry * entry,const gchar * name,MatchType match_type)	extras:fileScope
+find_next	geanyctags.c	443;"	f	language:C	typeref:typename:gboolean	file:	signature:(tagFile * tf,tagEntry * entry,MatchType match_type)	extras:fileScope
+find_tags	geanyctags.c	496;"	f	language:C	typeref:typename:void	file:	signature:(const gchar * name,gboolean declaration,gboolean case_sensitive,MatchType match_type)	extras:fileScope
+format	readtags.c	47;"	m	language:C	scope:struct:sTagFile	typeref:typename:unsigned char	file:	extras:fileScope
+format	readtags.h	84;"	m	language:C++	scope:struct:__anona3d896660408::__anona3d896660608	typeref:typename:short
+fp	readtags.c	55;"	m	language:C	scope:struct:sTagFile	typeref:typename:FILE *	file:	extras:fileScope
+g_pattern_spec_match_string	geanyctags.c	459;"	d	language:C	file:	extras:fileScope
+geany_data	geanyctags.c	52;"	v	language:C	typeref:typename:GeanyData *	file:	extras:fileScope
+geany_load_module	geanyctags.c	822;"	f	language:C	typeref:typename:G_MODULE_EXPORT void	signature:(GeanyPlugin * plugin)
+geany_plugin	geanyctags.c	51;"	v	language:C	typeref:typename:GeanyPlugin *	file:	extras:fileScope
+geanyctags.la	Makefile.am	4;"	T	language:Automake	scope:directory:geanyplugins	extras:subparser
+geanyctags_la_CFLAGS	Makefile.am	13;"	m	language:Make
+geanyctags_la_CPPFLAGS	Makefile.am	11;"	m	language:Make
+geanyctags_la_LIBADD	Makefile.am	14;"	m	language:Make
+geanyctags_la_SOURCES	Makefile.am	6;"	m	language:Make
+geanyplugins_LTLIBRARIES	Makefile.am	4;"	m	language:Make
+generate_find_string	geanyctags.c	209;"	f	language:C	typeref:typename:gchar *	file:	signature:(GeanyProject * prj)	extras:fileScope
+get_base_path	geanyctags.c	228;"	f	language:C	typeref:typename:gchar *	file:	signature:(void)	extras:fileScope
+get_selection	geanyctags.c	356;"	f	language:C	typeref:typename:gchar *	file:	signature:(void)	extras:fileScope
+get_tags_filename	geanyctags.c	196;"	f	language:C	typeref:typename:gchar *	file:	signature:(void)	extras:fileScope
+gotoFirstLogicalTag	readtags.c	822;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file)	extras:fileScope
+growFields	readtags.c	399;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file)	extras:fileScope
+growString	readtags.c	256;"	f	language:C	typeref:typename:tagResult	file:	signature:(vstring * s)	extras:fileScope
+gtk_combo_box_text_append_text	geanyctags.c	45;"	d	language:C	file:	extras:fileScope
+gtk_combo_box_text_new	geanyctags.c	44;"	d	language:C	file:	extras:fileScope
+ignorecase	readtags.c	75;"	m	language:C	scope:struct:sTagFile::__anona3d896610208	typeref:typename:short	file:	extras:fileScope
+initialize	readtags.c	856;"	f	language:C	typeref:typename:tagFile *	file:	signature:(const char * const filePath,tagFileInfo * const info)	extras:fileScope
+initialized	readtags.c	45;"	m	language:C	scope:struct:sTagFile	typeref:typename:unsigned char	file:	extras:fileScope
+inputUCtagsMode	readtags.c	51;"	m	language:C	scope:struct:sTagFile	typeref:typename:unsigned char	file:	extras:fileScope
+isOdd	readtags.c	509;"	f	language:C	typeref:typename:int	file:	signature:(unsigned int i)	extras:fileScope
+isPseudoTagLine	readtags.c	687;"	f	language:C	typeref:typename:int	file:	signature:(const char * buffer)	extras:fileScope
+kb_callback	geanyctags.c	728;"	f	language:C	typeref:typename:gboolean	file:	signature:(guint key_id)	extras:fileScope
+key	readtags.h	114;"	m	language:C++	scope:struct:__anona3d896660808	typeref:typename:const char *
+kind	readtags.h	143;"	m	language:C++	scope:struct:__anona3d896660908	typeref:typename:const char *
+line	readtags.c	61;"	m	language:C	scope:struct:sTagFile	typeref:typename:vstring	file:	extras:fileScope
+lineNumber	readtags.h	139;"	m	language:C++	scope:struct:__anona3d896660908::__anona3d896660a08	typeref:typename:unsigned long
+list	readtags.c	82;"	m	language:C	scope:struct:sTagFile::__anona3d896610308	typeref:typename:tagExtensionField *	file:	extras:fileScope
+list	readtags.h	154;"	m	language:C++	scope:struct:__anona3d896660908::__anona3d896660b08	typeref:typename:tagExtensionField *
+max	readtags.c	80;"	m	language:C	scope:struct:sTagFile::__anona3d896610308	typeref:typename:unsigned short	file:	extras:fileScope
+name	readtags.c	63;"	m	language:C	scope:struct:sTagFile	typeref:typename:vstring	file:	extras:fileScope
+name	readtags.c	69;"	m	language:C	scope:struct:sTagFile::__anona3d896610208	typeref:typename:char *	file:	extras:fileScope
+name	readtags.c	89;"	m	language:C	scope:struct:sTagFile::__anona3d896610408	typeref:typename:char *	file:	extras:fileScope
+name	readtags.h	125;"	m	language:C++	scope:struct:__anona3d896660908	typeref:typename:const char *
+name	readtags.h	97;"	m	language:C++	scope:struct:__anona3d896660408::__anona3d896660708	typeref:typename:const char *
+nameAcceptable	readtags.c	1154;"	f	language:C	typeref:typename:int	file:	signature:(tagFile * const file,void * unused)	extras:fileScope
+nameComparison	readtags.c	1020;"	f	language:C	typeref:typename:int	file:	signature:(tagFile * const file)	extras:fileScope
+nameLength	readtags.c	71;"	m	language:C	scope:struct:sTagFile::__anona3d896610208	typeref:typename:size_t	file:	extras:fileScope
+on_find_declaration	geanyctags.c	590;"	f	language:C	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)	extras:fileScope
+on_find_definition	geanyctags.c	603;"	f	language:C	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)	extras:fileScope
+on_find_tag	geanyctags.c	687;"	f	language:C	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)	extras:fileScope
+on_generate_tags	geanyctags.c	252;"	f	language:C	typeref:typename:void	file:	signature:(GtkMenuItem * menuitem,gpointer user_data)	extras:fileScope
+on_project_close	geanyctags.c	104;"	f	language:C	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,G_GNUC_UNUSED gpointer user_data)	extras:fileScope
+on_project_open	geanyctags.c	99;"	f	language:C	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,GKeyFile * config,G_GNUC_UNUSED gpointer user_data)	extras:fileScope
+on_project_save	geanyctags.c	109;"	f	language:C	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GObject * obj,GKeyFile * config,G_GNUC_UNUSED gpointer user_data)	extras:fileScope
+opened	readtags.h	74;"	m	language:C++	scope:struct:__anona3d896660408::__anona3d896660508	typeref:typename:int
+parseExtensionFields	readtags.c	416;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry,char * const string,int * err)	extras:fileScope
+parseTagLine	readtags.c	559;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * file,tagEntry * const entry,int * err)	extras:fileScope
+partial	readtags.c	73;"	m	language:C	scope:struct:sTagFile::__anona3d896610208	typeref:typename:short	file:	extras:fileScope
+pattern	readtags.h	135;"	m	language:C++	scope:struct:__anona3d896660908::__anona3d896660a08	typeref:typename:const char *
+plugin	Makefile.am	2;"	m	language:Make
+plugin_geanyctags_callbacks	geanyctags.c	114;"	v	language:C	typeref:typename:PluginCallback[]	file:	extras:fileScope
+plugin_geanyctags_cleanup	geanyctags.c	804;"	f	language:C	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)	extras:fileScope
+plugin_geanyctags_help	geanyctags.c	125;"	f	language:C	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)	extras:fileScope
+plugin_geanyctags_init	geanyctags.c	743;"	f	language:C	typeref:typename:gboolean	file:	signature:(GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)	extras:fileScope
+pos	readtags.c	57;"	m	language:C	scope:struct:sTagFile	typeref:typename:rt_off_t	file:	extras:fileScope
+pos	readtags.c	67;"	m	language:C	scope:struct:sTagFile::__anona3d896610208	typeref:typename:rt_off_t	file:	extras:fileScope
+program	readtags.c	94;"	m	language:C	scope:struct:sTagFile	typeref:struct:sTagFile::__anona3d896610408	file:	extras:fileScope
+program	readtags.h	104;"	m	language:C++	scope:struct:__anona3d896660408	typeref:struct:__anona3d896660408::__anona3d896660708
+readFieldValue	readtags.c	986;"	f	language:C	typeref:typename:const char *	file:	signature:(const tagEntry * const entry,const char * const key)	extras:fileScope
+readNext	readtags.c	963;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry)	extras:fileScope
+readPseudoTags	readtags.c	692;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagFileInfo * const info)	extras:fileScope
+readTagCharacter	readtags.c	154;"	f	language:C	typeref:typename:int	file:	signature:(const char ** const s)	extras:fileScope
+readTagLine	readtags.c	389;"	f	language:C	typeref:typename:int	file:	signature:(tagFile * const file,int * err)	extras:fileScope
+readTagLineRaw	readtags.c	313;"	f	language:C	typeref:typename:int	file:	signature:(tagFile * const file,int * err)	extras:fileScope
+readTagLineSeek	readtags.c	1001;"	f	language:C	typeref:typename:int	file:	signature:(tagFile * const file,const rt_off_t pos)	extras:fileScope
+readtags_fseek	readtags.c	124;"	f	language:C	typeref:typename:int	file:	signature:(FILE * fp,rt_off_t pos,int whence)	extras:fileScope
+readtags_ftell	readtags.c	111;"	f	language:C	typeref:typename:rt_off_t	file:	signature:(FILE * fp)	extras:fileScope
+rt_off_t	readtags.c	37;"	t	language:C	typeref:typename:long long	file:	extras:fileScope
+rt_off_t	readtags.c	39;"	t	language:C	typeref:typename:off_t	file:	extras:fileScope
+sTagFile	readtags.c	43;"	s	language:C	file:	extras:fileScope
+s_context_fdec_item	geanyctags.c	56;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+s_context_fdef_item	geanyctags.c	57;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+s_context_sep_item	geanyctags.c	58;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+s_ft_dialog	geanyctags.c	73;"	v	language:C	typeref:struct:__anonc3299e7c0108
+s_ft_item	geanyctags.c	61;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+s_gt_item	geanyctags.c	59;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+s_sep_item	geanyctags.c	60;"	v	language:C	typeref:typename:GtkWidget *	file:	extras:fileScope
+search	readtags.c	76;"	m	language:C	scope:struct:sTagFile	typeref:struct:sTagFile::__anona3d896610208	file:	extras:fileScope
+set_widgets_sensitive	geanyctags.c	87;"	f	language:C	typeref:typename:void	file:	signature:(gboolean sensitive)	extras:fileScope
+show_entry	geanyctags.c	301;"	f	language:C	typeref:typename:void	file:	signature:(tagEntry * entry)	extras:fileScope
+size	readtags.c	31;"	m	language:C	scope:struct:__anona3d896610108	typeref:typename:size_t	file:	extras:fileScope
+size	readtags.c	59;"	m	language:C	scope:struct:sTagFile	typeref:typename:rt_off_t	file:	extras:fileScope
+sort	readtags.h	87;"	m	language:C++	scope:struct:__anona3d896660408::__anona3d896660608	typeref:typename:tagSortType
+sortMethod	readtags.c	53;"	m	language:C	scope:struct:sTagFile	typeref:typename:tagSortType	file:	extras:fileScope
+sortType	readtags.h	39;"	d	language:C++
+spawn_cmd	geanyctags.c	132;"	f	language:C	typeref:typename:void	file:	signature:(const gchar * cmd,const gchar * dir)	extras:fileScope
+status	readtags.h	79;"	m	language:C++	scope:struct:__anona3d896660408	typeref:struct:__anona3d896660408::__anona3d896660508
+tagEntry	readtags.h	157;"	t	language:C++	typeref:struct:__anona3d896660908
+tagErrno	readtags.h	63;"	t	language:C++	typeref:enum:__anona3d896660303
+tagExtensionField	readtags.h	119;"	t	language:C++	typeref:struct:__anona3d896660808
+tagFile	readtags.h	67;"	t	language:C++	typeref:struct:sTagFile
+tagFileInfo	readtags.h	106;"	t	language:C++	typeref:struct:__anona3d896660408
+tagResult	readtags.h	53;"	t	language:C++	typeref:enum:__anona3d896660203
+tagSortType	readtags.h	33;"	t	language:C++	typeref:enum:__anona3d896660103
+tagcmp	readtags.c	228;"	f	language:C	typeref:typename:int	file:	signature:(const char * s1,const char * s2)	extras:fileScope
+tagncmp	readtags.c	242;"	f	language:C	typeref:typename:int	file:	signature:(const char * s1,const char * s2,size_t n)	extras:fileScope
+tagnuppercmp	readtags.c	214;"	f	language:C	typeref:typename:int	file:	signature:(const char * s1,const char * s2,size_t n)	extras:fileScope
+tagsClose	readtags.c	1420;"	f	language:C	typeref:typename:tagResult	signature:(tagFile * const file)
+tagsField	readtags.c	1340;"	f	language:C	typeref:typename:const char *	signature:(const tagEntry * const entry,const char * const key)
+tagsFind	readtags.c	1348;"	f	language:C	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry,const char * const name,const int options)
+tagsFindNext	readtags.c	1363;"	f	language:C	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsFindPseudoTag	readtags.c	1387;"	f	language:C	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry,const char * const name,const int match)
+tagsFirst	readtags.c	1310;"	f	language:C	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsFirstPseudoTag	readtags.c	1377;"	f	language:C	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsGetErrno	readtags.c	1431;"	f	language:C	typeref:typename:int	signature:(tagFile * const file)
+tagsNext	readtags.c	1326;"	f	language:C	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsNextPseudoTag	readtags.c	1382;"	f	language:C	typeref:typename:tagResult	signature:(tagFile * const file,tagEntry * const entry)
+tagsOpen	readtags.c	1280;"	f	language:C	typeref:typename:tagFile *	signature:(const char * const filePath,tagFileInfo * const info)
+tagsSetSortType	readtags.c	1286;"	f	language:C	typeref:typename:tagResult	signature:(tagFile * const file,const tagSortType type)
+taguppercmp	readtags.c	200;"	f	language:C	typeref:typename:int	file:	signature:(const char * s1,const char * s2)	extras:fileScope
+terminate	readtags.c	939;"	f	language:C	typeref:typename:void	file:	signature:(tagFile * const file)	extras:fileScope
+unescapeInPlace	readtags.c	534;"	f	language:C	typeref:typename:char *	file:	signature:(char * q,char ** tab,size_t * p_len)	extras:fileScope
+url	readtags.c	91;"	m	language:C	scope:struct:sTagFile::__anona3d896610408	typeref:typename:char *	file:	extras:fileScope
+url	readtags.h	100;"	m	language:C++	scope:struct:__anona3d896660408::__anona3d896660708	typeref:typename:const char *
+value	readtags.h	117;"	m	language:C++	scope:struct:__anona3d896660808	typeref:typename:const char *
+version	readtags.c	93;"	m	language:C	scope:struct:sTagFile::__anona3d896610408	typeref:typename:char *	file:	extras:fileScope
+version	readtags.h	103;"	m	language:C++	scope:struct:__anona3d896660408::__anona3d896660708	typeref:typename:const char *
+vstring	readtags.c	33;"	t	language:C	typeref:struct:__anona3d896610108	file:	extras:fileScope
+widget	geanyctags.c	67;"	m	language:C	scope:struct:__anonc3299e7c0108	typeref:typename:GtkWidget *	file:	extras:fileScope
+xdigitValue	readtags.c	138;"	f	language:C	typeref:typename:int	file:	signature:(unsigned char digit)	extras:fileScope
