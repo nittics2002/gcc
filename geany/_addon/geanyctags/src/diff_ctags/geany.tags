@@ -20,8 +20,6 @@ copyName	./readtags.c	285;"	function	typeref:typename:tagResult	file:	signature:
 count	./readtags.h	151;"	member	struct:__anon0e8d8a030908::__anon0e8d8a030b08	typeref:typename:unsigned short
 countContinuousBackslashesBackward	./readtags.c	514;"	function	typeref:typename:unsigned int	file:	signature:(const char * from,const char * till)
 create_dialog_find_file	./geanyctags.c	616;"	function	typeref:typename:void	file:	signature:(void)
-ctags比較 geany標準ctagsとgeanyctags.plugin	./diff_ctags/readme.md	1;"	chapter
-ctags生成コマンド	./diff_ctags/readme.md	3;"	section	chapter:ctags比較 geany標準ctagsとgeanyctags.plugin
 declaration	./geanyctags.c	72;"	member	struct:__anonaee9ed590108	typeref:typename:GtkWidget *	file:
 doesFilePointPseudoTag	./readtags.c	817;"	function	typeref:typename:int	file:	signature:(tagFile * const file,void * unused)
 duplicate	./readtags.c	675;"	function	typeref:typename:char *	file:	signature:(const char * str)
@@ -49,16 +47,9 @@ find_tags	./geanyctags.c	496;"	function	typeref:typename:void	file:	signature:(c
 format	./readtags.c	47;"	member	struct:sTagFile	typeref:typename:unsigned char	file:
 format	./readtags.h	84;"	member	struct:__anon0e8d8a030408::__anon0e8d8a030608	typeref:typename:short
 fp	./readtags.c	55;"	member	struct:sTagFile	typeref:typename:FILE *	file:
-geanyctags.la	./Makefile.am	4;"	ltlibrary	directory:geanyplugins
-geanyctags_la_CFLAGS	./Makefile.am	13;"	macro
-geanyctags_la_CPPFLAGS	./Makefile.am	11;"	macro
-geanyctags_la_LIBADD	./Makefile.am	14;"	macro
-geanyctags_la_SOURCES	./Makefile.am	6;"	macro
-geanyplugins_LTLIBRARIES	./Makefile.am	4;"	macro
 geany_data	./geanyctags.c	52;"	variable	typeref:typename:GeanyData *	file:
 geany_load_module	./geanyctags.c	822;"	function	typeref:typename:G_MODULE_EXPORT void	signature:(GeanyPlugin * plugin)
 geany_plugin	./geanyctags.c	51;"	variable	typeref:typename:GeanyPlugin *	file:
-geany標準	./diff_ctags/readme.md	5;"	subsection	section:ctags比較 geany標準ctagsとgeanyctags.plugin""ctags生成コマンド
 generate_find_string	./geanyctags.c	209;"	function	typeref:typename:gchar *	file:	signature:(GeanyProject * prj)
 get_base_path	./geanyctags.c	228;"	function	typeref:typename:gchar *	file:	signature:(void)
 get_selection	./geanyctags.c	356;"	function	typeref:typename:gchar *	file:	signature:(void)
@@ -112,8 +103,6 @@ parseExtensionFields	./readtags.c	416;"	function	typeref:typename:tagResult	file
 parseTagLine	./readtags.c	559;"	function	typeref:typename:tagResult	file:	signature:(tagFile * file,tagEntry * const entry,int * err)
 partial	./readtags.c	73;"	member	struct:sTagFile::__anon0e8d89fe0208	typeref:typename:short	file:
 pattern	./readtags.h	135;"	member	struct:__anon0e8d8a030908::__anon0e8d8a030a08	typeref:typename:const char *
-plugin	./diff_ctags/readme.md	11;"	subsection	section:ctags比較 geany標準ctagsとgeanyctags.plugin""ctags生成コマンド
-plugin	./Makefile.am	2;"	macro
 plugin_geanyctags_callbacks	./geanyctags.c	114;"	variable	typeref:typename:PluginCallback[]	file:
 plugin_geanyctags_cleanup	./geanyctags.c	804;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)
 plugin_geanyctags_help	./geanyctags.c	125;"	function	typeref:typename:void	file:	signature:(G_GNUC_UNUSED GeanyPlugin * plugin,G_GNUC_UNUSED gpointer pdata)
@@ -233,4 +222,3 @@ __anon0e8d8a030b08	./readtags.h	149;"	struct	struct:__anon0e8d8a030908
 __anonaee9ed590108	./geanyctags.c	66;"	struct	file:
 __anonaee9ed590203	./geanyctags.c	79;"	enum	file:
 __anonaee9ed590303	./geanyctags.c	416;"	enum	file:
-比較	./diff_ctags/readme.md	21;"	section	chapter:ctags比較 geany標準ctagsとgeanyctags.plugin

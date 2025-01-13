@@ -1,0 +1,1 @@
+findNext	readtags.c	1242;"	f	language:C	typeref:typename:tagResult	file:	signature:(tagFile * const file,tagEntry * const entry)	extras:fileScope
